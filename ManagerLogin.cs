@@ -9,21 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-
 namespace PAGASCO
 {
-    public partial class ManagerLogin : Form
+    public partial class ManagerLogin : Form, MyInterface
     {
+        private SharedUIHelper uiHelper = new SharedUIHelper();
+
         public ManagerLogin()
         {
             InitializeComponent();
         }
-
-        private void siticoneLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void siticoneTextBox1_Click(object sender, EventArgs e)
         {
 
@@ -36,7 +31,19 @@ namespace PAGASCO
 
         private void ManagerLogin_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                Database db = new Database();
+                var managersWithBranches = db.GetManagersWithBranches();
+                
+                // Build the display text with manager names and their branches
+                var displayLines = managersWithBranches.Select(m => $"{m.managerName} - {m.branchName}");
+                ManagerNamesRegisteredLabel.Text = "Available Managers:\n" + string.Join("\n", displayLines);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading manager list: " + ex.Message);
+            }
         }
 
         private void siticoneButton1_Click(object sender, EventArgs e)
@@ -52,13 +59,13 @@ namespace PAGASCO
 
             Database dbHelper = new Database();
 
-            bool loginSuccess = dbHelper.ValidateLogin(username, password);
+            int managerID = dbHelper.ValidateLogin(username, password);
 
-            if (loginSuccess)
+            if (managerID != -1)
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                ManagerDashboard dashboard = new ManagerDashboard();
+                ManagerDashboard dashboard = new ManagerDashboard(managerID);
                 dashboard.Show();
                 this.Hide();
             }
@@ -66,16 +73,6 @@ namespace PAGASCO
             {
                 MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-        private void siticoneLabel2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ManagerLabel_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -84,23 +81,16 @@ namespace PAGASCO
 
         }
 
-        private void createaccBtn_Click(object sender, EventArgs e)
-        {
-            CreateAcc createacc = new CreateAcc();
-            createacc.Show();
-            this.Hide();
-        }
 
         private void LoginExtBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
+            ExitApplication(); // Now uses interface method
         }
 
         private void LoginBackBtn_Click(object sender, EventArgs e)
         {
-            UserChoiceMenu choiceMenu = new UserChoiceMenu();
-            choiceMenu.Show();
+           CompanyRole companyrole = new CompanyRole();
+            companyrole.Show();
             this.Hide();
         }
 
@@ -141,6 +131,32 @@ namespace PAGASCO
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void ManagerNamesRegisteredLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MANAGERS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        // Interface Methods
+        public void ExitApplication()
+        {
+            uiHelper.ExitApplication(this);
+        }
+
+        public void GoBackToLogin()
+        {
+            uiHelper.GoBackToLogin(this);
+        }
+
+        public void EnableDrag(Control control)
+        {
+            uiHelper.EnableDrag(control, this);
         }
     }
 }

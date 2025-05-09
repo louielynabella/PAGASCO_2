@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             siticonePanel1 = new SiticoneNetCoreUI.SiticonePanel();
+            OrderBtn = new SiticoneNetCoreUI.SiticoneButton();
             label2 = new Label();
             label1 = new Label();
-            siticoneButton1 = new SiticoneNetCoreUI.SiticoneButton();
             ManagerLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             branchesComBx = new ComboBox();
             costumerBackBtn = new FontAwesome.Sharp.IconButton();
@@ -41,15 +41,14 @@
             CostumerFuelandPricesDGV = new DataGridView();
             siticoneLabel1 = new SiticoneNetCoreUI.SiticoneLabel();
             FuelCostumeracahoicesPanel = new Panel();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
+            RegularRadioBtn = new RadioButton();
+            PremiumRadioBtn = new RadioButton();
+            DieselRadioBtn = new RadioButton();
             panel = new SiticoneNetCoreUI.SiticonePanel();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
-            LitterBtn = new FontAwesome.Sharp.IconButton();
+            backspacedeleteBtn = new FontAwesome.Sharp.IconButton();
             siticoneLabel3 = new SiticoneNetCoreUI.SiticoneLabel();
-            textBox2 = new TextBox();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            LiterTotalPriceTbx = new TextBox();
+            dotBtn = new FontAwesome.Sharp.IconButton();
             ZeroBtn = new FontAwesome.Sharp.IconButton();
             nineBtn = new FontAwesome.Sharp.IconButton();
             eightBtn = new FontAwesome.Sharp.IconButton();
@@ -60,9 +59,8 @@
             threeBtn = new FontAwesome.Sharp.IconButton();
             twoBtn = new FontAwesome.Sharp.IconButton();
             oneBtn = new FontAwesome.Sharp.IconButton();
-            textBox1 = new TextBox();
+            LitersTbx = new TextBox();
             siticoneLabel2 = new SiticoneNetCoreUI.SiticoneLabel();
-            loginBtn = new SiticoneNetCoreUI.SiticoneButton();
             siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CostumerFuelandPricesDGV).BeginInit();
             FuelCostumeracahoicesPanel.SuspendLayout();
@@ -78,9 +76,9 @@
             siticonePanel1.BorderGradientEndColor = Color.Purple;
             siticonePanel1.BorderGradientStartColor = Color.Blue;
             siticonePanel1.BorderThickness = 2F;
+            siticonePanel1.Controls.Add(OrderBtn);
             siticonePanel1.Controls.Add(label2);
             siticonePanel1.Controls.Add(label1);
-            siticonePanel1.Controls.Add(siticoneButton1);
             siticonePanel1.Controls.Add(ManagerLabel);
             siticonePanel1.Controls.Add(branchesComBx);
             siticonePanel1.Controls.Add(costumerBackBtn);
@@ -124,7 +122,86 @@
             siticonePanel1.UseMultiGradient = false;
             siticonePanel1.UsePatternTexture = false;
             siticonePanel1.UseRadialGradient = false;
+            siticonePanel1.Paint += siticonePanel1_Paint;
             siticonePanel1.MouseDown += Panel_MouseDown;
+            // 
+            // OrderBtn
+            // 
+            OrderBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
+            OrderBtn.AccessibleName = "FUEL UP!";
+            OrderBtn.AutoSizeBasedOnText = false;
+            OrderBtn.BackColor = Color.Transparent;
+            OrderBtn.BadgeBackColor = Color.Red;
+            OrderBtn.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
+            OrderBtn.BadgeValue = 0;
+            OrderBtn.BadgeValueForeColor = Color.Transparent;
+            OrderBtn.BorderColor = Color.FromArgb(38, 70, 83);
+            OrderBtn.BorderWidth = 2;
+            OrderBtn.ButtonBackColor = Color.FromArgb(244, 241, 222);
+            OrderBtn.ButtonImage = null;
+            OrderBtn.CanBeep = true;
+            OrderBtn.CanGlow = true;
+            OrderBtn.CanShake = true;
+            OrderBtn.ContextMenuStripEx = null;
+            OrderBtn.CornerRadiusBottomLeft = 10;
+            OrderBtn.CornerRadiusBottomRight = 10;
+            OrderBtn.CornerRadiusTopLeft = 10;
+            OrderBtn.CornerRadiusTopRight = 10;
+            OrderBtn.CustomCursor = Cursors.Default;
+            OrderBtn.DisabledTextColor = Color.FromArgb(38, 70, 83);
+            OrderBtn.EnableLongPress = false;
+            OrderBtn.EnablePressAnimation = true;
+            OrderBtn.EnableRippleEffect = true;
+            OrderBtn.EnableShadow = false;
+            OrderBtn.EnableTextWrapping = false;
+            OrderBtn.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            OrderBtn.GlowColor = Color.FromArgb(100, 255, 255, 255);
+            OrderBtn.GlowIntensity = 100;
+            OrderBtn.GlowRadius = 20F;
+            OrderBtn.GradientBackground = false;
+            OrderBtn.GradientColor = Color.Transparent;
+            OrderBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            OrderBtn.HintText = null;
+            OrderBtn.HoverBackColor = Color.Transparent;
+            OrderBtn.HoverFontStyle = FontStyle.Regular;
+            OrderBtn.HoverTextColor = Color.FromArgb(38, 70, 83);
+            OrderBtn.HoverTransitionDuration = 250;
+            OrderBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            OrderBtn.ImagePadding = 5;
+            OrderBtn.ImageSize = new Size(16, 16);
+            OrderBtn.IsRadial = false;
+            OrderBtn.IsReadOnly = false;
+            OrderBtn.IsToggleButton = false;
+            OrderBtn.IsToggled = false;
+            OrderBtn.Location = new Point(157, 511);
+            OrderBtn.LongPressDurationMS = 1000;
+            OrderBtn.Margin = new Padding(4);
+            OrderBtn.Name = "OrderBtn";
+            OrderBtn.NormalFontStyle = FontStyle.Regular;
+            OrderBtn.ParticleColor = Color.Transparent;
+            OrderBtn.ParticleCount = 15;
+            OrderBtn.PressAnimationScale = 0.97F;
+            OrderBtn.PressedBackColor = Color.Transparent;
+            OrderBtn.PressedFontStyle = FontStyle.Regular;
+            OrderBtn.PressTransitionDuration = 150;
+            OrderBtn.ReadOnlyTextColor = Color.WhiteSmoke;
+            OrderBtn.RippleColor = Color.FromArgb(231, 111, 81);
+            OrderBtn.RippleOpacity = 0.3F;
+            OrderBtn.RippleRadiusMultiplier = 0.6F;
+            OrderBtn.ShadowBlur = 5;
+            OrderBtn.ShadowColor = Color.FromArgb(100, 0, 0, 0);
+            OrderBtn.ShadowOffset = new Point(2, 2);
+            OrderBtn.ShakeDuration = 500;
+            OrderBtn.ShakeIntensity = 5;
+            OrderBtn.Size = new Size(304, 105);
+            OrderBtn.TabIndex = 25;
+            OrderBtn.Text = "FUEL UP!";
+            OrderBtn.TextAlign = ContentAlignment.MiddleCenter;
+            OrderBtn.TextColor = Color.FromArgb(38, 70, 83);
+            OrderBtn.TooltipText = null;
+            OrderBtn.UseAdvancedRendering = true;
+            OrderBtn.UseParticles = false;
+            OrderBtn.Click += OrderBtn_Click;
             // 
             // label2
             // 
@@ -149,83 +226,6 @@
             label1.Size = new Size(139, 26);
             label1.TabIndex = 16;
             label1.Text = "Created By:";
-            // 
-            // siticoneButton1
-            // 
-            siticoneButton1.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
-            siticoneButton1.AccessibleName = "FUEL UP!";
-            siticoneButton1.AutoSizeBasedOnText = false;
-            siticoneButton1.BackColor = Color.Transparent;
-            siticoneButton1.BadgeBackColor = Color.Red;
-            siticoneButton1.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
-            siticoneButton1.BadgeValue = 0;
-            siticoneButton1.BadgeValueForeColor = Color.Transparent;
-            siticoneButton1.BorderColor = Color.FromArgb(38, 70, 83);
-            siticoneButton1.BorderWidth = 2;
-            siticoneButton1.ButtonBackColor = Color.FromArgb(244, 241, 222);
-            siticoneButton1.ButtonImage = null;
-            siticoneButton1.CanBeep = true;
-            siticoneButton1.CanGlow = true;
-            siticoneButton1.CanShake = true;
-            siticoneButton1.ContextMenuStripEx = null;
-            siticoneButton1.CornerRadiusBottomLeft = 10;
-            siticoneButton1.CornerRadiusBottomRight = 10;
-            siticoneButton1.CornerRadiusTopLeft = 10;
-            siticoneButton1.CornerRadiusTopRight = 10;
-            siticoneButton1.CustomCursor = Cursors.Default;
-            siticoneButton1.DisabledTextColor = Color.FromArgb(38, 70, 83);
-            siticoneButton1.EnableLongPress = false;
-            siticoneButton1.EnablePressAnimation = true;
-            siticoneButton1.EnableRippleEffect = true;
-            siticoneButton1.EnableShadow = false;
-            siticoneButton1.EnableTextWrapping = false;
-            siticoneButton1.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            siticoneButton1.GlowColor = Color.FromArgb(100, 255, 255, 255);
-            siticoneButton1.GlowIntensity = 100;
-            siticoneButton1.GlowRadius = 20F;
-            siticoneButton1.GradientBackground = false;
-            siticoneButton1.GradientColor = Color.Transparent;
-            siticoneButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            siticoneButton1.HintText = null;
-            siticoneButton1.HoverBackColor = Color.Transparent;
-            siticoneButton1.HoverFontStyle = FontStyle.Regular;
-            siticoneButton1.HoverTextColor = Color.FromArgb(38, 70, 83);
-            siticoneButton1.HoverTransitionDuration = 250;
-            siticoneButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            siticoneButton1.ImagePadding = 5;
-            siticoneButton1.ImageSize = new Size(16, 16);
-            siticoneButton1.IsRadial = false;
-            siticoneButton1.IsReadOnly = false;
-            siticoneButton1.IsToggleButton = false;
-            siticoneButton1.IsToggled = false;
-            siticoneButton1.Location = new Point(161, 542);
-            siticoneButton1.LongPressDurationMS = 1000;
-            siticoneButton1.Margin = new Padding(4);
-            siticoneButton1.Name = "siticoneButton1";
-            siticoneButton1.NormalFontStyle = FontStyle.Regular;
-            siticoneButton1.ParticleColor = Color.Transparent;
-            siticoneButton1.ParticleCount = 15;
-            siticoneButton1.PressAnimationScale = 0.97F;
-            siticoneButton1.PressedBackColor = Color.Transparent;
-            siticoneButton1.PressedFontStyle = FontStyle.Regular;
-            siticoneButton1.PressTransitionDuration = 150;
-            siticoneButton1.ReadOnlyTextColor = Color.WhiteSmoke;
-            siticoneButton1.RippleColor = Color.FromArgb(231, 111, 81);
-            siticoneButton1.RippleOpacity = 0.3F;
-            siticoneButton1.RippleRadiusMultiplier = 0.6F;
-            siticoneButton1.ShadowBlur = 5;
-            siticoneButton1.ShadowColor = Color.FromArgb(100, 0, 0, 0);
-            siticoneButton1.ShadowOffset = new Point(2, 2);
-            siticoneButton1.ShakeDuration = 500;
-            siticoneButton1.ShakeIntensity = 5;
-            siticoneButton1.Size = new Size(304, 105);
-            siticoneButton1.TabIndex = 24;
-            siticoneButton1.Text = "FUEL UP!";
-            siticoneButton1.TextAlign = ContentAlignment.MiddleCenter;
-            siticoneButton1.TextColor = Color.FromArgb(38, 70, 83);
-            siticoneButton1.TooltipText = null;
-            siticoneButton1.UseAdvancedRendering = true;
-            siticoneButton1.UseParticles = false;
             // 
             // ManagerLabel
             // 
@@ -261,6 +261,7 @@
             branchesComBx.Name = "branchesComBx";
             branchesComBx.Size = new Size(348, 34);
             branchesComBx.TabIndex = 14;
+            branchesComBx.SelectedIndexChanged += branchesComBx_SelectedIndexChanged;
             // 
             // costumerBackBtn
             // 
@@ -348,6 +349,7 @@
             CostumerFuelandPricesDGV.RowHeadersWidth = 51;
             CostumerFuelandPricesDGV.Size = new Size(318, 121);
             CostumerFuelandPricesDGV.TabIndex = 13;
+            CostumerFuelandPricesDGV.CellContentClick += CostumerFuelandPricesDGV_CellContentClick;
             // 
             // siticoneLabel1
             // 
@@ -364,9 +366,9 @@
             // 
             // FuelCostumeracahoicesPanel
             // 
-            FuelCostumeracahoicesPanel.Controls.Add(radioButton3);
-            FuelCostumeracahoicesPanel.Controls.Add(radioButton2);
-            FuelCostumeracahoicesPanel.Controls.Add(radioButton1);
+            FuelCostumeracahoicesPanel.Controls.Add(RegularRadioBtn);
+            FuelCostumeracahoicesPanel.Controls.Add(PremiumRadioBtn);
+            FuelCostumeracahoicesPanel.Controls.Add(DieselRadioBtn);
             FuelCostumeracahoicesPanel.Location = new Point(36, 325);
             FuelCostumeracahoicesPanel.Margin = new Padding(4);
             FuelCostumeracahoicesPanel.Name = "FuelCostumeracahoicesPanel";
@@ -374,48 +376,50 @@
             FuelCostumeracahoicesPanel.TabIndex = 19;
             FuelCostumeracahoicesPanel.Paint += FuelCostumeracahoicesPanel_Paint;
             // 
-            // radioButton3
+            // RegularRadioBtn
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
-            radioButton3.ForeColor = Color.FromArgb(38, 70, 83);
-            radioButton3.Location = new Point(19, 154);
-            radioButton3.Margin = new Padding(4);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(182, 36);
-            radioButton3.TabIndex = 2;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "REGULAR";
-            radioButton3.UseVisualStyleBackColor = true;
+            RegularRadioBtn.AutoSize = true;
+            RegularRadioBtn.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+            RegularRadioBtn.ForeColor = Color.FromArgb(38, 70, 83);
+            RegularRadioBtn.Location = new Point(19, 154);
+            RegularRadioBtn.Margin = new Padding(4);
+            RegularRadioBtn.Name = "RegularRadioBtn";
+            RegularRadioBtn.Size = new Size(182, 36);
+            RegularRadioBtn.TabIndex = 2;
+            RegularRadioBtn.TabStop = true;
+            RegularRadioBtn.Text = "REGULAR";
+            RegularRadioBtn.UseVisualStyleBackColor = true;
+            RegularRadioBtn.CheckedChanged += RegularRadioBtn_CheckedChanged;
             // 
-            // radioButton2
+            // PremiumRadioBtn
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
-            radioButton2.ForeColor = Color.FromArgb(38, 70, 83);
-            radioButton2.Location = new Point(19, 92);
-            radioButton2.Margin = new Padding(4);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(177, 36);
-            radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "PREMIUM";
-            radioButton2.UseVisualStyleBackColor = true;
+            PremiumRadioBtn.AutoSize = true;
+            PremiumRadioBtn.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+            PremiumRadioBtn.ForeColor = Color.FromArgb(38, 70, 83);
+            PremiumRadioBtn.Location = new Point(19, 92);
+            PremiumRadioBtn.Margin = new Padding(4);
+            PremiumRadioBtn.Name = "PremiumRadioBtn";
+            PremiumRadioBtn.Size = new Size(177, 36);
+            PremiumRadioBtn.TabIndex = 1;
+            PremiumRadioBtn.TabStop = true;
+            PremiumRadioBtn.Text = "PREMIUM";
+            PremiumRadioBtn.UseVisualStyleBackColor = true;
+            PremiumRadioBtn.CheckedChanged += radioButton2_CheckedChanged;
             // 
-            // radioButton1
+            // DieselRadioBtn
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
-            radioButton1.ForeColor = Color.FromArgb(38, 70, 83);
-            radioButton1.Location = new Point(20, 32);
-            radioButton1.Margin = new Padding(4);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(145, 36);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "DIESEL";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            DieselRadioBtn.AutoSize = true;
+            DieselRadioBtn.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold);
+            DieselRadioBtn.ForeColor = Color.FromArgb(38, 70, 83);
+            DieselRadioBtn.Location = new Point(20, 32);
+            DieselRadioBtn.Margin = new Padding(4);
+            DieselRadioBtn.Name = "DieselRadioBtn";
+            DieselRadioBtn.Size = new Size(145, 36);
+            DieselRadioBtn.TabIndex = 0;
+            DieselRadioBtn.TabStop = true;
+            DieselRadioBtn.Text = "DIESEL";
+            DieselRadioBtn.UseVisualStyleBackColor = true;
+            DieselRadioBtn.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // panel
             // 
@@ -426,11 +430,10 @@
             panel.BorderGradientEndColor = Color.Purple;
             panel.BorderGradientStartColor = Color.Blue;
             panel.BorderThickness = 2F;
-            panel.Controls.Add(iconButton2);
-            panel.Controls.Add(LitterBtn);
+            panel.Controls.Add(backspacedeleteBtn);
             panel.Controls.Add(siticoneLabel3);
-            panel.Controls.Add(textBox2);
-            panel.Controls.Add(iconButton1);
+            panel.Controls.Add(LiterTotalPriceTbx);
+            panel.Controls.Add(dotBtn);
             panel.Controls.Add(ZeroBtn);
             panel.Controls.Add(nineBtn);
             panel.Controls.Add(eightBtn);
@@ -441,9 +444,8 @@
             panel.Controls.Add(threeBtn);
             panel.Controls.Add(twoBtn);
             panel.Controls.Add(oneBtn);
-            panel.Controls.Add(textBox1);
+            panel.Controls.Add(LitersTbx);
             panel.Controls.Add(siticoneLabel2);
-            panel.Controls.Add(loginBtn);
             panel.Controls.Add(FuelCostumeracahoicesPanel);
             panel.Controls.Add(siticoneLabel1);
             panel.Controls.Add(CostumerFuelandPricesDGV);
@@ -469,7 +471,7 @@
     0.5F,
     1F
     };
-            panel.Location = new Point(658, 0);
+            panel.Location = new Point(650, 0);
             panel.Margin = new Padding(4);
             panel.Name = "panel";
             panel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
@@ -479,7 +481,7 @@
             panel.RippleMaxSize = 600F;
             panel.RippleSpeed = 15F;
             panel.ShowBorder = true;
-            panel.Size = new Size(714, 804);
+            panel.Size = new Size(722, 804);
             panel.TabIndex = 3;
             panel.TabStop = true;
             panel.UseBorderGradient = false;
@@ -489,32 +491,19 @@
             panel.Paint += panel_Paint;
             panel.MouseDown += panell_MouseDown;
             // 
-            // iconButton2
+            // backspacedeleteBtn
             // 
-            iconButton2.BackColor = Color.FromArgb(244, 241, 222);
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            iconButton2.IconColor = Color.FromArgb(231, 111, 81);
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(565, 638);
-            iconButton2.Margin = new Padding(4);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(75, 68);
-            iconButton2.TabIndex = 41;
-            iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // LitterBtn
-            // 
-            LitterBtn.BackColor = Color.FromArgb(244, 241, 222);
-            LitterBtn.IconChar = FontAwesome.Sharp.IconChar.GasPump;
-            LitterBtn.IconColor = Color.FromArgb(231, 111, 81);
-            LitterBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            LitterBtn.Location = new Point(361, 714);
-            LitterBtn.Margin = new Padding(4);
-            LitterBtn.Name = "LitterBtn";
-            LitterBtn.Size = new Size(240, 68);
-            LitterBtn.TabIndex = 40;
-            LitterBtn.UseVisualStyleBackColor = false;
-            LitterBtn.Click += LitterBtn_Click;
+            backspacedeleteBtn.BackColor = Color.FromArgb(244, 241, 222);
+            backspacedeleteBtn.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
+            backspacedeleteBtn.IconColor = Color.FromArgb(231, 111, 81);
+            backspacedeleteBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            backspacedeleteBtn.Location = new Point(565, 638);
+            backspacedeleteBtn.Margin = new Padding(4);
+            backspacedeleteBtn.Name = "backspacedeleteBtn";
+            backspacedeleteBtn.Size = new Size(75, 68);
+            backspacedeleteBtn.TabIndex = 41;
+            backspacedeleteBtn.UseVisualStyleBackColor = false;
+            backspacedeleteBtn.Click += backspacedeleteBtn_Click;
             // 
             // siticoneLabel3
             // 
@@ -528,31 +517,33 @@
             siticoneLabel3.TabIndex = 39;
             siticoneLabel3.Text = "Litter Total Price";
             // 
-            // textBox2
+            // LiterTotalPriceTbx
             // 
-            textBox2.BackColor = Color.FromArgb(244, 241, 222);
-            textBox2.Location = new Point(405, 135);
-            textBox2.Margin = new Padding(4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(254, 124);
-            textBox2.TabIndex = 38;
+            LiterTotalPriceTbx.BackColor = Color.FromArgb(244, 241, 222);
+            LiterTotalPriceTbx.Location = new Point(405, 135);
+            LiterTotalPriceTbx.Margin = new Padding(4);
+            LiterTotalPriceTbx.Multiline = true;
+            LiterTotalPriceTbx.Name = "LiterTotalPriceTbx";
+            LiterTotalPriceTbx.Size = new Size(254, 124);
+            LiterTotalPriceTbx.TabIndex = 38;
+            LiterTotalPriceTbx.TextChanged += LiterTotalPriceTbx_TextChanged;
             // 
-            // iconButton1
+            // dotBtn
             // 
-            iconButton1.BackColor = Color.FromArgb(244, 241, 222);
-            iconButton1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            iconButton1.ForeColor = Color.FromArgb(38, 70, 83);
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton1.IconColor = Color.FromArgb(38, 70, 83);
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(315, 488);
-            iconButton1.Margin = new Padding(4);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(75, 68);
-            iconButton1.TabIndex = 37;
-            iconButton1.Text = ".";
-            iconButton1.UseVisualStyleBackColor = false;
+            dotBtn.BackColor = Color.FromArgb(244, 241, 222);
+            dotBtn.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dotBtn.ForeColor = Color.FromArgb(38, 70, 83);
+            dotBtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            dotBtn.IconColor = Color.FromArgb(38, 70, 83);
+            dotBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            dotBtn.Location = new Point(315, 488);
+            dotBtn.Margin = new Padding(4);
+            dotBtn.Name = "dotBtn";
+            dotBtn.Size = new Size(75, 68);
+            dotBtn.TabIndex = 37;
+            dotBtn.Text = ".";
+            dotBtn.UseVisualStyleBackColor = false;
+            dotBtn.Click += dotBtn_Click;
             // 
             // ZeroBtn
             // 
@@ -569,6 +560,7 @@
             ZeroBtn.Size = new Size(75, 68);
             ZeroBtn.TabIndex = 36;
             ZeroBtn.UseVisualStyleBackColor = false;
+            ZeroBtn.Click += ZeroBtn_Click;
             // 
             // nineBtn
             // 
@@ -585,6 +577,7 @@
             nineBtn.Size = new Size(75, 68);
             nineBtn.TabIndex = 35;
             nineBtn.UseVisualStyleBackColor = false;
+            nineBtn.Click += nineBtn_Click;
             // 
             // eightBtn
             // 
@@ -601,6 +594,7 @@
             eightBtn.Size = new Size(75, 68);
             eightBtn.TabIndex = 34;
             eightBtn.UseVisualStyleBackColor = false;
+            eightBtn.Click += eightBtn_Click;
             // 
             // sevenBtn
             // 
@@ -617,6 +611,7 @@
             sevenBtn.Size = new Size(75, 68);
             sevenBtn.TabIndex = 33;
             sevenBtn.UseVisualStyleBackColor = false;
+            sevenBtn.Click += sevenBtn_Click;
             // 
             // sixBtn
             // 
@@ -633,6 +628,7 @@
             sixBtn.Size = new Size(75, 68);
             sixBtn.TabIndex = 32;
             sixBtn.UseVisualStyleBackColor = false;
+            sixBtn.Click += sixBtn_Click;
             // 
             // fiveBtn
             // 
@@ -649,6 +645,7 @@
             fiveBtn.Size = new Size(75, 68);
             fiveBtn.TabIndex = 31;
             fiveBtn.UseVisualStyleBackColor = false;
+            fiveBtn.Click += fiveBtn_Click;
             // 
             // fourBtn
             // 
@@ -665,6 +662,7 @@
             fourBtn.Size = new Size(75, 68);
             fourBtn.TabIndex = 30;
             fourBtn.UseVisualStyleBackColor = false;
+            fourBtn.Click += fourBtn_Click;
             // 
             // threeBtn
             // 
@@ -681,6 +679,7 @@
             threeBtn.Size = new Size(75, 68);
             threeBtn.TabIndex = 29;
             threeBtn.UseVisualStyleBackColor = false;
+            threeBtn.Click += threeBtn_Click;
             // 
             // twoBtn
             // 
@@ -697,6 +696,7 @@
             twoBtn.Size = new Size(75, 68);
             twoBtn.TabIndex = 28;
             twoBtn.UseVisualStyleBackColor = false;
+            twoBtn.Click += twoBtn_Click;
             // 
             // oneBtn
             // 
@@ -713,16 +713,18 @@
             oneBtn.Size = new Size(75, 68);
             oneBtn.TabIndex = 27;
             oneBtn.UseVisualStyleBackColor = false;
+            oneBtn.Click += oneBtn_Click;
             // 
-            // textBox1
+            // LitersTbx
             // 
-            textBox1.BackColor = Color.FromArgb(244, 241, 222);
-            textBox1.Location = new Point(300, 346);
-            textBox1.Margin = new Padding(4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(359, 118);
-            textBox1.TabIndex = 25;
+            LitersTbx.BackColor = Color.FromArgb(244, 241, 222);
+            LitersTbx.Location = new Point(300, 346);
+            LitersTbx.Margin = new Padding(4);
+            LitersTbx.Multiline = true;
+            LitersTbx.Name = "LitersTbx";
+            LitersTbx.Size = new Size(359, 118);
+            LitersTbx.TabIndex = 25;
+            LitersTbx.TextChanged += LitersTbx_TextChanged;
             // 
             // siticoneLabel2
             // 
@@ -736,83 +738,6 @@
             siticoneLabel2.TabIndex = 23;
             siticoneLabel2.Text = "LITTERS";
             // 
-            // loginBtn
-            // 
-            loginBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
-            loginBtn.AccessibleName = "SELECT";
-            loginBtn.AutoSizeBasedOnText = false;
-            loginBtn.BackColor = Color.Transparent;
-            loginBtn.BadgeBackColor = Color.Red;
-            loginBtn.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
-            loginBtn.BadgeValue = 0;
-            loginBtn.BadgeValueForeColor = Color.Transparent;
-            loginBtn.BorderColor = Color.FromArgb(231, 111, 81);
-            loginBtn.BorderWidth = 2;
-            loginBtn.ButtonBackColor = Color.FromArgb(244, 241, 222);
-            loginBtn.ButtonImage = null;
-            loginBtn.CanBeep = true;
-            loginBtn.CanGlow = true;
-            loginBtn.CanShake = true;
-            loginBtn.ContextMenuStripEx = null;
-            loginBtn.CornerRadiusBottomLeft = 10;
-            loginBtn.CornerRadiusBottomRight = 10;
-            loginBtn.CornerRadiusTopLeft = 10;
-            loginBtn.CornerRadiusTopRight = 10;
-            loginBtn.CustomCursor = Cursors.Default;
-            loginBtn.DisabledTextColor = Color.FromArgb(231, 111, 81);
-            loginBtn.EnableLongPress = false;
-            loginBtn.EnablePressAnimation = true;
-            loginBtn.EnableRippleEffect = true;
-            loginBtn.EnableShadow = false;
-            loginBtn.EnableTextWrapping = false;
-            loginBtn.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            loginBtn.GlowColor = Color.FromArgb(100, 255, 255, 255);
-            loginBtn.GlowIntensity = 100;
-            loginBtn.GlowRadius = 20F;
-            loginBtn.GradientBackground = false;
-            loginBtn.GradientColor = Color.Transparent;
-            loginBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            loginBtn.HintText = null;
-            loginBtn.HoverBackColor = Color.Transparent;
-            loginBtn.HoverFontStyle = FontStyle.Regular;
-            loginBtn.HoverTextColor = Color.FromArgb(231, 111, 81);
-            loginBtn.HoverTransitionDuration = 250;
-            loginBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            loginBtn.ImagePadding = 5;
-            loginBtn.ImageSize = new Size(16, 16);
-            loginBtn.IsRadial = false;
-            loginBtn.IsReadOnly = false;
-            loginBtn.IsToggleButton = false;
-            loginBtn.IsToggled = false;
-            loginBtn.Location = new Point(56, 575);
-            loginBtn.LongPressDurationMS = 1000;
-            loginBtn.Margin = new Padding(4);
-            loginBtn.Name = "loginBtn";
-            loginBtn.NormalFontStyle = FontStyle.Regular;
-            loginBtn.ParticleColor = Color.Transparent;
-            loginBtn.ParticleCount = 15;
-            loginBtn.PressAnimationScale = 0.97F;
-            loginBtn.PressedBackColor = Color.Transparent;
-            loginBtn.PressedFontStyle = FontStyle.Regular;
-            loginBtn.PressTransitionDuration = 150;
-            loginBtn.ReadOnlyTextColor = Color.WhiteSmoke;
-            loginBtn.RippleColor = Color.FromArgb(231, 111, 81);
-            loginBtn.RippleOpacity = 0.3F;
-            loginBtn.RippleRadiusMultiplier = 0.6F;
-            loginBtn.ShadowBlur = 5;
-            loginBtn.ShadowColor = Color.FromArgb(100, 0, 0, 0);
-            loginBtn.ShadowOffset = new Point(2, 2);
-            loginBtn.ShakeDuration = 500;
-            loginBtn.ShakeIntensity = 5;
-            loginBtn.Size = new Size(162, 41);
-            loginBtn.TabIndex = 20;
-            loginBtn.Text = "SELECT";
-            loginBtn.TextAlign = ContentAlignment.MiddleCenter;
-            loginBtn.TextColor = Color.FromArgb(231, 111, 81);
-            loginBtn.TooltipText = null;
-            loginBtn.UseAdvancedRendering = true;
-            loginBtn.UseParticles = false;
-            // 
             // CostumerMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -823,7 +748,9 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "CostumerMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CostumerMenu";
+            Load += CostumerMenu_Load;
             siticonePanel1.ResumeLayout(false);
             siticonePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CostumerFuelandPricesDGV).EndInit();
@@ -848,30 +775,28 @@
         private NumericUpDown numericUpDown1;
         private Panel FuelCostumeracahoicesPanel;
         private SiticoneNetCoreUI.SiticonePanel panel;
-        private RadioButton radioButton1;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private SiticoneNetCoreUI.SiticoneButton loginBtn;
+        private RadioButton DieselRadioBtn;
+        private RadioButton RegularRadioBtn;
+        private RadioButton PremiumRadioBtn;
         private SiticoneNetCoreUI.SiticoneTextBox siticoneTextBox1;
         private SiticoneNetCoreUI.SiticoneLabel siticoneLabel2;
         private Label label2;
         private Label label1;
-        private SiticoneNetCoreUI.SiticoneButton siticoneButton1;
         private FontAwesome.Sharp.IconButton fiveBtn;
         private FontAwesome.Sharp.IconButton fourBtn;
         private FontAwesome.Sharp.IconButton threeBtn;
         private FontAwesome.Sharp.IconButton twoBtn;
         private FontAwesome.Sharp.IconButton oneBtn;
-        private TextBox textBox1;
+        private TextBox LitersTbx;
         private FontAwesome.Sharp.IconButton ZeroBtn;
         private FontAwesome.Sharp.IconButton nineBtn;
         private FontAwesome.Sharp.IconButton eightBtn;
         private FontAwesome.Sharp.IconButton sevenBtn;
         private FontAwesome.Sharp.IconButton sixBtn;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton dotBtn;
         private SiticoneNetCoreUI.SiticoneLabel siticoneLabel3;
-        private TextBox textBox2;
-        private FontAwesome.Sharp.IconButton LitterBtn;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private TextBox LiterTotalPriceTbx;
+        private FontAwesome.Sharp.IconButton backspacedeleteBtn;
+        private SiticoneNetCoreUI.SiticoneButton OrderBtn;
     }
 }

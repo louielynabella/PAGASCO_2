@@ -13,12 +13,9 @@ namespace PAGASCO
             InitializeComponent();
         }
 
-        private void managaerBtn_Click(object sender, EventArgs e)
-        {
-            ManagerLogin managerLogin = new ManagerLogin();
-            managerLogin.Show();
-            this.Hide();
-        }
+
+
+
 
         private void siticonePanel2_Paint(object sender, PaintEventArgs e)
         {
@@ -31,11 +28,7 @@ namespace PAGASCO
             Application.Exit();
         }
 
-        private void cnnctBtn_Click(object sender, EventArgs e)
-        {
-            Database database = new Database();
-            database.testconnection();
-        }
+       
 
         private void CostumerBtn_Click(object sender, EventArgs e)
         {
@@ -69,6 +62,18 @@ namespace PAGASCO
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void CompanyRoleBtn_Click(object sender, EventArgs e)
+        {
+            CompanyRole companyrole = new CompanyRole();
+            companyrole.Show();
+            this.Hide();
+        }
+
+        private void siticonePanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

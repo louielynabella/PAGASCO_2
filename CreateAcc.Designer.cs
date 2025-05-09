@@ -7,6 +7,7 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -26,6 +27,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+
         private void InitializeComponent()
         {
             siticonePanel1 = new SiticoneNetCoreUI.SiticonePanel();
@@ -43,6 +46,26 @@
             siticoneLabel1 = new SiticoneNetCoreUI.SiticoneLabel();
             PagascoLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             siticonePanel2 = new SiticoneNetCoreUI.SiticonePanel();
+            ManagerDetailsPanel = new SiticoneNetCoreUI.SiticonePanel();
+            DateOfBirth = new DateTimePicker();
+            ManagerSchoolNameTbx = new SiticoneNetCoreUI.SiticoneTextBox();
+            siticoneLabel8 = new SiticoneNetCoreUI.SiticoneLabel();
+            ManagerDegreeTbx = new SiticoneNetCoreUI.SiticoneTextBox();
+            siticoneLabel7 = new SiticoneNetCoreUI.SiticoneLabel();
+            siticoneLabel6 = new SiticoneNetCoreUI.SiticoneLabel();
+            EducationBackgroundCombobox = new ComboBox();
+            siticoneLabel5 = new SiticoneNetCoreUI.SiticoneLabel();
+            NationalityTbx = new SiticoneNetCoreUI.SiticoneTextBox();
+            NationalityName = new SiticoneNetCoreUI.SiticoneLabel();
+            AdressTbx = new SiticoneNetCoreUI.SiticoneTextBox();
+            siticoneLabel4 = new SiticoneNetCoreUI.SiticoneLabel();
+            ContactNumberTbx = new SiticoneNetCoreUI.SiticoneTextBox();
+            siticoneLabel2 = new SiticoneNetCoreUI.SiticoneLabel();
+            siticoneGroupBox1 = new SiticoneNetCoreUI.SiticoneGroupBox();
+            OthersRbtn = new SiticoneNetCoreUI.SiticoneRadioButton();
+            MaleRbtn = new SiticoneNetCoreUI.SiticoneRadioButton();
+            FemaleRbtn = new SiticoneNetCoreUI.SiticoneRadioButton();
+            ManagerLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             CreateExtBtn = new FontAwesome.Sharp.IconButton();
             siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).BeginInit();
@@ -50,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             siticonePanel2.SuspendLayout();
+            ManagerDetailsPanel.SuspendLayout();
+            siticoneGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // siticonePanel1
@@ -504,7 +529,7 @@
             siticoneLabel3.Name = "siticoneLabel3";
             siticoneLabel3.Size = new Size(414, 36);
             siticoneLabel3.TabIndex = 4;
-            siticoneLabel3.Text = "Pagasco_Surname";
+            siticoneLabel3.Text = "PAGASCO_Surname";
             // 
             // siticoneLabel1
             // 
@@ -549,6 +574,8 @@
             siticonePanel2.BorderGradientEndColor = Color.Purple;
             siticonePanel2.BorderGradientStartColor = Color.Blue;
             siticonePanel2.BorderThickness = 2F;
+            siticonePanel2.Controls.Add(ManagerDetailsPanel);
+            siticonePanel2.Controls.Add(ManagerLabel);
             siticonePanel2.Controls.Add(CreateExtBtn);
             siticonePanel2.CornerRadiusBottomLeft = 0F;
             siticonePanel2.CornerRadiusBottomRight = 0F;
@@ -571,7 +598,7 @@
     0.5F,
     1F
     };
-            siticonePanel2.Location = new Point(658, 0);
+            siticonePanel2.Location = new Point(660, 0);
             siticonePanel2.Margin = new Padding(4);
             siticonePanel2.Name = "siticonePanel2";
             siticonePanel2.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
@@ -581,7 +608,7 @@
             siticonePanel2.RippleMaxSize = 600F;
             siticonePanel2.RippleSpeed = 15F;
             siticonePanel2.ShowBorder = true;
-            siticonePanel2.Size = new Size(714, 804);
+            siticonePanel2.Size = new Size(712, 804);
             siticonePanel2.TabIndex = 3;
             siticonePanel2.TabStop = true;
             siticonePanel2.UseBorderGradient = false;
@@ -589,6 +616,654 @@
             siticonePanel2.UsePatternTexture = false;
             siticonePanel2.UseRadialGradient = false;
             siticonePanel2.MouseDown += panel_MouseDown;
+            // 
+            // ManagerDetailsPanel
+            // 
+            ManagerDetailsPanel.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
+            ManagerDetailsPanel.BackColor = Color.Transparent;
+            ManagerDetailsPanel.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            ManagerDetailsPanel.BorderDashPattern = null;
+            ManagerDetailsPanel.BorderGradientEndColor = Color.Purple;
+            ManagerDetailsPanel.BorderGradientStartColor = Color.Blue;
+            ManagerDetailsPanel.BorderThickness = 2F;
+            ManagerDetailsPanel.Controls.Add(DateOfBirth);
+            ManagerDetailsPanel.Controls.Add(ManagerSchoolNameTbx);
+            ManagerDetailsPanel.Controls.Add(siticoneLabel8);
+            ManagerDetailsPanel.Controls.Add(ManagerDegreeTbx);
+            ManagerDetailsPanel.Controls.Add(siticoneLabel7);
+            ManagerDetailsPanel.Controls.Add(siticoneLabel6);
+            ManagerDetailsPanel.Controls.Add(EducationBackgroundCombobox);
+            ManagerDetailsPanel.Controls.Add(siticoneLabel5);
+            ManagerDetailsPanel.Controls.Add(NationalityTbx);
+            ManagerDetailsPanel.Controls.Add(NationalityName);
+            ManagerDetailsPanel.Controls.Add(AdressTbx);
+            ManagerDetailsPanel.Controls.Add(siticoneLabel4);
+            ManagerDetailsPanel.Controls.Add(ContactNumberTbx);
+            ManagerDetailsPanel.Controls.Add(siticoneLabel2);
+            ManagerDetailsPanel.Controls.Add(siticoneGroupBox1);
+            ManagerDetailsPanel.CornerRadiusBottomLeft = 10F;
+            ManagerDetailsPanel.CornerRadiusBottomRight = 10F;
+            ManagerDetailsPanel.CornerRadiusTopLeft = 10F;
+            ManagerDetailsPanel.CornerRadiusTopRight = 10F;
+            ManagerDetailsPanel.EnableAcrylicEffect = false;
+            ManagerDetailsPanel.EnableMicaEffect = false;
+            ManagerDetailsPanel.EnableRippleEffect = false;
+            ManagerDetailsPanel.FillColor = Color.White;
+            ManagerDetailsPanel.GradientColors = new Color[]
+    {
+    Color.FromArgb(231, 111, 81),
+    Color.FromArgb(244, 241, 222),
+    Color.FromArgb(231, 111, 81)
+    };
+            ManagerDetailsPanel.GradientPositions = new float[]
+    {
+    0F,
+    0.5F,
+    1F
+    };
+            ManagerDetailsPanel.Location = new Point(22, 82);
+            ManagerDetailsPanel.Name = "ManagerDetailsPanel";
+            ManagerDetailsPanel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
+            ManagerDetailsPanel.RippleAlpha = 50;
+            ManagerDetailsPanel.RippleAlphaDecrement = 3;
+            ManagerDetailsPanel.RippleColor = Color.FromArgb(50, 255, 255, 255);
+            ManagerDetailsPanel.RippleMaxSize = 600F;
+            ManagerDetailsPanel.RippleSpeed = 15F;
+            ManagerDetailsPanel.ShowBorder = true;
+            ManagerDetailsPanel.Size = new Size(673, 705);
+            ManagerDetailsPanel.TabIndex = 14;
+            ManagerDetailsPanel.TabStop = true;
+            ManagerDetailsPanel.UseBorderGradient = false;
+            ManagerDetailsPanel.UseMultiGradient = true;
+            ManagerDetailsPanel.UsePatternTexture = false;
+            ManagerDetailsPanel.UseRadialGradient = false;
+            // 
+            // DateOfBirth
+            // 
+            DateOfBirth.CalendarMonthBackground = Color.FromArgb(244, 241, 222);
+            DateOfBirth.CalendarTitleBackColor = Color.FromArgb(38, 70, 83);
+            DateOfBirth.Font = new Font("MS Reference Sans Serif", 10.2F);
+            DateOfBirth.Location = new Point(38, 38);
+            DateOfBirth.Name = "DateOfBirth";
+            DateOfBirth.Size = new Size(389, 32);
+            DateOfBirth.TabIndex = 30;
+            DateOfBirth.ValueChanged += DateOfBirth_ValueChanged;
+            // 
+            // ManagerSchoolNameTbx
+            // 
+            ManagerSchoolNameTbx.AccessibleDescription = "A customizable text input field.";
+            ManagerSchoolNameTbx.AccessibleName = "Text Box";
+            ManagerSchoolNameTbx.AccessibleRole = AccessibleRole.Text;
+            ManagerSchoolNameTbx.BackColor = Color.Transparent;
+            ManagerSchoolNameTbx.BlinkCount = 3;
+            ManagerSchoolNameTbx.BlinkShadow = false;
+            ManagerSchoolNameTbx.BorderColor1 = Color.LightSlateGray;
+            ManagerSchoolNameTbx.BorderColor2 = Color.LightSlateGray;
+            ManagerSchoolNameTbx.BorderFocusColor1 = Color.FromArgb(77, 77, 255);
+            ManagerSchoolNameTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
+            ManagerSchoolNameTbx.CanShake = true;
+            ManagerSchoolNameTbx.ContinuousBlink = false;
+            ManagerSchoolNameTbx.CursorBlinkRate = 500;
+            ManagerSchoolNameTbx.CursorColor = Color.Black;
+            ManagerSchoolNameTbx.CursorHeight = 26;
+            ManagerSchoolNameTbx.CursorOffset = 0;
+            ManagerSchoolNameTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
+            ManagerSchoolNameTbx.CursorWidth = 1;
+            ManagerSchoolNameTbx.DisabledBackColor = Color.WhiteSmoke;
+            ManagerSchoolNameTbx.DisabledBorderColor = Color.LightGray;
+            ManagerSchoolNameTbx.DisabledTextColor = Color.Gray;
+            ManagerSchoolNameTbx.EnableDropShadow = false;
+            ManagerSchoolNameTbx.FillColor1 = Color.White;
+            ManagerSchoolNameTbx.FillColor2 = Color.White;
+            ManagerSchoolNameTbx.Font = new Font("MS Reference Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManagerSchoolNameTbx.ForeColor = Color.DimGray;
+            ManagerSchoolNameTbx.HoverBorderColor1 = Color.Gray;
+            ManagerSchoolNameTbx.HoverBorderColor2 = Color.Gray;
+            ManagerSchoolNameTbx.IsEnabled = true;
+            ManagerSchoolNameTbx.Location = new Point(356, 406);
+            ManagerSchoolNameTbx.Name = "ManagerSchoolNameTbx";
+            ManagerSchoolNameTbx.PlaceholderColor = Color.Gray;
+            ManagerSchoolNameTbx.PlaceholderText = "Enter text here...";
+            ManagerSchoolNameTbx.ReadOnlyBorderColor1 = Color.LightGray;
+            ManagerSchoolNameTbx.ReadOnlyBorderColor2 = Color.LightGray;
+            ManagerSchoolNameTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
+            ManagerSchoolNameTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
+            ManagerSchoolNameTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
+            ManagerSchoolNameTbx.SelectionBackColor = Color.FromArgb(77, 77, 255);
+            ManagerSchoolNameTbx.ShadowAnimationDuration = 1;
+            ManagerSchoolNameTbx.ShadowBlur = 10;
+            ManagerSchoolNameTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
+            ManagerSchoolNameTbx.Size = new Size(273, 105);
+            ManagerSchoolNameTbx.SolidBorderColor = Color.LightSlateGray;
+            ManagerSchoolNameTbx.SolidBorderFocusColor = Color.FromArgb(77, 77, 255);
+            ManagerSchoolNameTbx.SolidBorderHoverColor = Color.Gray;
+            ManagerSchoolNameTbx.SolidFillColor = Color.FromArgb(244, 241, 222);
+            ManagerSchoolNameTbx.TabIndex = 29;
+            ManagerSchoolNameTbx.TextPadding = new Padding(16, 0, 6, 0);
+            ManagerSchoolNameTbx.ValidationErrorMessage = "Invalid input.";
+            ManagerSchoolNameTbx.ValidationFunction = null;
+            ManagerSchoolNameTbx.Click += ManagerSchoolNameTbx_Click;
+            // 
+            // siticoneLabel8
+            // 
+            siticoneLabel8.BackColor = Color.Transparent;
+            siticoneLabel8.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel8.ForeColor = Color.FromArgb(38, 70, 83);
+            siticoneLabel8.Location = new Point(354, 360);
+            siticoneLabel8.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel8.Name = "siticoneLabel8";
+            siticoneLabel8.Size = new Size(237, 31);
+            siticoneLabel8.TabIndex = 28;
+            siticoneLabel8.Text = "Institution/University";
+            // 
+            // ManagerDegreeTbx
+            // 
+            ManagerDegreeTbx.AccessibleDescription = "A customizable text input field.";
+            ManagerDegreeTbx.AccessibleName = "Text Box";
+            ManagerDegreeTbx.AccessibleRole = AccessibleRole.Text;
+            ManagerDegreeTbx.BackColor = Color.Transparent;
+            ManagerDegreeTbx.BlinkCount = 3;
+            ManagerDegreeTbx.BlinkShadow = false;
+            ManagerDegreeTbx.BorderColor1 = Color.LightSlateGray;
+            ManagerDegreeTbx.BorderColor2 = Color.LightSlateGray;
+            ManagerDegreeTbx.BorderFocusColor1 = Color.FromArgb(77, 77, 255);
+            ManagerDegreeTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
+            ManagerDegreeTbx.CanShake = true;
+            ManagerDegreeTbx.ContinuousBlink = false;
+            ManagerDegreeTbx.CursorBlinkRate = 500;
+            ManagerDegreeTbx.CursorColor = Color.Black;
+            ManagerDegreeTbx.CursorHeight = 26;
+            ManagerDegreeTbx.CursorOffset = 0;
+            ManagerDegreeTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
+            ManagerDegreeTbx.CursorWidth = 1;
+            ManagerDegreeTbx.DisabledBackColor = Color.WhiteSmoke;
+            ManagerDegreeTbx.DisabledBorderColor = Color.LightGray;
+            ManagerDegreeTbx.DisabledTextColor = Color.Gray;
+            ManagerDegreeTbx.EnableDropShadow = false;
+            ManagerDegreeTbx.FillColor1 = Color.White;
+            ManagerDegreeTbx.FillColor2 = Color.White;
+            ManagerDegreeTbx.Font = new Font("MS Reference Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManagerDegreeTbx.ForeColor = Color.DimGray;
+            ManagerDegreeTbx.HoverBorderColor1 = Color.Gray;
+            ManagerDegreeTbx.HoverBorderColor2 = Color.Gray;
+            ManagerDegreeTbx.IsEnabled = true;
+            ManagerDegreeTbx.Location = new Point(356, 293);
+            ManagerDegreeTbx.Name = "ManagerDegreeTbx";
+            ManagerDegreeTbx.PlaceholderColor = Color.Gray;
+            ManagerDegreeTbx.PlaceholderText = "Enter text here...";
+            ManagerDegreeTbx.ReadOnlyBorderColor1 = Color.LightGray;
+            ManagerDegreeTbx.ReadOnlyBorderColor2 = Color.LightGray;
+            ManagerDegreeTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
+            ManagerDegreeTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
+            ManagerDegreeTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
+            ManagerDegreeTbx.SelectionBackColor = Color.FromArgb(77, 77, 255);
+            ManagerDegreeTbx.ShadowAnimationDuration = 1;
+            ManagerDegreeTbx.ShadowBlur = 10;
+            ManagerDegreeTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
+            ManagerDegreeTbx.Size = new Size(273, 43);
+            ManagerDegreeTbx.SolidBorderColor = Color.LightSlateGray;
+            ManagerDegreeTbx.SolidBorderFocusColor = Color.FromArgb(77, 77, 255);
+            ManagerDegreeTbx.SolidBorderHoverColor = Color.Gray;
+            ManagerDegreeTbx.SolidFillColor = Color.FromArgb(244, 241, 222);
+            ManagerDegreeTbx.TabIndex = 27;
+            ManagerDegreeTbx.TextPadding = new Padding(16, 0, 6, 0);
+            ManagerDegreeTbx.ValidationErrorMessage = "Invalid input.";
+            ManagerDegreeTbx.ValidationFunction = null;
+            ManagerDegreeTbx.Click += ManagerDegreeTbx_Click;
+            // 
+            // siticoneLabel7
+            // 
+            siticoneLabel7.BackColor = Color.Transparent;
+            siticoneLabel7.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel7.ForeColor = Color.FromArgb(38, 70, 83);
+            siticoneLabel7.Location = new Point(353, 255);
+            siticoneLabel7.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel7.Name = "siticoneLabel7";
+            siticoneLabel7.Size = new Size(155, 31);
+            siticoneLabel7.TabIndex = 26;
+            siticoneLabel7.Text = "(N/A if none)";
+            // 
+            // siticoneLabel6
+            // 
+            siticoneLabel6.BackColor = Color.Transparent;
+            siticoneLabel6.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel6.ForeColor = Color.FromArgb(38, 70, 83);
+            siticoneLabel6.Location = new Point(354, 224);
+            siticoneLabel6.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel6.Name = "siticoneLabel6";
+            siticoneLabel6.Size = new Size(200, 31);
+            siticoneLabel6.TabIndex = 25;
+            siticoneLabel6.Text = "Degree:";
+            // 
+            // EducationBackgroundCombobox
+            // 
+            EducationBackgroundCombobox.BackColor = Color.FromArgb(244, 241, 222);
+            EducationBackgroundCombobox.FormattingEnabled = true;
+            EducationBackgroundCombobox.Items.AddRange(new object[] { "Elementary Graduate", "High School Graduate", "Senior High School Graduate", "College Degree Holder", "TESDA Certificate Holder" });
+            EducationBackgroundCombobox.Location = new Point(354, 169);
+            EducationBackgroundCombobox.Name = "EducationBackgroundCombobox";
+            EducationBackgroundCombobox.Size = new Size(261, 33);
+            EducationBackgroundCombobox.TabIndex = 24;
+            EducationBackgroundCombobox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // siticoneLabel5
+            // 
+            siticoneLabel5.BackColor = Color.Transparent;
+            siticoneLabel5.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel5.ForeColor = Color.FromArgb(38, 70, 83);
+            siticoneLabel5.Location = new Point(353, 115);
+            siticoneLabel5.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel5.Name = "siticoneLabel5";
+            siticoneLabel5.Size = new Size(262, 31);
+            siticoneLabel5.TabIndex = 23;
+            siticoneLabel5.Text = "Education Background";
+            siticoneLabel5.Click += siticoneLabel5_Click;
+            // 
+            // NationalityTbx
+            // 
+            NationalityTbx.AccessibleDescription = "A customizable text input field.";
+            NationalityTbx.AccessibleName = "Text Box";
+            NationalityTbx.AccessibleRole = AccessibleRole.Text;
+            NationalityTbx.BackColor = Color.Transparent;
+            NationalityTbx.BlinkCount = 3;
+            NationalityTbx.BlinkShadow = false;
+            NationalityTbx.BorderColor1 = Color.LightSlateGray;
+            NationalityTbx.BorderColor2 = Color.LightSlateGray;
+            NationalityTbx.BorderFocusColor1 = Color.FromArgb(77, 77, 255);
+            NationalityTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
+            NationalityTbx.CanShake = true;
+            NationalityTbx.ContinuousBlink = false;
+            NationalityTbx.CursorBlinkRate = 500;
+            NationalityTbx.CursorColor = Color.Black;
+            NationalityTbx.CursorHeight = 26;
+            NationalityTbx.CursorOffset = 0;
+            NationalityTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
+            NationalityTbx.CursorWidth = 1;
+            NationalityTbx.DisabledBackColor = Color.WhiteSmoke;
+            NationalityTbx.DisabledBorderColor = Color.LightGray;
+            NationalityTbx.DisabledTextColor = Color.Gray;
+            NationalityTbx.EnableDropShadow = false;
+            NationalityTbx.FillColor1 = Color.White;
+            NationalityTbx.FillColor2 = Color.White;
+            NationalityTbx.Font = new Font("MS Reference Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NationalityTbx.ForeColor = Color.DimGray;
+            NationalityTbx.HoverBorderColor1 = Color.Gray;
+            NationalityTbx.HoverBorderColor2 = Color.Gray;
+            NationalityTbx.IsEnabled = true;
+            NationalityTbx.Location = new Point(39, 498);
+            NationalityTbx.Name = "NationalityTbx";
+            NationalityTbx.PlaceholderColor = Color.Gray;
+            NationalityTbx.PlaceholderText = "Enter text here...";
+            NationalityTbx.ReadOnlyBorderColor1 = Color.LightGray;
+            NationalityTbx.ReadOnlyBorderColor2 = Color.LightGray;
+            NationalityTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
+            NationalityTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
+            NationalityTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
+            NationalityTbx.SelectionBackColor = Color.FromArgb(77, 77, 255);
+            NationalityTbx.ShadowAnimationDuration = 1;
+            NationalityTbx.ShadowBlur = 10;
+            NationalityTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
+            NationalityTbx.Size = new Size(201, 43);
+            NationalityTbx.SolidBorderColor = Color.LightSlateGray;
+            NationalityTbx.SolidBorderFocusColor = Color.FromArgb(77, 77, 255);
+            NationalityTbx.SolidBorderHoverColor = Color.Gray;
+            NationalityTbx.SolidFillColor = Color.FromArgb(244, 241, 222);
+            NationalityTbx.TabIndex = 22;
+            NationalityTbx.TextPadding = new Padding(16, 0, 6, 0);
+            NationalityTbx.ValidationErrorMessage = "Invalid input.";
+            NationalityTbx.ValidationFunction = null;
+            NationalityTbx.Click += NationalityTbx_Click;
+            // 
+            // NationalityName
+            // 
+            NationalityName.BackColor = Color.Transparent;
+            NationalityName.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NationalityName.ForeColor = Color.FromArgb(38, 70, 83);
+            NationalityName.Location = new Point(39, 464);
+            NationalityName.Margin = new Padding(4, 0, 4, 0);
+            NationalityName.Name = "NationalityName";
+            NationalityName.Size = new Size(137, 31);
+            NationalityName.TabIndex = 21;
+            NationalityName.Text = "Nationality:";
+            // 
+            // AdressTbx
+            // 
+            AdressTbx.AccessibleDescription = "A customizable text input field.";
+            AdressTbx.AccessibleName = "Text Box";
+            AdressTbx.AccessibleRole = AccessibleRole.Text;
+            AdressTbx.BackColor = Color.Transparent;
+            AdressTbx.BlinkCount = 3;
+            AdressTbx.BlinkShadow = false;
+            AdressTbx.BorderColor1 = Color.LightSlateGray;
+            AdressTbx.BorderColor2 = Color.LightSlateGray;
+            AdressTbx.BorderFocusColor1 = Color.FromArgb(77, 77, 255);
+            AdressTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
+            AdressTbx.CanShake = true;
+            AdressTbx.ContinuousBlink = false;
+            AdressTbx.CursorBlinkRate = 500;
+            AdressTbx.CursorColor = Color.Black;
+            AdressTbx.CursorHeight = 26;
+            AdressTbx.CursorOffset = 0;
+            AdressTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
+            AdressTbx.CursorWidth = 1;
+            AdressTbx.DisabledBackColor = Color.WhiteSmoke;
+            AdressTbx.DisabledBorderColor = Color.LightGray;
+            AdressTbx.DisabledTextColor = Color.Gray;
+            AdressTbx.EnableDropShadow = false;
+            AdressTbx.FillColor1 = Color.White;
+            AdressTbx.FillColor2 = Color.White;
+            AdressTbx.Font = new Font("MS Reference Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AdressTbx.ForeColor = Color.DimGray;
+            AdressTbx.HoverBorderColor1 = Color.Gray;
+            AdressTbx.HoverBorderColor2 = Color.Gray;
+            AdressTbx.IsEnabled = true;
+            AdressTbx.Location = new Point(39, 406);
+            AdressTbx.Name = "AdressTbx";
+            AdressTbx.PlaceholderColor = Color.Gray;
+            AdressTbx.PlaceholderText = "Enter text here...";
+            AdressTbx.ReadOnlyBorderColor1 = Color.LightGray;
+            AdressTbx.ReadOnlyBorderColor2 = Color.LightGray;
+            AdressTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
+            AdressTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
+            AdressTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
+            AdressTbx.SelectionBackColor = Color.FromArgb(77, 77, 255);
+            AdressTbx.ShadowAnimationDuration = 1;
+            AdressTbx.ShadowBlur = 10;
+            AdressTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
+            AdressTbx.Size = new Size(201, 43);
+            AdressTbx.SolidBorderColor = Color.LightSlateGray;
+            AdressTbx.SolidBorderFocusColor = Color.FromArgb(77, 77, 255);
+            AdressTbx.SolidBorderHoverColor = Color.Gray;
+            AdressTbx.SolidFillColor = Color.FromArgb(244, 241, 222);
+            AdressTbx.TabIndex = 20;
+            AdressTbx.TextPadding = new Padding(16, 0, 6, 0);
+            AdressTbx.ValidationErrorMessage = "Invalid input.";
+            AdressTbx.ValidationFunction = null;
+            AdressTbx.Click += AdressTbx_Click;
+            // 
+            // siticoneLabel4
+            // 
+            siticoneLabel4.BackColor = Color.Transparent;
+            siticoneLabel4.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel4.ForeColor = Color.FromArgb(38, 70, 83);
+            siticoneLabel4.Location = new Point(38, 376);
+            siticoneLabel4.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel4.Name = "siticoneLabel4";
+            siticoneLabel4.Size = new Size(106, 31);
+            siticoneLabel4.TabIndex = 19;
+            siticoneLabel4.Text = "Address: ";
+            // 
+            // ContactNumberTbx
+            // 
+            ContactNumberTbx.AccessibleDescription = "A customizable text input field.";
+            ContactNumberTbx.AccessibleName = "Text Box";
+            ContactNumberTbx.AccessibleRole = AccessibleRole.Text;
+            ContactNumberTbx.BackColor = Color.Transparent;
+            ContactNumberTbx.BlinkCount = 3;
+            ContactNumberTbx.BlinkShadow = false;
+            ContactNumberTbx.BorderColor1 = Color.LightSlateGray;
+            ContactNumberTbx.BorderColor2 = Color.LightSlateGray;
+            ContactNumberTbx.BorderFocusColor1 = Color.FromArgb(77, 77, 255);
+            ContactNumberTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
+            ContactNumberTbx.CanShake = true;
+            ContactNumberTbx.ContinuousBlink = false;
+            ContactNumberTbx.CursorBlinkRate = 500;
+            ContactNumberTbx.CursorColor = Color.Black;
+            ContactNumberTbx.CursorHeight = 26;
+            ContactNumberTbx.CursorOffset = 0;
+            ContactNumberTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
+            ContactNumberTbx.CursorWidth = 1;
+            ContactNumberTbx.DisabledBackColor = Color.WhiteSmoke;
+            ContactNumberTbx.DisabledBorderColor = Color.LightGray;
+            ContactNumberTbx.DisabledTextColor = Color.Gray;
+            ContactNumberTbx.EnableDropShadow = false;
+            ContactNumberTbx.FillColor1 = Color.White;
+            ContactNumberTbx.FillColor2 = Color.White;
+            ContactNumberTbx.Font = new Font("MS Reference Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ContactNumberTbx.ForeColor = Color.DimGray;
+            ContactNumberTbx.HoverBorderColor1 = Color.Gray;
+            ContactNumberTbx.HoverBorderColor2 = Color.Gray;
+            ContactNumberTbx.IsEnabled = true;
+            ContactNumberTbx.Location = new Point(39, 321);
+            ContactNumberTbx.Name = "ContactNumberTbx";
+            ContactNumberTbx.PlaceholderColor = Color.Gray;
+            ContactNumberTbx.PlaceholderText = "Enter text here...";
+            ContactNumberTbx.ReadOnlyBorderColor1 = Color.LightGray;
+            ContactNumberTbx.ReadOnlyBorderColor2 = Color.LightGray;
+            ContactNumberTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
+            ContactNumberTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
+            ContactNumberTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
+            ContactNumberTbx.SelectionBackColor = Color.FromArgb(77, 77, 255);
+            ContactNumberTbx.ShadowAnimationDuration = 1;
+            ContactNumberTbx.ShadowBlur = 10;
+            ContactNumberTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
+            ContactNumberTbx.Size = new Size(201, 43);
+            ContactNumberTbx.SolidBorderColor = Color.LightSlateGray;
+            ContactNumberTbx.SolidBorderFocusColor = Color.FromArgb(77, 77, 255);
+            ContactNumberTbx.SolidBorderHoverColor = Color.Gray;
+            ContactNumberTbx.SolidFillColor = Color.FromArgb(244, 241, 222);
+            ContactNumberTbx.TabIndex = 19;
+            ContactNumberTbx.TextPadding = new Padding(16, 0, 6, 0);
+            ContactNumberTbx.ValidationErrorMessage = "Invalid input.";
+            ContactNumberTbx.ValidationFunction = null;
+            ContactNumberTbx.Click += ContactNumberTbx_Click;
+            // 
+            // siticoneLabel2
+            // 
+            siticoneLabel2.BackColor = Color.Transparent;
+            siticoneLabel2.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel2.ForeColor = Color.FromArgb(38, 70, 83);
+            siticoneLabel2.Location = new Point(36, 291);
+            siticoneLabel2.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel2.Name = "siticoneLabel2";
+            siticoneLabel2.Size = new Size(200, 31);
+            siticoneLabel2.TabIndex = 18;
+            siticoneLabel2.Text = "Contact Number: ";
+            // 
+            // siticoneGroupBox1
+            // 
+            siticoneGroupBox1.BackColor = Color.Transparent;
+            siticoneGroupBox1.BadgeColor = Color.Red;
+            siticoneGroupBox1.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
+            siticoneGroupBox1.BadgeLeftPadding = 12;
+            siticoneGroupBox1.BadgeValue = 0;
+            siticoneGroupBox1.BadgeVisible = false;
+            siticoneGroupBox1.BlinkInterval = 500;
+            siticoneGroupBox1.BlinkMinOpacity = 0.3F;
+            siticoneGroupBox1.BlinkOpacityStep = 0.05F;
+            siticoneGroupBox1.BorderColor = Color.FromArgb(100, 100, 100);
+            siticoneGroupBox1.BorderWidth = 2F;
+            siticoneGroupBox1.CanHover = true;
+            siticoneGroupBox1.ChevronColor = Color.Black;
+            siticoneGroupBox1.ChevronLeftSpacing = 4F;
+            siticoneGroupBox1.ChevronSize = 10F;
+            siticoneGroupBox1.ChevronThickness = 2F;
+            siticoneGroupBox1.ContentPadding = 5;
+            siticoneGroupBox1.Controls.Add(OthersRbtn);
+            siticoneGroupBox1.Controls.Add(MaleRbtn);
+            siticoneGroupBox1.Controls.Add(FemaleRbtn);
+            siticoneGroupBox1.CornerRadius = 0;
+            siticoneGroupBox1.EnableBlinking = false;
+            siticoneGroupBox1.EnableHoverAnimation = true;
+            siticoneGroupBox1.Font = new Font("MS Reference Sans Serif", 10.2F);
+            siticoneGroupBox1.GradientEndColor = Color.LightGray;
+            siticoneGroupBox1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            siticoneGroupBox1.GradientStartColor = Color.White;
+            siticoneGroupBox1.GroupTitle = "Gender";
+            siticoneGroupBox1.HoveredBorderColor = Color.FromArgb(60, 120, 200);
+            siticoneGroupBox1.HoveredTitleColor = Color.FromArgb(40, 90, 160);
+            siticoneGroupBox1.IsCollapsed = false;
+            siticoneGroupBox1.IsCollapsible = true;
+            siticoneGroupBox1.Location = new Point(35, 75);
+            siticoneGroupBox1.MaxBlinkCount = 3;
+            siticoneGroupBox1.Name = "siticoneGroupBox1";
+            siticoneGroupBox1.PressedBorderColor = Color.FromArgb(40, 90, 160);
+            siticoneGroupBox1.ShadowColor = Color.FromArgb(50, 0, 0, 0);
+            siticoneGroupBox1.ShadowDepth = 3;
+            siticoneGroupBox1.ShowShadow = true;
+            siticoneGroupBox1.Size = new Size(242, 211);
+            siticoneGroupBox1.SolidFillColor = Color.FromArgb(244, 241, 222);
+            siticoneGroupBox1.StatusIcon = null;
+            siticoneGroupBox1.StatusText = "";
+            siticoneGroupBox1.TabIndex = 1;
+            siticoneGroupBox1.Text = "siticoneGroupBox1";
+            siticoneGroupBox1.TitleBackColor = Color.Transparent;
+            siticoneGroupBox1.TitleColor = Color.FromArgb(60, 60, 60);
+            siticoneGroupBox1.TitlePadding = new Padding(0, 8, 0, 12);
+            siticoneGroupBox1.TitlePos = SiticoneNetCoreUI.TitlePosition.TopLeft;
+            siticoneGroupBox1.UseGradient = false;
+            siticoneGroupBox1.Click += siticoneGroupBox1_Click;
+            // 
+            // OthersRbtn
+            // 
+            OthersRbtn.AccessibleRole = AccessibleRole.RadioButton;
+            OthersRbtn.BackColor = Color.Transparent;
+            OthersRbtn.CanBeep = true;
+            OthersRbtn.CanShake = true;
+            OthersRbtn.Checked = false;
+            OthersRbtn.CheckedColor = Color.FromArgb(0, 120, 215);
+            OthersRbtn.ContainerBackColor = Color.FromArgb(20, 0, 0, 0);
+            OthersRbtn.ContainerBorderColor = Color.FromArgb(50, 0, 0, 0);
+            OthersRbtn.ContainerBorderWidth = 1;
+            OthersRbtn.ContainerBottomLeftRadius = 8;
+            OthersRbtn.ContainerBottomRightRadius = 8;
+            OthersRbtn.ContainerCheckedBorderColor = Color.FromArgb(50, 56, 128, 255);
+            OthersRbtn.ContainerCheckedColor = Color.FromArgb(20, 56, 128, 255);
+            OthersRbtn.ContainerCheckedHoverColor = Color.FromArgb(25, 56, 128, 255);
+            OthersRbtn.ContainerCheckedPressedColor = Color.FromArgb(30, 56, 128, 255);
+            OthersRbtn.ContainerHoverColor = Color.FromArgb(25, 0, 0, 0);
+            OthersRbtn.ContainerPadding = 8;
+            OthersRbtn.ContainerPressedColor = Color.FromArgb(30, 0, 0, 0);
+            OthersRbtn.ContainerTopLeftRadius = 8;
+            OthersRbtn.ContainerTopRightRadius = 8;
+            OthersRbtn.ContextMenu = null;
+            OthersRbtn.EnableRipple = false;
+            OthersRbtn.Font = new Font("MS Reference Sans Serif", 10.2F);
+            OthersRbtn.HoverCursor = Cursors.Hand;
+            OthersRbtn.IsContained = false;
+            OthersRbtn.IsReadOnly = false;
+            OthersRbtn.Location = new Point(13, 149);
+            OthersRbtn.MinimumSize = new Size(178, 29);
+            OthersRbtn.Name = "OthersRbtn";
+            OthersRbtn.RippleColor = Color.FromArgb(40, 0, 120, 215);
+            OthersRbtn.RippleDuration = 0.5F;
+            OthersRbtn.RippleStyle = SiticoneNetCoreUI.SiticoneRadioButton.RippleAnimationStyle.Standard;
+            OthersRbtn.ShakeDuration = 0.5F;
+            OthersRbtn.Size = new Size(217, 42);
+            OthersRbtn.TabIndex = 2;
+            OthersRbtn.Text = "Others";
+            OthersRbtn.TextColor = Color.FromArgb(32, 32, 32);
+            OthersRbtn.ToolTipText = "";
+            OthersRbtn.UncheckedColor = Color.FromArgb(160, 160, 160);
+            OthersRbtn.Click += OthersRbtn_Click;
+            // 
+            // MaleRbtn
+            // 
+            MaleRbtn.AccessibleRole = AccessibleRole.RadioButton;
+            MaleRbtn.BackColor = Color.Transparent;
+            MaleRbtn.CanBeep = true;
+            MaleRbtn.CanShake = true;
+            MaleRbtn.Checked = false;
+            MaleRbtn.CheckedColor = Color.FromArgb(0, 120, 215);
+            MaleRbtn.ContainerBackColor = Color.FromArgb(20, 0, 0, 0);
+            MaleRbtn.ContainerBorderColor = Color.FromArgb(50, 0, 0, 0);
+            MaleRbtn.ContainerBorderWidth = 1;
+            MaleRbtn.ContainerBottomLeftRadius = 8;
+            MaleRbtn.ContainerBottomRightRadius = 8;
+            MaleRbtn.ContainerCheckedBorderColor = Color.FromArgb(50, 56, 128, 255);
+            MaleRbtn.ContainerCheckedColor = Color.FromArgb(20, 56, 128, 255);
+            MaleRbtn.ContainerCheckedHoverColor = Color.FromArgb(25, 56, 128, 255);
+            MaleRbtn.ContainerCheckedPressedColor = Color.FromArgb(30, 56, 128, 255);
+            MaleRbtn.ContainerHoverColor = Color.FromArgb(25, 0, 0, 0);
+            MaleRbtn.ContainerPadding = 8;
+            MaleRbtn.ContainerPressedColor = Color.FromArgb(30, 0, 0, 0);
+            MaleRbtn.ContainerTopLeftRadius = 8;
+            MaleRbtn.ContainerTopRightRadius = 8;
+            MaleRbtn.ContextMenu = null;
+            MaleRbtn.EnableRipple = false;
+            MaleRbtn.Font = new Font("MS Reference Sans Serif", 10.2F);
+            MaleRbtn.HoverCursor = Cursors.Hand;
+            MaleRbtn.IsContained = false;
+            MaleRbtn.IsReadOnly = false;
+            MaleRbtn.Location = new Point(13, 103);
+            MaleRbtn.MinimumSize = new Size(178, 29);
+            MaleRbtn.Name = "MaleRbtn";
+            MaleRbtn.RippleColor = Color.FromArgb(40, 0, 120, 215);
+            MaleRbtn.RippleDuration = 0.5F;
+            MaleRbtn.RippleStyle = SiticoneNetCoreUI.SiticoneRadioButton.RippleAnimationStyle.Standard;
+            MaleRbtn.ShakeDuration = 0.5F;
+            MaleRbtn.Size = new Size(217, 42);
+            MaleRbtn.TabIndex = 1;
+            MaleRbtn.Text = "Male";
+            MaleRbtn.TextColor = Color.FromArgb(32, 32, 32);
+            MaleRbtn.ToolTipText = "";
+            MaleRbtn.UncheckedColor = Color.FromArgb(160, 160, 160);
+            MaleRbtn.Click += MaleRbtn_Click;
+            // 
+            // FemaleRbtn
+            // 
+            FemaleRbtn.AccessibleRole = AccessibleRole.RadioButton;
+            FemaleRbtn.BackColor = Color.Transparent;
+            FemaleRbtn.CanBeep = true;
+            FemaleRbtn.CanShake = true;
+            FemaleRbtn.Checked = false;
+            FemaleRbtn.CheckedColor = Color.FromArgb(0, 120, 215);
+            FemaleRbtn.ContainerBackColor = Color.FromArgb(20, 0, 0, 0);
+            FemaleRbtn.ContainerBorderColor = Color.FromArgb(50, 0, 0, 0);
+            FemaleRbtn.ContainerBorderWidth = 1;
+            FemaleRbtn.ContainerBottomLeftRadius = 8;
+            FemaleRbtn.ContainerBottomRightRadius = 8;
+            FemaleRbtn.ContainerCheckedBorderColor = Color.FromArgb(50, 56, 128, 255);
+            FemaleRbtn.ContainerCheckedColor = Color.FromArgb(20, 56, 128, 255);
+            FemaleRbtn.ContainerCheckedHoverColor = Color.FromArgb(25, 56, 128, 255);
+            FemaleRbtn.ContainerCheckedPressedColor = Color.FromArgb(30, 56, 128, 255);
+            FemaleRbtn.ContainerHoverColor = Color.FromArgb(25, 0, 0, 0);
+            FemaleRbtn.ContainerPadding = 8;
+            FemaleRbtn.ContainerPressedColor = Color.FromArgb(30, 0, 0, 0);
+            FemaleRbtn.ContainerTopLeftRadius = 8;
+            FemaleRbtn.ContainerTopRightRadius = 8;
+            FemaleRbtn.ContextMenu = null;
+            FemaleRbtn.EnableRipple = false;
+            FemaleRbtn.Font = new Font("MS Reference Sans Serif", 10.2F);
+            FemaleRbtn.HoverCursor = Cursors.Hand;
+            FemaleRbtn.IsContained = false;
+            FemaleRbtn.IsReadOnly = false;
+            FemaleRbtn.Location = new Point(12, 58);
+            FemaleRbtn.MinimumSize = new Size(178, 29);
+            FemaleRbtn.Name = "FemaleRbtn";
+            FemaleRbtn.RippleColor = Color.FromArgb(40, 0, 120, 215);
+            FemaleRbtn.RippleDuration = 0.5F;
+            FemaleRbtn.RippleStyle = SiticoneNetCoreUI.SiticoneRadioButton.RippleAnimationStyle.Standard;
+            FemaleRbtn.ShakeDuration = 0.5F;
+            FemaleRbtn.Size = new Size(217, 42);
+            FemaleRbtn.TabIndex = 0;
+            FemaleRbtn.Text = "Female";
+            FemaleRbtn.TextColor = Color.FromArgb(32, 32, 32);
+            FemaleRbtn.ToolTipText = "";
+            FemaleRbtn.UncheckedColor = Color.FromArgb(160, 160, 160);
+            FemaleRbtn.Click += FemaleRbtn_Click;
+            // 
+            // ManagerLabel
+            // 
+            ManagerLabel.AutoReverse = false;
+            ManagerLabel.BackColor = Color.FromArgb(244, 241, 222);
+            ManagerLabel.BaseColor = Color.FromArgb(38, 70, 83);
+            ManagerLabel.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            ManagerLabel.Font = new Font("MS Reference Sans Serif", 10.2F);
+            ManagerLabel.IsAnimating = true;
+            ManagerLabel.IsPaused = false;
+            ManagerLabel.Location = new Point(15, 35);
+            ManagerLabel.Margin = new Padding(4);
+            ManagerLabel.Name = "ManagerLabel";
+            ManagerLabel.PauseDuration = 0;
+            ManagerLabel.ShimmerColor = Color.FromArgb(231, 111, 81);
+            ManagerLabel.ShimmerOpacity = 1F;
+            ManagerLabel.ShimmerSpeed = 50;
+            ManagerLabel.ShimmerWidth = 0.8F;
+            ManagerLabel.Size = new Size(284, 55);
+            ManagerLabel.TabIndex = 13;
+            ManagerLabel.Text = "MANAGER DETAILS:";
+            ManagerLabel.ToolTipText = "";
             // 
             // CreateExtBtn
             // 
@@ -616,6 +1291,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "CreateAcc";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CreateAcc";
             siticonePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox4).EndInit();
@@ -623,6 +1299,9 @@
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             siticonePanel2.ResumeLayout(false);
+            ManagerDetailsPanel.ResumeLayout(false);
+            siticoneGroupBox1.ResumeLayout(false);
+            siticoneGroupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -644,5 +1323,25 @@
         private SiticoneNetCoreUI.SiticoneButton createBtn;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private SiticoneNetCoreUI.SiticoneTextBox emailTbx;
+        private SiticoneNetCoreUI.SiticoneShimmerLabel ManagerLabel;
+        private SiticoneNetCoreUI.SiticonePanel ManagerDetailsPanel;
+        private SiticoneNetCoreUI.SiticoneGroupBox siticoneGroupBox1;
+        private SiticoneNetCoreUI.SiticoneRadioButton OthersRbtn;
+        private SiticoneNetCoreUI.SiticoneRadioButton MaleRbtn;
+        private SiticoneNetCoreUI.SiticoneRadioButton FemaleRbtn;
+        private SiticoneNetCoreUI.SiticoneLabel siticoneLabel2;
+        private SiticoneNetCoreUI.SiticoneTextBox AdressTbx;
+        private SiticoneNetCoreUI.SiticoneLabel siticoneLabel4;
+        private SiticoneNetCoreUI.SiticoneTextBox ContactNumberTbx;
+        private SiticoneNetCoreUI.SiticoneLabel siticoneLabel5;
+        private SiticoneNetCoreUI.SiticoneTextBox NationalityTbx;
+        private SiticoneNetCoreUI.SiticoneLabel NationalityName;
+        private ComboBox EducationBackgroundCombobox;
+        private SiticoneNetCoreUI.SiticoneTextBox ManagerSchoolNameTbx;
+        private SiticoneNetCoreUI.SiticoneLabel siticoneLabel8;
+        private SiticoneNetCoreUI.SiticoneTextBox ManagerDegreeTbx;
+        private SiticoneNetCoreUI.SiticoneLabel siticoneLabel7;
+        private SiticoneNetCoreUI.SiticoneLabel siticoneLabel6;
+        private DateTimePicker DateOfBirth;
     }
 }

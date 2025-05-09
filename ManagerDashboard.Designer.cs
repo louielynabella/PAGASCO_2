@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerDashboard));
             siticonePanel2 = new SiticoneNetCoreUI.SiticonePanel();
             sidebar = new SiticoneNetCoreUI.SiticonePanel();
             siticonePanel3 = new SiticoneNetCoreUI.SiticonePanel();
@@ -48,15 +49,41 @@
             siticonePanel1 = new SiticoneNetCoreUI.SiticonePanel();
             DashBoardExtBtn = new FontAwesome.Sharp.IconButton();
             btnHam = new FontAwesome.Sharp.IconButton();
-            branchPanel = new SiticoneNetCoreUI.SiticonePanel();
-            SaveStockBtn = new FontAwesome.Sharp.IconButton();
-            addstockBtn = new FontAwesome.Sharp.IconButton();
-            BranchesLoadBtn = new FontAwesome.Sharp.IconButton();
-            AddFuelTbx = new SiticoneNetCoreUI.SiticoneTextBox();
-            addbranchBtn = new FontAwesome.Sharp.IconButton();
-            addbranchTbx = new SiticoneNetCoreUI.SiticoneTextBox();
-            branchesComBx = new ComboBox();
-            ManagerLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            siticonePanel4 = new SiticoneNetCoreUI.SiticonePanel();
+            siticoneShimmerLabel8 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            siticoneShimmerLabel7 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            siticoneShimmerLabel6 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            AccountSetPanel = new SiticoneNetCoreUI.SiticonePanel();
+            OwnerLoginBtn = new SiticoneNetCoreUI.SiticoneButton();
+            pictureBox1 = new PictureBox();
+            ManagerNameLabel = new SiticoneNetCoreUI.SiticoneLabel();
+            ManagerWelcomingSettingsLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            SalesPanel = new SiticoneNetCoreUI.SiticonePanel();
+            LitersSoldLabel = new SiticoneNetCoreUI.SiticoneLabel();
+            totalSalesLabel = new SiticoneNetCoreUI.SiticoneLabel();
+            siticoneLabel1 = new SiticoneNetCoreUI.SiticoneLabel();
+            FuelTypeSalesCombobox = new ComboBox();
+            siticoneLabel3 = new SiticoneNetCoreUI.SiticoneLabel();
+            DateSalesCombox = new ComboBox();
+            salesDVG = new DataGridView();
+            siticoneShimmerLabel2 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            siticoneShimmerLabel1 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            BranchPanel = new SiticoneNetCoreUI.SiticonePanel();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            FuelCostumeracahoicesPanel = new Panel();
+            RegularrestockRadioBtn = new RadioButton();
+            PremiumrestockRadioBtn = new RadioButton();
+            DieselrestockRadioBtn = new RadioButton();
+            restockBtn = new FontAwesome.Sharp.IconButton();
+            restockTbx = new SiticoneNetCoreUI.SiticoneTextBox();
+            siticoneShimmerLabel5 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            PricesLoadBtn = new FontAwesome.Sharp.IconButton();
+            FuelPricesDGV = new DataGridView();
+            siticoneShimmerLabel4 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            LoadBtn = new FontAwesome.Sharp.IconButton();
             FuelStocksDGV = new DataGridView();
             AboutUsPanel = new SiticoneNetCoreUI.SiticonePanel();
             label9 = new Label();
@@ -70,14 +97,6 @@
             label2 = new Label();
             label1 = new Label();
             siticoneShimmerLabel3 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
-            AccountSetPanel = new SiticoneNetCoreUI.SiticonePanel();
-            ManagerWelcomingSettingsLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
-            SalesPanel = new SiticoneNetCoreUI.SiticonePanel();
-            siticoneLabel3 = new SiticoneNetCoreUI.SiticoneLabel();
-            DateSalesCombox = new ComboBox();
-            salesDVG = new DataGridView();
-            siticoneShimmerLabel2 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
-            siticoneShimmerLabel1 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             fuelStockBindingSource1 = new BindingSource(components);
             fuelStockBindingSource = new BindingSource(components);
             sidebarTransition = new System.Windows.Forms.Timer(components);
@@ -93,12 +112,20 @@
             BranchBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             siticonePanel1.SuspendLayout();
-            branchPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)FuelStocksDGV).BeginInit();
-            AboutUsPanel.SuspendLayout();
+            siticonePanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             AccountSetPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SalesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)salesDVG).BeginInit();
+            BranchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            FuelCostumeracahoicesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)FuelPricesDGV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FuelStocksDGV).BeginInit();
+            AboutUsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)fuelStockBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fuelStockBindingSource).BeginInit();
             SuspendLayout();
@@ -114,10 +141,11 @@
             siticonePanel2.BorderThickness = 2F;
             siticonePanel2.Controls.Add(sidebar);
             siticonePanel2.Controls.Add(siticonePanel1);
-            siticonePanel2.Controls.Add(branchPanel);
-            siticonePanel2.Controls.Add(AboutUsPanel);
+            siticonePanel2.Controls.Add(siticonePanel4);
             siticonePanel2.Controls.Add(AccountSetPanel);
             siticonePanel2.Controls.Add(SalesPanel);
+            siticonePanel2.Controls.Add(BranchPanel);
+            siticonePanel2.Controls.Add(AboutUsPanel);
             siticonePanel2.CornerRadiusBottomLeft = 0F;
             siticonePanel2.CornerRadiusBottomRight = 0F;
             siticonePanel2.CornerRadiusTopLeft = 0F;
@@ -205,7 +233,7 @@
             sidebar.RippleMaxSize = 600F;
             sidebar.RippleSpeed = 15F;
             sidebar.ShowBorder = true;
-            sidebar.Size = new Size(46, 759);
+            sidebar.Size = new Size(481, 759);
             sidebar.TabIndex = 2;
             sidebar.TabStop = true;
             sidebar.UseBorderGradient = false;
@@ -626,6 +654,7 @@
             siticonePanel5.UseMultiGradient = false;
             siticonePanel5.UsePatternTexture = false;
             siticonePanel5.UseRadialGradient = false;
+            siticonePanel5.Paint += siticonePanel5_Paint;
             // 
             // iconPictureBox1
             // 
@@ -790,7 +819,7 @@
             // BrnchBtn
             // 
             BrnchBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
-            BrnchBtn.AccessibleName = "BRANCH";
+            BrnchBtn.AccessibleName = "RESTOCKS AND PRICES";
             BrnchBtn.AutoSizeBasedOnText = false;
             BrnchBtn.BackColor = Color.Transparent;
             BrnchBtn.BadgeBackColor = Color.Red;
@@ -857,7 +886,7 @@
             BrnchBtn.ShakeIntensity = 5;
             BrnchBtn.Size = new Size(474, 60);
             BrnchBtn.TabIndex = 10;
-            BrnchBtn.Text = "BRANCH";
+            BrnchBtn.Text = "RESTOCKS AND PRICES";
             BrnchBtn.TextAlign = ContentAlignment.MiddleCenter;
             BrnchBtn.TextColor = Color.FromArgb(231, 111, 81);
             BrnchBtn.TooltipText = null;
@@ -971,289 +1000,812 @@
             btnHam.UseVisualStyleBackColor = false;
             btnHam.Click += btnHam_Click;
             // 
-            // branchPanel
+            // siticonePanel4
             // 
-            branchPanel.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
-            branchPanel.BackColor = Color.Transparent;
-            branchPanel.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            branchPanel.BorderDashPattern = null;
-            branchPanel.BorderGradientEndColor = Color.FromArgb(231, 111, 81);
-            branchPanel.BorderGradientStartColor = Color.FromArgb(38, 70, 83);
-            branchPanel.BorderThickness = 2F;
-            branchPanel.Controls.Add(SaveStockBtn);
-            branchPanel.Controls.Add(addstockBtn);
-            branchPanel.Controls.Add(BranchesLoadBtn);
-            branchPanel.Controls.Add(AddFuelTbx);
-            branchPanel.Controls.Add(addbranchBtn);
-            branchPanel.Controls.Add(addbranchTbx);
-            branchPanel.Controls.Add(branchesComBx);
-            branchPanel.Controls.Add(ManagerLabel);
-            branchPanel.Controls.Add(FuelStocksDGV);
-            branchPanel.CornerRadiusBottomLeft = 10F;
-            branchPanel.CornerRadiusBottomRight = 10F;
-            branchPanel.CornerRadiusTopLeft = 10F;
-            branchPanel.CornerRadiusTopRight = 10F;
-            branchPanel.EnableAcrylicEffect = false;
-            branchPanel.EnableMicaEffect = false;
-            branchPanel.EnableRippleEffect = false;
-            branchPanel.FillColor = Color.Transparent;
-            branchPanel.GradientColors = new Color[]
+            siticonePanel4.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
+            siticonePanel4.BackColor = Color.Transparent;
+            siticonePanel4.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            siticonePanel4.BorderDashPattern = null;
+            siticonePanel4.BorderGradientEndColor = Color.Purple;
+            siticonePanel4.BorderGradientStartColor = Color.Blue;
+            siticonePanel4.BorderThickness = 2F;
+            siticonePanel4.Controls.Add(siticoneShimmerLabel8);
+            siticonePanel4.Controls.Add(pictureBox5);
+            siticonePanel4.Controls.Add(pictureBox4);
+            siticonePanel4.Controls.Add(siticoneShimmerLabel7);
+            siticonePanel4.Controls.Add(siticoneShimmerLabel6);
+            siticonePanel4.CornerRadiusBottomLeft = 10F;
+            siticonePanel4.CornerRadiusBottomRight = 10F;
+            siticonePanel4.CornerRadiusTopLeft = 10F;
+            siticonePanel4.CornerRadiusTopRight = 10F;
+            siticonePanel4.EnableAcrylicEffect = false;
+            siticonePanel4.EnableMicaEffect = false;
+            siticonePanel4.EnableRippleEffect = false;
+            siticonePanel4.FillColor = Color.White;
+            siticonePanel4.GradientColors = new Color[]
     {
-    Color.White,
-    Color.LightGray,
-    Color.Gray
+    Color.FromArgb(244, 241, 222),
+    Color.FromArgb(231, 111, 81),
+    Color.FromArgb(38, 70, 83)
     };
-            branchPanel.GradientPositions = new float[]
+            siticonePanel4.GradientPositions = new float[]
     {
     0F,
     0.5F,
     1F
     };
-            branchPanel.Location = new Point(72, 68);
-            branchPanel.Margin = new Padding(4);
-            branchPanel.Name = "branchPanel";
-            branchPanel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
-            branchPanel.RippleAlpha = 50;
-            branchPanel.RippleAlphaDecrement = 3;
-            branchPanel.RippleColor = Color.FromArgb(50, 255, 255, 255);
-            branchPanel.RippleMaxSize = 600F;
-            branchPanel.RippleSpeed = 15F;
-            branchPanel.ShowBorder = true;
-            branchPanel.Size = new Size(1274, 718);
-            branchPanel.TabIndex = 3;
-            branchPanel.TabStop = true;
-            branchPanel.UseBorderGradient = true;
-            branchPanel.UseMultiGradient = false;
-            branchPanel.UsePatternTexture = false;
-            branchPanel.UseRadialGradient = false;
+            siticonePanel4.Location = new Point(68, 68);
+            siticonePanel4.Name = "siticonePanel4";
+            siticonePanel4.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
+            siticonePanel4.RippleAlpha = 50;
+            siticonePanel4.RippleAlphaDecrement = 3;
+            siticonePanel4.RippleColor = Color.FromArgb(50, 255, 255, 255);
+            siticonePanel4.RippleMaxSize = 600F;
+            siticonePanel4.RippleSpeed = 15F;
+            siticonePanel4.ShowBorder = true;
+            siticonePanel4.Size = new Size(1275, 718);
+            siticonePanel4.TabIndex = 23;
+            siticonePanel4.TabStop = true;
+            siticonePanel4.UseBorderGradient = false;
+            siticonePanel4.UseMultiGradient = true;
+            siticonePanel4.UsePatternTexture = false;
+            siticonePanel4.UseRadialGradient = false;
+            siticonePanel4.Paint += siticonePanel4_Paint;
             // 
-            // SaveStockBtn
+            // siticoneShimmerLabel8
             // 
-            SaveStockBtn.BackColor = Color.FromArgb(244, 241, 222);
-            SaveStockBtn.FlatStyle = FlatStyle.Popup;
-            SaveStockBtn.ForeColor = Color.FromArgb(244, 241, 222);
-            SaveStockBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
-            SaveStockBtn.IconColor = Color.FromArgb(231, 111, 81);
-            SaveStockBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            SaveStockBtn.Location = new Point(1090, 626);
-            SaveStockBtn.Margin = new Padding(4);
-            SaveStockBtn.Name = "SaveStockBtn";
-            SaveStockBtn.Size = new Size(65, 64);
-            SaveStockBtn.TabIndex = 20;
-            SaveStockBtn.UseVisualStyleBackColor = false;
-            SaveStockBtn.Click += SaveStockBtn_Click;
+            siticoneShimmerLabel8.AutoReverse = false;
+            siticoneShimmerLabel8.BackColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel8.BaseColor = Color.FromArgb(244, 241, 222);
+            siticoneShimmerLabel8.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            siticoneShimmerLabel8.Font = new Font("Impact", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneShimmerLabel8.IsAnimating = true;
+            siticoneShimmerLabel8.IsPaused = false;
+            siticoneShimmerLabel8.Location = new Point(594, 143);
+            siticoneShimmerLabel8.Margin = new Padding(4);
+            siticoneShimmerLabel8.Name = "siticoneShimmerLabel8";
+            siticoneShimmerLabel8.PauseDuration = 0;
+            siticoneShimmerLabel8.ShimmerColor = Color.FromArgb(231, 111, 81);
+            siticoneShimmerLabel8.ShimmerOpacity = 1F;
+            siticoneShimmerLabel8.ShimmerSpeed = 50;
+            siticoneShimmerLabel8.ShimmerWidth = 0.9F;
+            siticoneShimmerLabel8.Size = new Size(534, 112);
+            siticoneShimmerLabel8.TabIndex = 18;
+            siticoneShimmerLabel8.Text = "MANAGER!";
+            siticoneShimmerLabel8.ToolTipText = "";
             // 
-            // addstockBtn
+            // pictureBox5
             // 
-            addstockBtn.BackColor = Color.FromArgb(244, 241, 222);
-            addstockBtn.FlatStyle = FlatStyle.Popup;
-            addstockBtn.ForeColor = Color.FromArgb(244, 241, 222);
-            addstockBtn.IconChar = FontAwesome.Sharp.IconChar.GasPump;
-            addstockBtn.IconColor = Color.FromArgb(231, 111, 81);
-            addstockBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            addstockBtn.Location = new Point(1018, 626);
-            addstockBtn.Margin = new Padding(4);
-            addstockBtn.Name = "addstockBtn";
-            addstockBtn.Size = new Size(65, 64);
-            addstockBtn.TabIndex = 18;
-            addstockBtn.UseVisualStyleBackColor = false;
-            addstockBtn.Click += iconButton1_Click;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(-221, 27);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(410, 568);
+            pictureBox5.TabIndex = 17;
+            pictureBox5.TabStop = false;
             // 
-            // BranchesLoadBtn
+            // pictureBox4
             // 
-            BranchesLoadBtn.BackColor = Color.FromArgb(244, 241, 222);
-            BranchesLoadBtn.FlatAppearance.BorderSize = 0;
-            BranchesLoadBtn.FlatStyle = FlatStyle.Popup;
-            BranchesLoadBtn.IconChar = FontAwesome.Sharp.IconChar.Spinner;
-            BranchesLoadBtn.IconColor = Color.FromArgb(231, 111, 81);
-            BranchesLoadBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            BranchesLoadBtn.IconSize = 34;
-            BranchesLoadBtn.Location = new Point(1161, 626);
-            BranchesLoadBtn.Margin = new Padding(4);
-            BranchesLoadBtn.Name = "BranchesLoadBtn";
-            BranchesLoadBtn.Size = new Size(68, 64);
-            BranchesLoadBtn.TabIndex = 17;
-            BranchesLoadBtn.UseVisualStyleBackColor = false;
-            BranchesLoadBtn.Click += LoadBtn_Click;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(977, 475);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(297, 240);
+            pictureBox4.TabIndex = 16;
+            pictureBox4.TabStop = false;
             // 
-            // AddFuelTbx
+            // siticoneShimmerLabel7
             // 
-            AddFuelTbx.AccessibleDescription = "A customizable text input field.";
-            AddFuelTbx.AccessibleName = "Text Box";
-            AddFuelTbx.AccessibleRole = AccessibleRole.Text;
-            AddFuelTbx.BackColor = Color.Transparent;
-            AddFuelTbx.BlinkCount = 3;
-            AddFuelTbx.BlinkShadow = false;
-            AddFuelTbx.BorderColor1 = Color.FromArgb(231, 111, 81);
-            AddFuelTbx.BorderColor2 = Color.FromArgb(38, 70, 83);
-            AddFuelTbx.BorderFocusColor1 = Color.FromArgb(231, 111, 81);
-            AddFuelTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
-            AddFuelTbx.CanShake = true;
-            AddFuelTbx.ContinuousBlink = false;
-            AddFuelTbx.CursorBlinkRate = 500;
-            AddFuelTbx.CursorColor = Color.Black;
-            AddFuelTbx.CursorHeight = 26;
-            AddFuelTbx.CursorOffset = 0;
-            AddFuelTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
-            AddFuelTbx.CursorWidth = 1;
-            AddFuelTbx.DisabledBackColor = Color.WhiteSmoke;
-            AddFuelTbx.DisabledBorderColor = Color.LightGray;
-            AddFuelTbx.DisabledTextColor = Color.Gray;
-            AddFuelTbx.EnableDropShadow = false;
-            AddFuelTbx.FillColor1 = Color.White;
-            AddFuelTbx.FillColor2 = Color.White;
-            AddFuelTbx.Font = new Font("Segoe UI", 9.5F);
-            AddFuelTbx.ForeColor = Color.DimGray;
-            AddFuelTbx.HoverBorderColor1 = Color.Gray;
-            AddFuelTbx.HoverBorderColor2 = Color.Gray;
-            AddFuelTbx.IsEnabled = true;
-            AddFuelTbx.Location = new Point(682, 626);
-            AddFuelTbx.Margin = new Padding(4);
-            AddFuelTbx.Name = "AddFuelTbx";
-            AddFuelTbx.PlaceholderColor = Color.Gray;
-            AddFuelTbx.PlaceholderText = "Add Stock Fuel";
-            AddFuelTbx.ReadOnlyBorderColor1 = Color.LightGray;
-            AddFuelTbx.ReadOnlyBorderColor2 = Color.LightGray;
-            AddFuelTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
-            AddFuelTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
-            AddFuelTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
-            AddFuelTbx.SelectionBackColor = Color.FromArgb(231, 111, 81);
-            AddFuelTbx.ShadowAnimationDuration = 1;
-            AddFuelTbx.ShadowBlur = 10;
-            AddFuelTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
-            AddFuelTbx.Size = new Size(328, 64);
-            AddFuelTbx.SolidBorderColor = Color.FromArgb(231, 111, 81);
-            AddFuelTbx.SolidBorderFocusColor = Color.FromArgb(244, 241, 222);
-            AddFuelTbx.SolidBorderHoverColor = Color.Gray;
-            AddFuelTbx.SolidFillColor = Color.Transparent;
-            AddFuelTbx.TabIndex = 15;
-            AddFuelTbx.TextPadding = new Padding(16, 0, 6, 0);
-            AddFuelTbx.UseBorderGradient = true;
-            AddFuelTbx.ValidationErrorMessage = "Invalid input.";
-            AddFuelTbx.ValidationFunction = null;
-            AddFuelTbx.Click += AddFuelTbx_Click;
+            siticoneShimmerLabel7.AutoReverse = false;
+            siticoneShimmerLabel7.BackColor = Color.FromArgb(231, 111, 81);
+            siticoneShimmerLabel7.BaseColor = Color.FromArgb(244, 241, 222);
+            siticoneShimmerLabel7.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            siticoneShimmerLabel7.Font = new Font("Impact", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneShimmerLabel7.IsAnimating = true;
+            siticoneShimmerLabel7.IsPaused = false;
+            siticoneShimmerLabel7.Location = new Point(580, 289);
+            siticoneShimmerLabel7.Margin = new Padding(4);
+            siticoneShimmerLabel7.Name = "siticoneShimmerLabel7";
+            siticoneShimmerLabel7.PauseDuration = 0;
+            siticoneShimmerLabel7.ShimmerColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel7.ShimmerOpacity = 1F;
+            siticoneShimmerLabel7.ShimmerSpeed = 30;
+            siticoneShimmerLabel7.ShimmerWidth = 0.5F;
+            siticoneShimmerLabel7.Size = new Size(580, 183);
+            siticoneShimmerLabel7.TabIndex = 2;
+            siticoneShimmerLabel7.ToolTipText = "";
+            siticoneShimmerLabel7.Click += siticoneShimmerLabel7_Click;
             // 
-            // addbranchBtn
+            // siticoneShimmerLabel6
             // 
-            addbranchBtn.BackColor = Color.FromArgb(244, 241, 222);
-            addbranchBtn.FlatStyle = FlatStyle.Popup;
-            addbranchBtn.ForeColor = Color.FromArgb(244, 241, 222);
-            addbranchBtn.IconChar = FontAwesome.Sharp.IconChar.Add;
-            addbranchBtn.IconColor = Color.FromArgb(231, 111, 81);
-            addbranchBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            addbranchBtn.Location = new Point(385, 316);
-            addbranchBtn.Margin = new Padding(4);
-            addbranchBtn.Name = "addbranchBtn";
-            addbranchBtn.Size = new Size(65, 64);
-            addbranchBtn.TabIndex = 19;
-            addbranchBtn.UseVisualStyleBackColor = false;
-            addbranchBtn.Click += addbranchBtn_Click;
+            siticoneShimmerLabel6.AutoReverse = false;
+            siticoneShimmerLabel6.BackColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel6.BaseColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel6.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            siticoneShimmerLabel6.Font = new Font("Impact", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneShimmerLabel6.IsAnimating = true;
+            siticoneShimmerLabel6.IsPaused = false;
+            siticoneShimmerLabel6.Location = new Point(594, 35);
+            siticoneShimmerLabel6.Margin = new Padding(4);
+            siticoneShimmerLabel6.Name = "siticoneShimmerLabel6";
+            siticoneShimmerLabel6.PauseDuration = 0;
+            siticoneShimmerLabel6.ShimmerColor = Color.FromArgb(231, 111, 81);
+            siticoneShimmerLabel6.ShimmerOpacity = 1F;
+            siticoneShimmerLabel6.ShimmerSpeed = 30;
+            siticoneShimmerLabel6.ShimmerWidth = 0.5F;
+            siticoneShimmerLabel6.Size = new Size(534, 112);
+            siticoneShimmerLabel6.TabIndex = 1;
+            siticoneShimmerLabel6.Text = "WELCOME,";
+            siticoneShimmerLabel6.ToolTipText = "";
             // 
-            // addbranchTbx
+            // AccountSetPanel
             // 
-            addbranchTbx.AccessibleDescription = "A customizable text input field.";
-            addbranchTbx.AccessibleName = "Text Box";
-            addbranchTbx.AccessibleRole = AccessibleRole.Text;
-            addbranchTbx.BackColor = Color.Transparent;
-            addbranchTbx.BlinkCount = 3;
-            addbranchTbx.BlinkShadow = false;
-            addbranchTbx.BorderColor1 = Color.FromArgb(231, 111, 81);
-            addbranchTbx.BorderColor2 = Color.FromArgb(38, 70, 83);
-            addbranchTbx.BorderFocusColor1 = Color.FromArgb(231, 111, 81);
-            addbranchTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
-            addbranchTbx.CanShake = true;
-            addbranchTbx.ContinuousBlink = false;
-            addbranchTbx.CursorBlinkRate = 500;
-            addbranchTbx.CursorColor = Color.Black;
-            addbranchTbx.CursorHeight = 26;
-            addbranchTbx.CursorOffset = 0;
-            addbranchTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
-            addbranchTbx.CursorWidth = 1;
-            addbranchTbx.DisabledBackColor = Color.WhiteSmoke;
-            addbranchTbx.DisabledBorderColor = Color.LightGray;
-            addbranchTbx.DisabledTextColor = Color.Gray;
-            addbranchTbx.EnableDropShadow = false;
-            addbranchTbx.FillColor1 = Color.White;
-            addbranchTbx.FillColor2 = Color.White;
-            addbranchTbx.Font = new Font("Segoe UI", 9.5F);
-            addbranchTbx.ForeColor = Color.DimGray;
-            addbranchTbx.HoverBorderColor1 = Color.Gray;
-            addbranchTbx.HoverBorderColor2 = Color.Gray;
-            addbranchTbx.IsEnabled = true;
-            addbranchTbx.Location = new Point(36, 312);
-            addbranchTbx.Margin = new Padding(4);
-            addbranchTbx.Name = "addbranchTbx";
-            addbranchTbx.PlaceholderColor = Color.Gray;
-            addbranchTbx.PlaceholderText = "Enter text here...";
-            addbranchTbx.ReadOnlyBorderColor1 = Color.LightGray;
-            addbranchTbx.ReadOnlyBorderColor2 = Color.LightGray;
-            addbranchTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
-            addbranchTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
-            addbranchTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
-            addbranchTbx.SelectionBackColor = Color.FromArgb(231, 111, 81);
-            addbranchTbx.ShadowAnimationDuration = 1;
-            addbranchTbx.ShadowBlur = 10;
-            addbranchTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
-            addbranchTbx.Size = new Size(341, 68);
-            addbranchTbx.SolidBorderColor = Color.FromArgb(231, 111, 81);
-            addbranchTbx.SolidBorderFocusColor = Color.FromArgb(244, 241, 222);
-            addbranchTbx.SolidBorderHoverColor = Color.Gray;
-            addbranchTbx.SolidFillColor = Color.Transparent;
-            addbranchTbx.TabIndex = 6;
-            addbranchTbx.Text = "Add Branch...";
-            addbranchTbx.TextPadding = new Padding(16, 0, 6, 0);
-            addbranchTbx.UseBorderGradient = true;
-            addbranchTbx.ValidationErrorMessage = "Invalid input.";
-            addbranchTbx.ValidationFunction = null;
-            addbranchTbx.Click += usernameTbx_Click;
+            AccountSetPanel.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
+            AccountSetPanel.BackColor = Color.Transparent;
+            AccountSetPanel.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            AccountSetPanel.BorderDashPattern = null;
+            AccountSetPanel.BorderGradientEndColor = Color.Purple;
+            AccountSetPanel.BorderGradientStartColor = Color.Blue;
+            AccountSetPanel.BorderThickness = 2F;
+            AccountSetPanel.Controls.Add(OwnerLoginBtn);
+            AccountSetPanel.Controls.Add(pictureBox1);
+            AccountSetPanel.Controls.Add(ManagerNameLabel);
+            AccountSetPanel.Controls.Add(ManagerWelcomingSettingsLabel);
+            AccountSetPanel.CornerRadiusBottomLeft = 10F;
+            AccountSetPanel.CornerRadiusBottomRight = 10F;
+            AccountSetPanel.CornerRadiusTopLeft = 10F;
+            AccountSetPanel.CornerRadiusTopRight = 10F;
+            AccountSetPanel.EnableAcrylicEffect = false;
+            AccountSetPanel.EnableMicaEffect = false;
+            AccountSetPanel.EnableRippleEffect = false;
+            AccountSetPanel.FillColor = Color.FromArgb(244, 241, 222);
+            AccountSetPanel.GradientColors = new Color[]
+    {
+    Color.White,
+    Color.LightGray,
+    Color.Gray
+    };
+            AccountSetPanel.GradientPositions = new float[]
+    {
+    0F,
+    0.5F,
+    1F
+    };
+            AccountSetPanel.Location = new Point(71, 68);
+            AccountSetPanel.Margin = new Padding(4);
+            AccountSetPanel.Name = "AccountSetPanel";
+            AccountSetPanel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
+            AccountSetPanel.RippleAlpha = 50;
+            AccountSetPanel.RippleAlphaDecrement = 3;
+            AccountSetPanel.RippleColor = Color.FromArgb(50, 255, 255, 255);
+            AccountSetPanel.RippleMaxSize = 600F;
+            AccountSetPanel.RippleSpeed = 15F;
+            AccountSetPanel.ShowBorder = true;
+            AccountSetPanel.Size = new Size(1275, 718);
+            AccountSetPanel.TabIndex = 6;
+            AccountSetPanel.TabStop = true;
+            AccountSetPanel.UseBorderGradient = false;
+            AccountSetPanel.UseMultiGradient = false;
+            AccountSetPanel.UsePatternTexture = false;
+            AccountSetPanel.UseRadialGradient = false;
+            AccountSetPanel.Paint += AccountSetPanel_Paint;
             // 
-            // branchesComBx
+            // OwnerLoginBtn
             // 
-            branchesComBx.BackColor = Color.FromArgb(244, 241, 222);
-            branchesComBx.FlatStyle = FlatStyle.Popup;
-            branchesComBx.Font = new Font("MS Reference Sans Serif", 10.2F);
-            branchesComBx.ForeColor = Color.FromArgb(231, 111, 81);
-            branchesComBx.FormattingEnabled = true;
-            branchesComBx.Location = new Point(59, 84);
-            branchesComBx.Margin = new Padding(4);
-            branchesComBx.Name = "branchesComBx";
-            branchesComBx.Size = new Size(348, 34);
-            branchesComBx.TabIndex = 2;
-            branchesComBx.SelectedIndexChanged += branchesComBx_SelectedIndexChanged;
+            OwnerLoginBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
+            OwnerLoginBtn.AccessibleName = "Press this!";
+            OwnerLoginBtn.AutoSizeBasedOnText = false;
+            OwnerLoginBtn.BackColor = Color.Transparent;
+            OwnerLoginBtn.BadgeBackColor = Color.Red;
+            OwnerLoginBtn.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
+            OwnerLoginBtn.BadgeValue = 0;
+            OwnerLoginBtn.BadgeValueForeColor = Color.FromArgb(38, 70, 83);
+            OwnerLoginBtn.BorderColor = Color.FromArgb(244, 241, 222);
+            OwnerLoginBtn.BorderWidth = 2;
+            OwnerLoginBtn.ButtonBackColor = Color.FromArgb(231, 111, 81);
+            OwnerLoginBtn.ButtonImage = null;
+            OwnerLoginBtn.CanBeep = true;
+            OwnerLoginBtn.CanGlow = true;
+            OwnerLoginBtn.CanShake = true;
+            OwnerLoginBtn.ContextMenuStripEx = null;
+            OwnerLoginBtn.CornerRadiusBottomLeft = 60;
+            OwnerLoginBtn.CornerRadiusBottomRight = 20;
+            OwnerLoginBtn.CornerRadiusTopLeft = 20;
+            OwnerLoginBtn.CornerRadiusTopRight = 60;
+            OwnerLoginBtn.CustomCursor = Cursors.Default;
+            OwnerLoginBtn.DisabledTextColor = Color.FromArgb(150, 150, 150);
+            OwnerLoginBtn.EnableLongPress = false;
+            OwnerLoginBtn.EnablePressAnimation = true;
+            OwnerLoginBtn.EnableRippleEffect = true;
+            OwnerLoginBtn.EnableShadow = false;
+            OwnerLoginBtn.EnableTextWrapping = false;
+            OwnerLoginBtn.Font = new Font("Segoe UI", 9F);
+            OwnerLoginBtn.ForeColor = SystemColors.ActiveCaptionText;
+            OwnerLoginBtn.GlowColor = Color.FromArgb(231, 111, 81);
+            OwnerLoginBtn.GlowIntensity = 100;
+            OwnerLoginBtn.GlowRadius = 20F;
+            OwnerLoginBtn.GradientBackground = true;
+            OwnerLoginBtn.GradientColor = Color.FromArgb(38, 70, 83);
+            OwnerLoginBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            OwnerLoginBtn.HintText = null;
+            OwnerLoginBtn.HoverBackColor = Color.FromArgb(38, 70, 83);
+            OwnerLoginBtn.HoverFontStyle = FontStyle.Italic;
+            OwnerLoginBtn.HoverTextColor = Color.White;
+            OwnerLoginBtn.HoverTransitionDuration = 250;
+            OwnerLoginBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            OwnerLoginBtn.ImagePadding = 5;
+            OwnerLoginBtn.ImageSize = new Size(16, 16);
+            OwnerLoginBtn.IsRadial = false;
+            OwnerLoginBtn.IsReadOnly = false;
+            OwnerLoginBtn.IsToggleButton = false;
+            OwnerLoginBtn.IsToggled = false;
+            OwnerLoginBtn.Location = new Point(54, 227);
+            OwnerLoginBtn.LongPressDurationMS = 1000;
+            OwnerLoginBtn.Name = "OwnerLoginBtn";
+            OwnerLoginBtn.NormalFontStyle = FontStyle.Bold;
+            OwnerLoginBtn.ParticleColor = Color.FromArgb(200, 200, 200);
+            OwnerLoginBtn.ParticleCount = 15;
+            OwnerLoginBtn.PressAnimationScale = 0.97F;
+            OwnerLoginBtn.PressedBackColor = Color.FromArgb(38, 70, 83);
+            OwnerLoginBtn.PressedFontStyle = FontStyle.Bold;
+            OwnerLoginBtn.PressTransitionDuration = 150;
+            OwnerLoginBtn.ReadOnlyTextColor = Color.FromArgb(244, 241, 222);
+            OwnerLoginBtn.RippleColor = Color.FromArgb(255, 255, 255);
+            OwnerLoginBtn.RippleOpacity = 0.3F;
+            OwnerLoginBtn.RippleRadiusMultiplier = 0.6F;
+            OwnerLoginBtn.ShadowBlur = 5;
+            OwnerLoginBtn.ShadowColor = Color.FromArgb(100, 0, 0, 0);
+            OwnerLoginBtn.ShadowOffset = new Point(2, 2);
+            OwnerLoginBtn.ShakeDuration = 500;
+            OwnerLoginBtn.ShakeIntensity = 5;
+            OwnerLoginBtn.Size = new Size(293, 83);
+            OwnerLoginBtn.TabIndex = 9;
+            OwnerLoginBtn.Text = "Press this!";
+            OwnerLoginBtn.TextAlign = ContentAlignment.MiddleCenter;
+            OwnerLoginBtn.TextColor = Color.FromArgb(244, 241, 222);
+            OwnerLoginBtn.TooltipText = null;
+            OwnerLoginBtn.UseAdvancedRendering = true;
+            OwnerLoginBtn.UseParticles = false;
+            OwnerLoginBtn.Click += OwnerLoginBtn_Click;
             // 
-            // ManagerLabel
+            // pictureBox1
             // 
-            ManagerLabel.AutoReverse = false;
-            ManagerLabel.BackColor = Color.FromArgb(244, 241, 222);
-            ManagerLabel.BaseColor = Color.FromArgb(38, 70, 83);
-            ManagerLabel.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
-            ManagerLabel.Font = new Font("MS Reference Sans Serif", 10.2F);
-            ManagerLabel.IsAnimating = true;
-            ManagerLabel.IsPaused = false;
-            ManagerLabel.Location = new Point(32, 21);
-            ManagerLabel.Margin = new Padding(4);
-            ManagerLabel.Name = "ManagerLabel";
-            ManagerLabel.PauseDuration = 0;
-            ManagerLabel.ShimmerColor = Color.FromArgb(231, 111, 81);
-            ManagerLabel.ShimmerOpacity = 1F;
-            ManagerLabel.ShimmerSpeed = 50;
-            ManagerLabel.ShimmerWidth = 0.8F;
-            ManagerLabel.Size = new Size(389, 55);
-            ManagerLabel.TabIndex = 1;
-            ManagerLabel.Text = "BRANCHES";
-            ManagerLabel.ToolTipText = "";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1020, 233);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(252, 482);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
+            // ManagerNameLabel
+            // 
+            ManagerNameLabel.BackColor = Color.Transparent;
+            ManagerNameLabel.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManagerNameLabel.ForeColor = Color.FromArgb(38, 70, 83);
+            ManagerNameLabel.Location = new Point(49, 180);
+            ManagerNameLabel.Margin = new Padding(4, 0, 4, 0);
+            ManagerNameLabel.Name = "ManagerNameLabel";
+            ManagerNameLabel.Size = new Size(296, 44);
+            ManagerNameLabel.TabIndex = 3;
+            ManagerNameLabel.Text = "Change  Password?";
+            // 
+            // ManagerWelcomingSettingsLabel
+            // 
+            ManagerWelcomingSettingsLabel.AutoReverse = false;
+            ManagerWelcomingSettingsLabel.BackColor = Color.FromArgb(244, 241, 222);
+            ManagerWelcomingSettingsLabel.BaseColor = Color.FromArgb(38, 70, 83);
+            ManagerWelcomingSettingsLabel.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            ManagerWelcomingSettingsLabel.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManagerWelcomingSettingsLabel.IsAnimating = true;
+            ManagerWelcomingSettingsLabel.IsPaused = false;
+            ManagerWelcomingSettingsLabel.Location = new Point(18, 22);
+            ManagerWelcomingSettingsLabel.Margin = new Padding(4);
+            ManagerWelcomingSettingsLabel.Name = "ManagerWelcomingSettingsLabel";
+            ManagerWelcomingSettingsLabel.PauseDuration = 0;
+            ManagerWelcomingSettingsLabel.ShimmerColor = Color.FromArgb(231, 111, 81);
+            ManagerWelcomingSettingsLabel.ShimmerOpacity = 1F;
+            ManagerWelcomingSettingsLabel.ShimmerSpeed = 50;
+            ManagerWelcomingSettingsLabel.ShimmerWidth = 0.2F;
+            ManagerWelcomingSettingsLabel.Size = new Size(291, 58);
+            ManagerWelcomingSettingsLabel.TabIndex = 1;
+            ManagerWelcomingSettingsLabel.Text = "Welcome, Manager";
+            ManagerWelcomingSettingsLabel.ToolTipText = "";
+            // 
+            // SalesPanel
+            // 
+            SalesPanel.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
+            SalesPanel.BackColor = Color.Transparent;
+            SalesPanel.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            SalesPanel.BorderDashPattern = null;
+            SalesPanel.BorderGradientEndColor = Color.FromArgb(38, 70, 83);
+            SalesPanel.BorderGradientStartColor = Color.FromArgb(231, 111, 81);
+            SalesPanel.BorderThickness = 2F;
+            SalesPanel.Controls.Add(LitersSoldLabel);
+            SalesPanel.Controls.Add(totalSalesLabel);
+            SalesPanel.Controls.Add(siticoneLabel1);
+            SalesPanel.Controls.Add(FuelTypeSalesCombobox);
+            SalesPanel.Controls.Add(siticoneLabel3);
+            SalesPanel.Controls.Add(DateSalesCombox);
+            SalesPanel.Controls.Add(salesDVG);
+            SalesPanel.Controls.Add(siticoneShimmerLabel2);
+            SalesPanel.Controls.Add(siticoneShimmerLabel1);
+            SalesPanel.CornerRadiusBottomLeft = 10F;
+            SalesPanel.CornerRadiusBottomRight = 10F;
+            SalesPanel.CornerRadiusTopLeft = 10F;
+            SalesPanel.CornerRadiusTopRight = 10F;
+            SalesPanel.EnableAcrylicEffect = false;
+            SalesPanel.EnableMicaEffect = false;
+            SalesPanel.EnableRippleEffect = false;
+            SalesPanel.FillColor = Color.FromArgb(244, 241, 222);
+            SalesPanel.GradientColors = new Color[]
+    {
+    Color.White,
+    Color.LightGray,
+    Color.Gray
+    };
+            SalesPanel.GradientPositions = new float[]
+    {
+    0F,
+    0.5F,
+    1F
+    };
+            SalesPanel.Location = new Point(71, 65);
+            SalesPanel.Margin = new Padding(4);
+            SalesPanel.Name = "SalesPanel";
+            SalesPanel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
+            SalesPanel.RippleAlpha = 50;
+            SalesPanel.RippleAlphaDecrement = 3;
+            SalesPanel.RippleColor = Color.FromArgb(50, 255, 255, 255);
+            SalesPanel.RippleMaxSize = 600F;
+            SalesPanel.RippleSpeed = 15F;
+            SalesPanel.ShowBorder = true;
+            SalesPanel.Size = new Size(1276, 721);
+            SalesPanel.TabIndex = 21;
+            SalesPanel.TabStop = true;
+            SalesPanel.UseBorderGradient = true;
+            SalesPanel.UseMultiGradient = false;
+            SalesPanel.UsePatternTexture = false;
+            SalesPanel.UseRadialGradient = false;
+            SalesPanel.Paint += SalesPanel_Paint;
+            // 
+            // LitersSoldLabel
+            // 
+            LitersSoldLabel.BackColor = Color.Transparent;
+            LitersSoldLabel.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LitersSoldLabel.ForeColor = Color.FromArgb(231, 111, 81);
+            LitersSoldLabel.Location = new Point(730, 57);
+            LitersSoldLabel.Margin = new Padding(4, 0, 4, 0);
+            LitersSoldLabel.Name = "LitersSoldLabel";
+            LitersSoldLabel.Size = new Size(305, 36);
+            LitersSoldLabel.TabIndex = 11;
+            LitersSoldLabel.Text = "Total Liters Sold: ";
+            LitersSoldLabel.Click += LitersSoldLabel_Click;
+            // 
+            // totalSalesLabel
+            // 
+            totalSalesLabel.BackColor = Color.Transparent;
+            totalSalesLabel.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            totalSalesLabel.ForeColor = Color.FromArgb(231, 111, 81);
+            totalSalesLabel.Location = new Point(728, 21);
+            totalSalesLabel.Margin = new Padding(4, 0, 4, 0);
+            totalSalesLabel.Name = "totalSalesLabel";
+            totalSalesLabel.Size = new Size(305, 36);
+            totalSalesLabel.TabIndex = 8;
+            totalSalesLabel.Text = "Total Sales: ";
+            totalSalesLabel.Click += totalSalesLabel_Click;
+            // 
+            // siticoneLabel1
+            // 
+            siticoneLabel1.BackColor = Color.Transparent;
+            siticoneLabel1.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel1.ForeColor = Color.FromArgb(231, 111, 81);
+            siticoneLabel1.Location = new Point(735, 115);
+            siticoneLabel1.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel1.Name = "siticoneLabel1";
+            siticoneLabel1.Size = new Size(221, 36);
+            siticoneLabel1.TabIndex = 7;
+            siticoneLabel1.Text = "Fuel Type";
+            // 
+            // FuelTypeSalesCombobox
+            // 
+            FuelTypeSalesCombobox.BackColor = Color.FromArgb(244, 241, 222);
+            FuelTypeSalesCombobox.FormattingEnabled = true;
+            FuelTypeSalesCombobox.Items.AddRange(new object[] { "Diesel", "Premium", "Regular" });
+            FuelTypeSalesCombobox.Location = new Point(735, 162);
+            FuelTypeSalesCombobox.Margin = new Padding(4);
+            FuelTypeSalesCombobox.Name = "FuelTypeSalesCombobox";
+            FuelTypeSalesCombobox.Size = new Size(248, 33);
+            FuelTypeSalesCombobox.TabIndex = 6;
+            FuelTypeSalesCombobox.SelectedIndexChanged += FuelTypeSalesCombobox_SelectedIndexChanged;
+            // 
+            // siticoneLabel3
+            // 
+            siticoneLabel3.BackColor = Color.Transparent;
+            siticoneLabel3.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel3.ForeColor = Color.FromArgb(231, 111, 81);
+            siticoneLabel3.Location = new Point(1008, 114);
+            siticoneLabel3.Margin = new Padding(4, 0, 4, 0);
+            siticoneLabel3.Name = "siticoneLabel3";
+            siticoneLabel3.Size = new Size(221, 36);
+            siticoneLabel3.TabIndex = 5;
+            siticoneLabel3.Text = "Monthly Sales";
+            siticoneLabel3.Click += siticoneLabel3_Click;
+            // 
+            // DateSalesCombox
+            // 
+            DateSalesCombox.BackColor = Color.FromArgb(244, 241, 222);
+            DateSalesCombox.FormattingEnabled = true;
+            DateSalesCombox.Location = new Point(1008, 162);
+            DateSalesCombox.Margin = new Padding(4);
+            DateSalesCombox.Name = "DateSalesCombox";
+            DateSalesCombox.Size = new Size(248, 33);
+            DateSalesCombox.TabIndex = 4;
+            DateSalesCombox.SelectedIndexChanged += DateSalesCombox_SelectedIndexChanged;
+            // 
+            // salesDVG
+            // 
+            salesDVG.BackgroundColor = Color.FromArgb(244, 241, 222);
+            salesDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            salesDVG.Location = new Point(18, 190);
+            salesDVG.Margin = new Padding(4);
+            salesDVG.Name = "salesDVG";
+            salesDVG.RowHeadersWidth = 51;
+            salesDVG.Size = new Size(551, 213);
+            salesDVG.TabIndex = 3;
+            salesDVG.CellContentClick += salesDVG_CellContentClick;
+            // 
+            // siticoneShimmerLabel2
+            // 
+            siticoneShimmerLabel2.AutoReverse = false;
+            siticoneShimmerLabel2.BackColor = Color.FromArgb(244, 241, 222);
+            siticoneShimmerLabel2.BaseColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel2.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            siticoneShimmerLabel2.Font = new Font("Impact", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneShimmerLabel2.IsAnimating = true;
+            siticoneShimmerLabel2.IsPaused = false;
+            siticoneShimmerLabel2.Location = new Point(130, 120);
+            siticoneShimmerLabel2.Margin = new Padding(4);
+            siticoneShimmerLabel2.Name = "siticoneShimmerLabel2";
+            siticoneShimmerLabel2.PauseDuration = 0;
+            siticoneShimmerLabel2.ShimmerColor = Color.FromArgb(231, 111, 81);
+            siticoneShimmerLabel2.ShimmerOpacity = 1F;
+            siticoneShimmerLabel2.ShimmerSpeed = 30;
+            siticoneShimmerLabel2.ShimmerWidth = 0.5F;
+            siticoneShimmerLabel2.Size = new Size(126, 49);
+            siticoneShimmerLabel2.TabIndex = 2;
+            siticoneShimmerLabel2.Text = "SALES";
+            siticoneShimmerLabel2.ToolTipText = "";
+            // 
+            // siticoneShimmerLabel1
+            // 
+            siticoneShimmerLabel1.AutoReverse = false;
+            siticoneShimmerLabel1.BackColor = Color.FromArgb(244, 241, 222);
+            siticoneShimmerLabel1.BaseColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel1.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            siticoneShimmerLabel1.Font = new Font("Impact", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneShimmerLabel1.IsAnimating = true;
+            siticoneShimmerLabel1.IsPaused = false;
+            siticoneShimmerLabel1.Location = new Point(9, 12);
+            siticoneShimmerLabel1.Margin = new Padding(4);
+            siticoneShimmerLabel1.Name = "siticoneShimmerLabel1";
+            siticoneShimmerLabel1.PauseDuration = 0;
+            siticoneShimmerLabel1.ShimmerColor = Color.FromArgb(231, 111, 81);
+            siticoneShimmerLabel1.ShimmerOpacity = 1F;
+            siticoneShimmerLabel1.ShimmerSpeed = 30;
+            siticoneShimmerLabel1.ShimmerWidth = 0.5F;
+            siticoneShimmerLabel1.Size = new Size(418, 100);
+            siticoneShimmerLabel1.TabIndex = 1;
+            siticoneShimmerLabel1.Text = "PAGAS.CO";
+            siticoneShimmerLabel1.ToolTipText = "";
+            // 
+            // BranchPanel
+            // 
+            BranchPanel.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
+            BranchPanel.BackColor = Color.Transparent;
+            BranchPanel.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            BranchPanel.BorderDashPattern = null;
+            BranchPanel.BorderGradientEndColor = Color.FromArgb(231, 111, 81);
+            BranchPanel.BorderGradientStartColor = Color.FromArgb(38, 70, 83);
+            BranchPanel.BorderThickness = 2F;
+            BranchPanel.Controls.Add(pictureBox3);
+            BranchPanel.Controls.Add(pictureBox2);
+            BranchPanel.Controls.Add(FuelCostumeracahoicesPanel);
+            BranchPanel.Controls.Add(restockBtn);
+            BranchPanel.Controls.Add(restockTbx);
+            BranchPanel.Controls.Add(siticoneShimmerLabel5);
+            BranchPanel.Controls.Add(PricesLoadBtn);
+            BranchPanel.Controls.Add(FuelPricesDGV);
+            BranchPanel.Controls.Add(siticoneShimmerLabel4);
+            BranchPanel.Controls.Add(LoadBtn);
+            BranchPanel.Controls.Add(FuelStocksDGV);
+            BranchPanel.CornerRadiusBottomLeft = 10F;
+            BranchPanel.CornerRadiusBottomRight = 10F;
+            BranchPanel.CornerRadiusTopLeft = 10F;
+            BranchPanel.CornerRadiusTopRight = 10F;
+            BranchPanel.EnableAcrylicEffect = false;
+            BranchPanel.EnableMicaEffect = false;
+            BranchPanel.EnableRippleEffect = false;
+            BranchPanel.FillColor = Color.Transparent;
+            BranchPanel.GradientColors = new Color[]
+    {
+    Color.White,
+    Color.LightGray,
+    Color.Gray
+    };
+            BranchPanel.GradientPositions = new float[]
+    {
+    0F,
+    0.5F,
+    1F
+    };
+            BranchPanel.Location = new Point(72, 68);
+            BranchPanel.Margin = new Padding(4);
+            BranchPanel.Name = "BranchPanel";
+            BranchPanel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
+            BranchPanel.RippleAlpha = 50;
+            BranchPanel.RippleAlphaDecrement = 3;
+            BranchPanel.RippleColor = Color.FromArgb(50, 255, 255, 255);
+            BranchPanel.RippleMaxSize = 600F;
+            BranchPanel.RippleSpeed = 15F;
+            BranchPanel.ShowBorder = true;
+            BranchPanel.Size = new Size(1274, 718);
+            BranchPanel.TabIndex = 3;
+            BranchPanel.TabStop = true;
+            BranchPanel.UseBorderGradient = true;
+            BranchPanel.UseMultiGradient = false;
+            BranchPanel.UsePatternTexture = false;
+            BranchPanel.UseRadialGradient = false;
+            BranchPanel.Paint += branchPanel_Paint;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1086, -289);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(185, 539);
+            pictureBox3.TabIndex = 29;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(971, 256);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(305, 462);
+            pictureBox2.TabIndex = 28;
+            pictureBox2.TabStop = false;
+            // 
+            // FuelCostumeracahoicesPanel
+            // 
+            FuelCostumeracahoicesPanel.Controls.Add(RegularrestockRadioBtn);
+            FuelCostumeracahoicesPanel.Controls.Add(PremiumrestockRadioBtn);
+            FuelCostumeracahoicesPanel.Controls.Add(DieselrestockRadioBtn);
+            FuelCostumeracahoicesPanel.Location = new Point(79, 44);
+            FuelCostumeracahoicesPanel.Margin = new Padding(4);
+            FuelCostumeracahoicesPanel.Name = "FuelCostumeracahoicesPanel";
+            FuelCostumeracahoicesPanel.Size = new Size(163, 199);
+            FuelCostumeracahoicesPanel.TabIndex = 27;
+            // 
+            // RegularrestockRadioBtn
+            // 
+            RegularrestockRadioBtn.AutoSize = true;
+            RegularrestockRadioBtn.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            RegularrestockRadioBtn.ForeColor = Color.FromArgb(38, 70, 83);
+            RegularrestockRadioBtn.Location = new Point(19, 154);
+            RegularrestockRadioBtn.Margin = new Padding(4);
+            RegularrestockRadioBtn.Name = "RegularrestockRadioBtn";
+            RegularrestockRadioBtn.Size = new Size(129, 26);
+            RegularrestockRadioBtn.TabIndex = 2;
+            RegularrestockRadioBtn.TabStop = true;
+            RegularrestockRadioBtn.Text = "REGULAR";
+            RegularrestockRadioBtn.UseVisualStyleBackColor = true;
+            RegularrestockRadioBtn.CheckedChanged += RegularrestockRadioBtn_CheckedChanged;
+            // 
+            // PremiumrestockRadioBtn
+            // 
+            PremiumrestockRadioBtn.AutoSize = true;
+            PremiumrestockRadioBtn.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PremiumrestockRadioBtn.ForeColor = Color.FromArgb(38, 70, 83);
+            PremiumrestockRadioBtn.Location = new Point(19, 92);
+            PremiumrestockRadioBtn.Margin = new Padding(4);
+            PremiumrestockRadioBtn.Name = "PremiumrestockRadioBtn";
+            PremiumrestockRadioBtn.Size = new Size(124, 26);
+            PremiumrestockRadioBtn.TabIndex = 1;
+            PremiumrestockRadioBtn.TabStop = true;
+            PremiumrestockRadioBtn.Text = "PREMIUM";
+            PremiumrestockRadioBtn.UseVisualStyleBackColor = true;
+            PremiumrestockRadioBtn.CheckedChanged += PremiumrestockRadioBtn_CheckedChanged;
+            // 
+            // DieselrestockRadioBtn
+            // 
+            DieselrestockRadioBtn.AutoSize = true;
+            DieselrestockRadioBtn.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DieselrestockRadioBtn.ForeColor = Color.FromArgb(38, 70, 83);
+            DieselrestockRadioBtn.Location = new Point(20, 32);
+            DieselrestockRadioBtn.Margin = new Padding(4);
+            DieselrestockRadioBtn.Name = "DieselrestockRadioBtn";
+            DieselrestockRadioBtn.Size = new Size(104, 26);
+            DieselrestockRadioBtn.TabIndex = 0;
+            DieselrestockRadioBtn.TabStop = true;
+            DieselrestockRadioBtn.Text = "DIESEL";
+            DieselrestockRadioBtn.UseVisualStyleBackColor = true;
+            DieselrestockRadioBtn.CheckedChanged += DieselrestockRadioBtn_CheckedChanged;
+            // 
+            // restockBtn
+            // 
+            restockBtn.BackColor = Color.FromArgb(244, 241, 222);
+            restockBtn.FlatStyle = FlatStyle.Popup;
+            restockBtn.ForeColor = Color.FromArgb(244, 241, 222);
+            restockBtn.IconChar = FontAwesome.Sharp.IconChar.Add;
+            restockBtn.IconColor = Color.FromArgb(231, 111, 81);
+            restockBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            restockBtn.Location = new Point(660, 269);
+            restockBtn.Margin = new Padding(4);
+            restockBtn.Name = "restockBtn";
+            restockBtn.Size = new Size(47, 44);
+            restockBtn.TabIndex = 26;
+            restockBtn.UseVisualStyleBackColor = false;
+            restockBtn.Click += restockBtn_Click;
+            // 
+            // restockTbx
+            // 
+            restockTbx.AccessibleDescription = "A customizable text input field.";
+            restockTbx.AccessibleName = "Text Box";
+            restockTbx.AccessibleRole = AccessibleRole.Text;
+            restockTbx.BackColor = Color.Transparent;
+            restockTbx.BlinkCount = 3;
+            restockTbx.BlinkShadow = false;
+            restockTbx.BorderColor1 = Color.FromArgb(231, 111, 81);
+            restockTbx.BorderColor2 = Color.FromArgb(38, 70, 83);
+            restockTbx.BorderFocusColor1 = Color.FromArgb(231, 111, 81);
+            restockTbx.BorderFocusColor2 = Color.FromArgb(77, 77, 255);
+            restockTbx.CanShake = true;
+            restockTbx.ContinuousBlink = false;
+            restockTbx.CursorBlinkRate = 500;
+            restockTbx.CursorColor = Color.Black;
+            restockTbx.CursorHeight = 26;
+            restockTbx.CursorOffset = 0;
+            restockTbx.CursorStyle = SiticoneNetCoreUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
+            restockTbx.CursorWidth = 1;
+            restockTbx.DisabledBackColor = Color.WhiteSmoke;
+            restockTbx.DisabledBorderColor = Color.LightGray;
+            restockTbx.DisabledTextColor = Color.Gray;
+            restockTbx.EnableDropShadow = false;
+            restockTbx.FillColor1 = Color.White;
+            restockTbx.FillColor2 = Color.White;
+            restockTbx.Font = new Font("Segoe UI", 9.5F);
+            restockTbx.ForeColor = Color.DimGray;
+            restockTbx.HoverBorderColor1 = Color.Gray;
+            restockTbx.HoverBorderColor2 = Color.Gray;
+            restockTbx.IsEnabled = true;
+            restockTbx.Location = new Point(297, 270);
+            restockTbx.Margin = new Padding(4);
+            restockTbx.Name = "restockTbx";
+            restockTbx.PlaceholderColor = Color.Gray;
+            restockTbx.PlaceholderText = "Restock Here!";
+            restockTbx.ReadOnlyBorderColor1 = Color.LightGray;
+            restockTbx.ReadOnlyBorderColor2 = Color.LightGray;
+            restockTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
+            restockTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
+            restockTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
+            restockTbx.SelectionBackColor = Color.FromArgb(231, 111, 81);
+            restockTbx.ShadowAnimationDuration = 1;
+            restockTbx.ShadowBlur = 10;
+            restockTbx.ShadowColor = Color.FromArgb(15, 0, 0, 0);
+            restockTbx.Size = new Size(341, 44);
+            restockTbx.SolidBorderColor = Color.FromArgb(231, 111, 81);
+            restockTbx.SolidBorderFocusColor = Color.FromArgb(244, 241, 222);
+            restockTbx.SolidBorderHoverColor = Color.Gray;
+            restockTbx.SolidFillColor = Color.Transparent;
+            restockTbx.TabIndex = 25;
+            restockTbx.TextPadding = new Padding(16, 0, 6, 0);
+            restockTbx.UseBorderGradient = true;
+            restockTbx.ValidationErrorMessage = "Invalid input.";
+            restockTbx.ValidationFunction = null;
+            restockTbx.Click += restockTbx_Click;
+            // 
+            // siticoneShimmerLabel5
+            // 
+            siticoneShimmerLabel5.AutoReverse = false;
+            siticoneShimmerLabel5.BackColor = Color.FromArgb(244, 241, 222);
+            siticoneShimmerLabel5.BaseColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel5.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            siticoneShimmerLabel5.Font = new Font("MS Reference Sans Serif", 10.2F);
+            siticoneShimmerLabel5.IsAnimating = true;
+            siticoneShimmerLabel5.IsPaused = false;
+            siticoneShimmerLabel5.Location = new Point(369, 368);
+            siticoneShimmerLabel5.Margin = new Padding(4);
+            siticoneShimmerLabel5.Name = "siticoneShimmerLabel5";
+            siticoneShimmerLabel5.PauseDuration = 0;
+            siticoneShimmerLabel5.ShimmerColor = Color.FromArgb(231, 111, 81);
+            siticoneShimmerLabel5.ShimmerOpacity = 1F;
+            siticoneShimmerLabel5.ShimmerSpeed = 50;
+            siticoneShimmerLabel5.ShimmerWidth = 0.8F;
+            siticoneShimmerLabel5.Size = new Size(269, 32);
+            siticoneShimmerLabel5.TabIndex = 24;
+            siticoneShimmerLabel5.Text = "Fuel Prices Each Branch";
+            siticoneShimmerLabel5.ToolTipText = "";
+            // 
+            // PricesLoadBtn
+            // 
+            PricesLoadBtn.BackColor = Color.FromArgb(244, 241, 222);
+            PricesLoadBtn.FlatAppearance.BorderSize = 0;
+            PricesLoadBtn.FlatStyle = FlatStyle.Popup;
+            PricesLoadBtn.IconChar = FontAwesome.Sharp.IconChar.Spinner;
+            PricesLoadBtn.IconColor = Color.FromArgb(231, 111, 81);
+            PricesLoadBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            PricesLoadBtn.IconSize = 34;
+            PricesLoadBtn.Location = new Point(883, 622);
+            PricesLoadBtn.Margin = new Padding(4);
+            PricesLoadBtn.Name = "PricesLoadBtn";
+            PricesLoadBtn.Size = new Size(46, 45);
+            PricesLoadBtn.TabIndex = 23;
+            PricesLoadBtn.UseVisualStyleBackColor = false;
+            // 
+            // FuelPricesDGV
+            // 
+            FuelPricesDGV.BackgroundColor = Color.FromArgb(244, 241, 222);
+            FuelPricesDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            FuelPricesDGV.Location = new Point(297, 419);
+            FuelPricesDGV.Margin = new Padding(4);
+            FuelPricesDGV.Name = "FuelPricesDGV";
+            FuelPricesDGV.RowHeadersWidth = 51;
+            FuelPricesDGV.Size = new Size(632, 184);
+            FuelPricesDGV.TabIndex = 22;
+            FuelPricesDGV.CellContentClick += FuelPricesDGV_CellContentClick;
+            FuelPricesDGV.CellValueChanged += FuelPricesDGV_CellValueChanged;
+            // 
+            // siticoneShimmerLabel4
+            // 
+            siticoneShimmerLabel4.AutoReverse = false;
+            siticoneShimmerLabel4.BackColor = Color.FromArgb(244, 241, 222);
+            siticoneShimmerLabel4.BaseColor = Color.FromArgb(38, 70, 83);
+            siticoneShimmerLabel4.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
+            siticoneShimmerLabel4.Font = new Font("MS Reference Sans Serif", 10.2F);
+            siticoneShimmerLabel4.IsAnimating = true;
+            siticoneShimmerLabel4.IsPaused = false;
+            siticoneShimmerLabel4.Location = new Point(369, 22);
+            siticoneShimmerLabel4.Margin = new Padding(4);
+            siticoneShimmerLabel4.Name = "siticoneShimmerLabel4";
+            siticoneShimmerLabel4.PauseDuration = 0;
+            siticoneShimmerLabel4.ShimmerColor = Color.FromArgb(231, 111, 81);
+            siticoneShimmerLabel4.ShimmerOpacity = 1F;
+            siticoneShimmerLabel4.ShimmerSpeed = 50;
+            siticoneShimmerLabel4.ShimmerWidth = 0.8F;
+            siticoneShimmerLabel4.Size = new Size(173, 32);
+            siticoneShimmerLabel4.TabIndex = 21;
+            siticoneShimmerLabel4.Text = "Fuels of branch";
+            siticoneShimmerLabel4.ToolTipText = "";
+            // 
+            // LoadBtn
+            // 
+            LoadBtn.BackColor = Color.FromArgb(244, 241, 222);
+            LoadBtn.FlatAppearance.BorderSize = 0;
+            LoadBtn.FlatStyle = FlatStyle.Popup;
+            LoadBtn.IconChar = FontAwesome.Sharp.IconChar.Spinner;
+            LoadBtn.IconColor = Color.FromArgb(231, 111, 81);
+            LoadBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            LoadBtn.IconSize = 34;
+            LoadBtn.Location = new Point(883, 270);
+            LoadBtn.Margin = new Padding(4);
+            LoadBtn.Name = "LoadBtn";
+            LoadBtn.Size = new Size(46, 45);
+            LoadBtn.TabIndex = 17;
+            LoadBtn.UseVisualStyleBackColor = false;
+            LoadBtn.Click += LoadBtn_Click;
             // 
             // FuelStocksDGV
             // 
             FuelStocksDGV.BackgroundColor = Color.FromArgb(244, 241, 222);
             FuelStocksDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            FuelStocksDGV.Location = new Point(682, 77);
+            FuelStocksDGV.Location = new Point(297, 62);
             FuelStocksDGV.Margin = new Padding(4);
             FuelStocksDGV.Name = "FuelStocksDGV";
             FuelStocksDGV.RowHeadersWidth = 51;
-            FuelStocksDGV.Size = new Size(552, 541);
+            FuelStocksDGV.Size = new Size(632, 184);
             FuelStocksDGV.TabIndex = 14;
             FuelStocksDGV.CellContentClick += FuelStocksDGV_CellContentClick;
+            FuelStocksDGV.CellValidating += FuelStocksDGV_CellValidating;
+            FuelStocksDGV.CellValueChanged += FuelStocksDGV_CellValueChanged;
+            FuelStocksDGV.RowValidated += FuelStocksDGV_RowValidated;
             // 
             // AboutUsPanel
             // 
@@ -1287,7 +1839,7 @@
     {
     Color.White,
     Color.LightGray,
-    Color.Gray
+    Color.FromArgb(38, 70, 83)
     };
             AboutUsPanel.GradientPositions = new float[]
     {
@@ -1309,7 +1861,7 @@
             AboutUsPanel.TabIndex = 22;
             AboutUsPanel.TabStop = true;
             AboutUsPanel.UseBorderGradient = false;
-            AboutUsPanel.UseMultiGradient = false;
+            AboutUsPanel.UseMultiGradient = true;
             AboutUsPanel.UsePatternTexture = false;
             AboutUsPanel.UseRadialGradient = false;
             // 
@@ -1456,209 +2008,6 @@
             siticoneShimmerLabel3.Text = "PAGAS.CO";
             siticoneShimmerLabel3.ToolTipText = "";
             // 
-            // AccountSetPanel
-            // 
-            AccountSetPanel.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
-            AccountSetPanel.BackColor = Color.Transparent;
-            AccountSetPanel.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            AccountSetPanel.BorderDashPattern = null;
-            AccountSetPanel.BorderGradientEndColor = Color.Purple;
-            AccountSetPanel.BorderGradientStartColor = Color.Blue;
-            AccountSetPanel.BorderThickness = 2F;
-            AccountSetPanel.Controls.Add(ManagerWelcomingSettingsLabel);
-            AccountSetPanel.CornerRadiusBottomLeft = 10F;
-            AccountSetPanel.CornerRadiusBottomRight = 10F;
-            AccountSetPanel.CornerRadiusTopLeft = 10F;
-            AccountSetPanel.CornerRadiusTopRight = 10F;
-            AccountSetPanel.EnableAcrylicEffect = false;
-            AccountSetPanel.EnableMicaEffect = false;
-            AccountSetPanel.EnableRippleEffect = false;
-            AccountSetPanel.FillColor = Color.FromArgb(244, 241, 222);
-            AccountSetPanel.GradientColors = new Color[]
-    {
-    Color.White,
-    Color.LightGray,
-    Color.Gray
-    };
-            AccountSetPanel.GradientPositions = new float[]
-    {
-    0F,
-    0.5F,
-    1F
-    };
-            AccountSetPanel.Location = new Point(71, 68);
-            AccountSetPanel.Margin = new Padding(4);
-            AccountSetPanel.Name = "AccountSetPanel";
-            AccountSetPanel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
-            AccountSetPanel.RippleAlpha = 50;
-            AccountSetPanel.RippleAlphaDecrement = 3;
-            AccountSetPanel.RippleColor = Color.FromArgb(50, 255, 255, 255);
-            AccountSetPanel.RippleMaxSize = 600F;
-            AccountSetPanel.RippleSpeed = 15F;
-            AccountSetPanel.ShowBorder = true;
-            AccountSetPanel.Size = new Size(1275, 718);
-            AccountSetPanel.TabIndex = 6;
-            AccountSetPanel.TabStop = true;
-            AccountSetPanel.UseBorderGradient = false;
-            AccountSetPanel.UseMultiGradient = false;
-            AccountSetPanel.UsePatternTexture = false;
-            AccountSetPanel.UseRadialGradient = false;
-            AccountSetPanel.Paint += AccountSetPanel_Paint;
-            // 
-            // ManagerWelcomingSettingsLabel
-            // 
-            ManagerWelcomingSettingsLabel.AutoReverse = false;
-            ManagerWelcomingSettingsLabel.BackColor = Color.FromArgb(244, 241, 222);
-            ManagerWelcomingSettingsLabel.BaseColor = Color.FromArgb(38, 70, 83);
-            ManagerWelcomingSettingsLabel.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
-            ManagerWelcomingSettingsLabel.Font = new Font("MS Reference Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ManagerWelcomingSettingsLabel.IsAnimating = true;
-            ManagerWelcomingSettingsLabel.IsPaused = false;
-            ManagerWelcomingSettingsLabel.Location = new Point(18, 22);
-            ManagerWelcomingSettingsLabel.Margin = new Padding(4);
-            ManagerWelcomingSettingsLabel.Name = "ManagerWelcomingSettingsLabel";
-            ManagerWelcomingSettingsLabel.PauseDuration = 0;
-            ManagerWelcomingSettingsLabel.ShimmerColor = Color.FromArgb(231, 111, 81);
-            ManagerWelcomingSettingsLabel.ShimmerOpacity = 1F;
-            ManagerWelcomingSettingsLabel.ShimmerSpeed = 50;
-            ManagerWelcomingSettingsLabel.ShimmerWidth = 0.2F;
-            ManagerWelcomingSettingsLabel.Size = new Size(291, 58);
-            ManagerWelcomingSettingsLabel.TabIndex = 1;
-            ManagerWelcomingSettingsLabel.Text = "Welcome, Manager";
-            ManagerWelcomingSettingsLabel.ToolTipText = "";
-            // 
-            // SalesPanel
-            // 
-            SalesPanel.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
-            SalesPanel.BackColor = Color.Transparent;
-            SalesPanel.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            SalesPanel.BorderDashPattern = null;
-            SalesPanel.BorderGradientEndColor = Color.FromArgb(38, 70, 83);
-            SalesPanel.BorderGradientStartColor = Color.FromArgb(231, 111, 81);
-            SalesPanel.BorderThickness = 2F;
-            SalesPanel.Controls.Add(siticoneLabel3);
-            SalesPanel.Controls.Add(DateSalesCombox);
-            SalesPanel.Controls.Add(salesDVG);
-            SalesPanel.Controls.Add(siticoneShimmerLabel2);
-            SalesPanel.Controls.Add(siticoneShimmerLabel1);
-            SalesPanel.CornerRadiusBottomLeft = 10F;
-            SalesPanel.CornerRadiusBottomRight = 10F;
-            SalesPanel.CornerRadiusTopLeft = 10F;
-            SalesPanel.CornerRadiusTopRight = 10F;
-            SalesPanel.EnableAcrylicEffect = false;
-            SalesPanel.EnableMicaEffect = false;
-            SalesPanel.EnableRippleEffect = false;
-            SalesPanel.FillColor = Color.FromArgb(244, 241, 222);
-            SalesPanel.GradientColors = new Color[]
-    {
-    Color.White,
-    Color.LightGray,
-    Color.Gray
-    };
-            SalesPanel.GradientPositions = new float[]
-    {
-    0F,
-    0.5F,
-    1F
-    };
-            SalesPanel.Location = new Point(71, 65);
-            SalesPanel.Margin = new Padding(4);
-            SalesPanel.Name = "SalesPanel";
-            SalesPanel.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
-            SalesPanel.RippleAlpha = 50;
-            SalesPanel.RippleAlphaDecrement = 3;
-            SalesPanel.RippleColor = Color.FromArgb(50, 255, 255, 255);
-            SalesPanel.RippleMaxSize = 600F;
-            SalesPanel.RippleSpeed = 15F;
-            SalesPanel.ShowBorder = true;
-            SalesPanel.Size = new Size(1276, 721);
-            SalesPanel.TabIndex = 21;
-            SalesPanel.TabStop = true;
-            SalesPanel.UseBorderGradient = true;
-            SalesPanel.UseMultiGradient = false;
-            SalesPanel.UsePatternTexture = false;
-            SalesPanel.UseRadialGradient = false;
-            SalesPanel.Paint += SalesPanel_Paint;
-            // 
-            // siticoneLabel3
-            // 
-            siticoneLabel3.BackColor = Color.Transparent;
-            siticoneLabel3.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            siticoneLabel3.ForeColor = Color.FromArgb(231, 111, 81);
-            siticoneLabel3.Location = new Point(1008, 114);
-            siticoneLabel3.Margin = new Padding(4, 0, 4, 0);
-            siticoneLabel3.Name = "siticoneLabel3";
-            siticoneLabel3.Size = new Size(221, 36);
-            siticoneLabel3.TabIndex = 5;
-            siticoneLabel3.Text = "Monthly Sales";
-            siticoneLabel3.Click += siticoneLabel3_Click;
-            // 
-            // DateSalesCombox
-            // 
-            DateSalesCombox.BackColor = Color.FromArgb(244, 241, 222);
-            DateSalesCombox.FormattingEnabled = true;
-            DateSalesCombox.Location = new Point(1008, 162);
-            DateSalesCombox.Margin = new Padding(4);
-            DateSalesCombox.Name = "DateSalesCombox";
-            DateSalesCombox.Size = new Size(248, 33);
-            DateSalesCombox.TabIndex = 4;
-            DateSalesCombox.SelectedIndexChanged += DateSalesCombox_SelectedIndexChanged;
-            // 
-            // salesDVG
-            // 
-            salesDVG.BackgroundColor = Color.FromArgb(244, 241, 222);
-            salesDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            salesDVG.Location = new Point(21, 215);
-            salesDVG.Margin = new Padding(4);
-            salesDVG.Name = "salesDVG";
-            salesDVG.RowHeadersWidth = 51;
-            salesDVG.Size = new Size(1235, 482);
-            salesDVG.TabIndex = 3;
-            // 
-            // siticoneShimmerLabel2
-            // 
-            siticoneShimmerLabel2.AutoReverse = false;
-            siticoneShimmerLabel2.BackColor = Color.FromArgb(244, 241, 222);
-            siticoneShimmerLabel2.BaseColor = Color.FromArgb(38, 70, 83);
-            siticoneShimmerLabel2.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
-            siticoneShimmerLabel2.Font = new Font("Impact", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            siticoneShimmerLabel2.IsAnimating = true;
-            siticoneShimmerLabel2.IsPaused = false;
-            siticoneShimmerLabel2.Location = new Point(130, 120);
-            siticoneShimmerLabel2.Margin = new Padding(4);
-            siticoneShimmerLabel2.Name = "siticoneShimmerLabel2";
-            siticoneShimmerLabel2.PauseDuration = 0;
-            siticoneShimmerLabel2.ShimmerColor = Color.FromArgb(231, 111, 81);
-            siticoneShimmerLabel2.ShimmerOpacity = 1F;
-            siticoneShimmerLabel2.ShimmerSpeed = 30;
-            siticoneShimmerLabel2.ShimmerWidth = 0.5F;
-            siticoneShimmerLabel2.Size = new Size(126, 49);
-            siticoneShimmerLabel2.TabIndex = 2;
-            siticoneShimmerLabel2.Text = "SALES";
-            siticoneShimmerLabel2.ToolTipText = "";
-            // 
-            // siticoneShimmerLabel1
-            // 
-            siticoneShimmerLabel1.AutoReverse = false;
-            siticoneShimmerLabel1.BackColor = Color.FromArgb(244, 241, 222);
-            siticoneShimmerLabel1.BaseColor = Color.FromArgb(38, 70, 83);
-            siticoneShimmerLabel1.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
-            siticoneShimmerLabel1.Font = new Font("Impact", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            siticoneShimmerLabel1.IsAnimating = true;
-            siticoneShimmerLabel1.IsPaused = false;
-            siticoneShimmerLabel1.Location = new Point(9, 12);
-            siticoneShimmerLabel1.Margin = new Padding(4);
-            siticoneShimmerLabel1.Name = "siticoneShimmerLabel1";
-            siticoneShimmerLabel1.PauseDuration = 0;
-            siticoneShimmerLabel1.ShimmerColor = Color.FromArgb(231, 111, 81);
-            siticoneShimmerLabel1.ShimmerOpacity = 1F;
-            siticoneShimmerLabel1.ShimmerSpeed = 30;
-            siticoneShimmerLabel1.ShimmerWidth = 0.5F;
-            siticoneShimmerLabel1.Size = new Size(418, 100);
-            siticoneShimmerLabel1.TabIndex = 1;
-            siticoneShimmerLabel1.Text = "PAGAS.CO";
-            siticoneShimmerLabel1.ToolTipText = "";
-            // 
             // fuelStockBindingSource1
             // 
             fuelStockBindingSource1.DataSource = typeof(FuelStock);
@@ -1669,7 +2018,7 @@
             // 
             // sidebarTransition
             // 
-            sidebarTransition.Interval = 10;
+            sidebarTransition.Interval = 1;
             sidebarTransition.Tick += sidebarTransition_Tick;
             // 
             // iconDropDownButton1
@@ -1690,6 +2039,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "ManagerDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManagerDashboard";
             Load += ManagerDashboard_Load;
             siticonePanel2.ResumeLayout(false);
@@ -1703,13 +2053,22 @@
             BranchBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             siticonePanel1.ResumeLayout(false);
-            branchPanel.ResumeLayout(false);
+            siticonePanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            AccountSetPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            SalesPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)salesDVG).EndInit();
+            BranchPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            FuelCostumeracahoicesPanel.ResumeLayout(false);
+            FuelCostumeracahoicesPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)FuelPricesDGV).EndInit();
             ((System.ComponentModel.ISupportInitialize)FuelStocksDGV).EndInit();
             AboutUsPanel.ResumeLayout(false);
             AboutUsPanel.PerformLayout();
-            AccountSetPanel.ResumeLayout(false);
-            SalesPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)salesDVG).EndInit();
             ((System.ComponentModel.ISupportInitialize)fuelStockBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)fuelStockBindingSource).EndInit();
             ResumeLayout(false);
@@ -1738,23 +2097,15 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private SiticoneNetCoreUI.SiticoneButton LogOutBtn;
         private SiticoneNetCoreUI.SiticonePanel SalesPanel;
-        private SiticoneNetCoreUI.SiticonePanel branchPanel;
-        private FontAwesome.Sharp.IconButton SaveStockBtn;
-        private FontAwesome.Sharp.IconButton addstockBtn;
-        private FontAwesome.Sharp.IconButton BranchesLoadBtn;
-        private SiticoneNetCoreUI.SiticoneTextBox AddFuelTbx;
-        private FontAwesome.Sharp.IconButton addbranchBtn;
-        private SiticoneNetCoreUI.SiticoneTextBox addbranchTbx;
-        private ComboBox branchesComBx;
-        private SiticoneNetCoreUI.SiticoneShimmerLabel ManagerLabel;
+        private SiticoneNetCoreUI.SiticonePanel BranchPanel;
+        private FontAwesome.Sharp.IconButton LoadBtn;
+        private FontAwesome.Sharp.IconButton branchRefreshBtn;  // Added declaration
         private DataGridView FuelStocksDGV;
         private DataGridView salesDVG;
         private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel2;
         private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel1;
         private ComboBox DateSalesCombox;
         private SiticoneNetCoreUI.SiticoneLabel siticoneLabel3;
-        private SiticoneNetCoreUI.SiticonePanel AccountSetPanel;
-        private SiticoneNetCoreUI.SiticoneShimmerLabel ManagerWelcomingSettingsLabel;
         private FontAwesome.Sharp.IconDropDownButton iconDropDownButton1;
         private SiticoneNetCoreUI.SiticonePanel AboutUsPanel;
         private Label label1;
@@ -1770,5 +2121,32 @@
         private Label label8;
         private BindingSource fuelStockBindingSource;
         private BindingSource fuelStockBindingSource1;
+        private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel4;
+        private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel5;
+        private FontAwesome.Sharp.IconButton PricesLoadBtn;
+        private DataGridView FuelPricesDGV;
+        private ComboBox FuelTypeSalesCombobox;
+        private SiticoneNetCoreUI.SiticoneLabel siticoneLabel1;
+        private SiticoneNetCoreUI.SiticoneLabel totalSalesLabel;
+        private SiticoneNetCoreUI.SiticoneLabel LitersSoldLabel;
+        private SiticoneNetCoreUI.SiticoneTextBox restockTbx;
+        private FontAwesome.Sharp.IconButton restockBtn;
+        private Panel FuelCostumeracahoicesPanel;
+        private RadioButton RegularrestockRadioBtn;
+        private RadioButton PremiumrestockRadioBtn;
+        private RadioButton DieselrestockRadioBtn;
+        private SiticoneNetCoreUI.SiticonePanel AccountSetPanel;
+        private SiticoneNetCoreUI.SiticoneButton OwnerLoginBtn;
+        private PictureBox pictureBox1;
+        private SiticoneNetCoreUI.SiticoneLabel ManagerNameLabel;
+        private SiticoneNetCoreUI.SiticoneShimmerLabel ManagerWelcomingSettingsLabel;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private SiticoneNetCoreUI.SiticonePanel siticonePanel4;
+        private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel7;
+        private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel6;
+        private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel8;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
     }
 }

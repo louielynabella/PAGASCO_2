@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             siticonePanel1 = new SiticoneNetCoreUI.SiticonePanel();
             UpdatePassForgotBtn = new SiticoneNetCoreUI.SiticoneButton();
             NewPassTbx = new SiticoneNetCoreUI.SiticoneTextBox();
@@ -39,11 +40,13 @@
             siticoneLabel1 = new SiticoneNetCoreUI.SiticoneLabel();
             PagascoLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             siticonePanel2 = new SiticoneNetCoreUI.SiticonePanel();
+            pictureBox1 = new PictureBox();
             forgotpassExtBtn = new FontAwesome.Sharp.IconButton();
             siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             siticonePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // siticonePanel1
@@ -254,6 +257,7 @@
             ForgotPassBackBtn.Size = new Size(66, 61);
             ForgotPassBackBtn.TabIndex = 12;
             ForgotPassBackBtn.UseVisualStyleBackColor = false;
+            ForgotPassBackBtn.Click += ForgotPassBackBtn_Click;
             // 
             // iconPictureBox2
             // 
@@ -397,6 +401,7 @@
             siticonePanel2.BorderGradientEndColor = Color.Purple;
             siticonePanel2.BorderGradientStartColor = Color.Blue;
             siticonePanel2.BorderThickness = 2F;
+            siticonePanel2.Controls.Add(pictureBox1);
             siticonePanel2.Controls.Add(forgotpassExtBtn);
             siticonePanel2.CornerRadiusBottomLeft = 0F;
             siticonePanel2.CornerRadiusBottomRight = 0F;
@@ -419,7 +424,7 @@
     0.5F,
     1F
     };
-            siticonePanel2.Location = new Point(658, 0);
+            siticonePanel2.Location = new Point(660, 0);
             siticonePanel2.Margin = new Padding(4);
             siticonePanel2.Name = "siticonePanel2";
             siticonePanel2.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
@@ -429,7 +434,7 @@
             siticonePanel2.RippleMaxSize = 600F;
             siticonePanel2.RippleSpeed = 15F;
             siticonePanel2.ShowBorder = true;
-            siticonePanel2.Size = new Size(714, 804);
+            siticonePanel2.Size = new Size(712, 804);
             siticonePanel2.TabIndex = 5;
             siticonePanel2.TabStop = true;
             siticonePanel2.UseBorderGradient = false;
@@ -437,6 +442,15 @@
             siticonePanel2.UsePatternTexture = false;
             siticonePanel2.UseRadialGradient = false;
             siticonePanel2.MouseDown += panel_MouseDown;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(41, 116);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(632, 572);
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
             // 
             // forgotpassExtBtn
             // 
@@ -464,11 +478,13 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ForgotPassword";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ForgotPassword";
             siticonePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             siticonePanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -486,5 +502,6 @@
         private FontAwesome.Sharp.IconButton forgotpassExtBtn;
         private SiticoneNetCoreUI.SiticoneTextBox NewPassTbx;
         private SiticoneNetCoreUI.SiticoneButton UpdatePassForgotBtn;
+        private PictureBox pictureBox1;
     }
 }

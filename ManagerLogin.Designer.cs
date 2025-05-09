@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -40,9 +41,8 @@
             siticoneLabel1 = new SiticoneNetCoreUI.SiticoneLabel();
             PagascoLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             siticonePanel2 = new SiticoneNetCoreUI.SiticonePanel();
-            createaccBtn = new SiticoneNetCoreUI.SiticoneButton();
+            ManagerNamesRegisteredLabel = new SiticoneNetCoreUI.SiticoneLabel();
             LoginExtBtn = new FontAwesome.Sharp.IconButton();
-            ManagerLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             ForgotPassBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
@@ -323,7 +323,7 @@
             passwordTbx.FillColor1 = Color.White;
             passwordTbx.FillColor2 = Color.White;
             passwordTbx.Font = new Font("Segoe UI", 9.5F);
-            passwordTbx.ForeColor = Color.DimGray;
+            passwordTbx.ForeColor = Color.FromArgb(244, 241, 222);
             passwordTbx.HoverBorderColor1 = Color.Gray;
             passwordTbx.HoverBorderColor2 = Color.Gray;
             passwordTbx.IsEnabled = true;
@@ -390,12 +390,12 @@
             usernameTbx.CursorWidth = 1;
             usernameTbx.DisabledBackColor = Color.WhiteSmoke;
             usernameTbx.DisabledBorderColor = Color.LightGray;
-            usernameTbx.DisabledTextColor = Color.Gray;
+            usernameTbx.DisabledTextColor = Color.FromArgb(244, 241, 222);
             usernameTbx.EnableDropShadow = false;
             usernameTbx.FillColor1 = Color.White;
             usernameTbx.FillColor2 = Color.White;
             usernameTbx.Font = new Font("Segoe UI", 9.5F);
-            usernameTbx.ForeColor = Color.DimGray;
+            usernameTbx.ForeColor = Color.FromArgb(244, 241, 222);
             usernameTbx.HoverBorderColor1 = Color.Gray;
             usernameTbx.HoverBorderColor2 = Color.Gray;
             usernameTbx.IsEnabled = true;
@@ -408,7 +408,7 @@
             usernameTbx.ReadOnlyBorderColor2 = Color.LightGray;
             usernameTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
             usernameTbx.ReadOnlyFillColor2 = Color.WhiteSmoke;
-            usernameTbx.ReadOnlyPlaceholderColor = Color.DarkGray;
+            usernameTbx.ReadOnlyPlaceholderColor = Color.FromArgb(244, 241, 222);
             usernameTbx.SelectionBackColor = Color.FromArgb(77, 77, 255);
             usernameTbx.ShadowAnimationDuration = 1;
             usernameTbx.ShadowBlur = 10;
@@ -427,21 +427,21 @@
             // siticoneLabel3
             // 
             siticoneLabel3.BackColor = Color.Transparent;
-            siticoneLabel3.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel3.Font = new Font("MS Reference Sans Serif", 9F);
             siticoneLabel3.ForeColor = Color.FromArgb(231, 111, 81);
-            siticoneLabel3.Location = new Point(15, 321);
+            siticoneLabel3.Location = new Point(28, 336);
             siticoneLabel3.Margin = new Padding(4, 0, 4, 0);
             siticoneLabel3.Name = "siticoneLabel3";
             siticoneLabel3.Size = new Size(414, 36);
             siticoneLabel3.TabIndex = 4;
-            siticoneLabel3.Text = "Pagasco_Surname";
+            siticoneLabel3.Text = "PAGASCO_Surname";
             // 
             // siticoneLabel1
             // 
             siticoneLabel1.BackColor = Color.Transparent;
-            siticoneLabel1.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            siticoneLabel1.Font = new Font("MS Reference Sans Serif", 9F);
             siticoneLabel1.ForeColor = Color.FromArgb(231, 111, 81);
-            siticoneLabel1.Location = new Point(15, 292);
+            siticoneLabel1.Location = new Point(28, 307);
             siticoneLabel1.Margin = new Padding(4, 0, 4, 0);
             siticoneLabel1.Name = "siticoneLabel1";
             siticoneLabel1.Size = new Size(426, 36);
@@ -479,9 +479,8 @@
             siticonePanel2.BorderGradientEndColor = Color.Purple;
             siticonePanel2.BorderGradientStartColor = Color.Blue;
             siticonePanel2.BorderThickness = 2F;
-            siticonePanel2.Controls.Add(createaccBtn);
+            siticonePanel2.Controls.Add(ManagerNamesRegisteredLabel);
             siticonePanel2.Controls.Add(LoginExtBtn);
-            siticonePanel2.Controls.Add(ManagerLabel);
             siticonePanel2.CornerRadiusBottomLeft = 0F;
             siticonePanel2.CornerRadiusBottomRight = 0F;
             siticonePanel2.CornerRadiusTopLeft = 0F;
@@ -503,7 +502,7 @@
     0.5F,
     1F
     };
-            siticonePanel2.Location = new Point(658, 0);
+            siticonePanel2.Location = new Point(662, 0);
             siticonePanel2.Margin = new Padding(4);
             siticonePanel2.Name = "siticonePanel2";
             siticonePanel2.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
@@ -513,7 +512,7 @@
             siticonePanel2.RippleMaxSize = 600F;
             siticonePanel2.RippleSpeed = 15F;
             siticonePanel2.ShowBorder = true;
-            siticonePanel2.Size = new Size(714, 804);
+            siticonePanel2.Size = new Size(710, 804);
             siticonePanel2.TabIndex = 2;
             siticonePanel2.TabStop = true;
             siticonePanel2.UseBorderGradient = false;
@@ -522,83 +521,18 @@
             siticonePanel2.UseRadialGradient = false;
             siticonePanel2.MouseDown += panel_MouseDown;
             // 
-            // createaccBtn
+            // ManagerNamesRegisteredLabel
             // 
-            createaccBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
-            createaccBtn.AccessibleName = "CREATE";
-            createaccBtn.AutoSizeBasedOnText = false;
-            createaccBtn.BackColor = Color.Transparent;
-            createaccBtn.BadgeBackColor = Color.Red;
-            createaccBtn.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
-            createaccBtn.BadgeValue = 0;
-            createaccBtn.BadgeValueForeColor = Color.Transparent;
-            createaccBtn.BorderColor = Color.FromArgb(38, 70, 83);
-            createaccBtn.BorderWidth = 2;
-            createaccBtn.ButtonBackColor = Color.FromArgb(244, 241, 222);
-            createaccBtn.ButtonImage = null;
-            createaccBtn.CanBeep = true;
-            createaccBtn.CanGlow = true;
-            createaccBtn.CanShake = true;
-            createaccBtn.ContextMenuStripEx = null;
-            createaccBtn.CornerRadiusBottomLeft = 10;
-            createaccBtn.CornerRadiusBottomRight = 10;
-            createaccBtn.CornerRadiusTopLeft = 10;
-            createaccBtn.CornerRadiusTopRight = 10;
-            createaccBtn.CustomCursor = Cursors.Default;
-            createaccBtn.DisabledTextColor = Color.FromArgb(38, 70, 83);
-            createaccBtn.EnableLongPress = false;
-            createaccBtn.EnablePressAnimation = true;
-            createaccBtn.EnableRippleEffect = true;
-            createaccBtn.EnableShadow = false;
-            createaccBtn.EnableTextWrapping = false;
-            createaccBtn.Font = new Font("MS Reference Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            createaccBtn.GlowColor = Color.FromArgb(100, 255, 255, 255);
-            createaccBtn.GlowIntensity = 100;
-            createaccBtn.GlowRadius = 20F;
-            createaccBtn.GradientBackground = false;
-            createaccBtn.GradientColor = Color.Transparent;
-            createaccBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            createaccBtn.HintText = null;
-            createaccBtn.HoverBackColor = Color.Transparent;
-            createaccBtn.HoverFontStyle = FontStyle.Regular;
-            createaccBtn.HoverTextColor = Color.FromArgb(38, 70, 83);
-            createaccBtn.HoverTransitionDuration = 250;
-            createaccBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            createaccBtn.ImagePadding = 5;
-            createaccBtn.ImageSize = new Size(16, 16);
-            createaccBtn.IsRadial = false;
-            createaccBtn.IsReadOnly = false;
-            createaccBtn.IsToggleButton = false;
-            createaccBtn.IsToggled = false;
-            createaccBtn.Location = new Point(21, 712);
-            createaccBtn.LongPressDurationMS = 1000;
-            createaccBtn.Margin = new Padding(4);
-            createaccBtn.Name = "createaccBtn";
-            createaccBtn.NormalFontStyle = FontStyle.Regular;
-            createaccBtn.ParticleColor = Color.Transparent;
-            createaccBtn.ParticleCount = 15;
-            createaccBtn.PressAnimationScale = 0.97F;
-            createaccBtn.PressedBackColor = Color.Transparent;
-            createaccBtn.PressedFontStyle = FontStyle.Regular;
-            createaccBtn.PressTransitionDuration = 150;
-            createaccBtn.ReadOnlyTextColor = Color.WhiteSmoke;
-            createaccBtn.RippleColor = Color.FromArgb(38, 70, 83);
-            createaccBtn.RippleOpacity = 0.3F;
-            createaccBtn.RippleRadiusMultiplier = 0.6F;
-            createaccBtn.ShadowBlur = 5;
-            createaccBtn.ShadowColor = Color.FromArgb(100, 0, 0, 0);
-            createaccBtn.ShadowOffset = new Point(2, 2);
-            createaccBtn.ShakeDuration = 500;
-            createaccBtn.ShakeIntensity = 5;
-            createaccBtn.Size = new Size(151, 44);
-            createaccBtn.TabIndex = 13;
-            createaccBtn.Text = "CREATE";
-            createaccBtn.TextAlign = ContentAlignment.MiddleCenter;
-            createaccBtn.TextColor = Color.FromArgb(38, 70, 83);
-            createaccBtn.TooltipText = null;
-            createaccBtn.UseAdvancedRendering = true;
-            createaccBtn.UseParticles = false;
-            createaccBtn.Click += createaccBtn_Click;
+            ManagerNamesRegisteredLabel.BackColor = Color.Transparent;
+            ManagerNamesRegisteredLabel.FlatStyle = FlatStyle.Popup;
+            ManagerNamesRegisteredLabel.Font = new Font("Impact", 15F);
+            ManagerNamesRegisteredLabel.ForeColor = Color.FromArgb(38, 70, 83);
+            ManagerNamesRegisteredLabel.Location = new Point(3, 51);
+            ManagerNamesRegisteredLabel.Name = "ManagerNamesRegisteredLabel";
+            ManagerNamesRegisteredLabel.Size = new Size(701, 693);
+            ManagerNamesRegisteredLabel.TabIndex = 14;
+            ManagerNamesRegisteredLabel.Text = "MANAGERS: ";
+            ManagerNamesRegisteredLabel.Click += ManagerNamesRegisteredLabel_Click;
             // 
             // LoginExtBtn
             // 
@@ -616,29 +550,6 @@
             LoginExtBtn.UseVisualStyleBackColor = false;
             LoginExtBtn.Click += LoginExtBtn_Click;
             // 
-            // ManagerLabel
-            // 
-            ManagerLabel.AutoReverse = false;
-            ManagerLabel.BackColor = Color.FromArgb(244, 241, 222);
-            ManagerLabel.BaseColor = Color.Black;
-            ManagerLabel.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
-            ManagerLabel.Font = new Font("MS Reference Sans Serif", 10.2F);
-            ManagerLabel.IsAnimating = true;
-            ManagerLabel.IsPaused = false;
-            ManagerLabel.Location = new Point(21, 650);
-            ManagerLabel.Margin = new Padding(4);
-            ManagerLabel.Name = "ManagerLabel";
-            ManagerLabel.PauseDuration = 0;
-            ManagerLabel.ShimmerColor = Color.FromArgb(38, 70, 83);
-            ManagerLabel.ShimmerOpacity = 1F;
-            ManagerLabel.ShimmerSpeed = 50;
-            ManagerLabel.ShimmerWidth = 0.2F;
-            ManagerLabel.Size = new Size(389, 55);
-            ManagerLabel.TabIndex = 0;
-            ManagerLabel.Text = "No Manager Account? sign up now!";
-            ManagerLabel.ToolTipText = "";
-            ManagerLabel.Click += ManagerLabel_Click;
-            // 
             // ManagerLogin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -649,6 +560,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "ManagerLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ManagerLogin";
             Load += ManagerLogin_Load;
             ForgotPassBtn.ResumeLayout(false);
@@ -670,10 +582,9 @@
         private SiticoneNetCoreUI.SiticoneTextBox passwordTbx;
         private SiticoneNetCoreUI.SiticoneButton loginBtn;
         private SiticoneNetCoreUI.SiticonePanel siticonePanel2;
-        private SiticoneNetCoreUI.SiticoneShimmerLabel ManagerLabel;
         private FontAwesome.Sharp.IconButton LoginExtBtn;
-        private SiticoneNetCoreUI.SiticoneButton createaccBtn;
         private FontAwesome.Sharp.IconButton LoginBackBtn;
         private SiticoneNetCoreUI.SiticoneButton ForgotpasBtn;
+        private SiticoneNetCoreUI.SiticoneLabel ManagerNamesRegisteredLabel;
     }
 }

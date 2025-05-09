@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerifyManager));
             siticonePanel1 = new SiticoneNetCoreUI.SiticonePanel();
             verifyBtn = new SiticoneNetCoreUI.SiticoneButton();
             CodeTbx = new SiticoneNetCoreUI.SiticoneTextBox();
@@ -40,11 +41,13 @@
             siticoneLabel1 = new SiticoneNetCoreUI.SiticoneLabel();
             PagascoLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             siticonePanel2 = new SiticoneNetCoreUI.SiticonePanel();
+            pictureBox1 = new PictureBox();
             VerifyExtBtn = new FontAwesome.Sharp.IconButton();
             siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             siticonePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // siticonePanel1
@@ -276,7 +279,7 @@
             registerdEmailTbx.Margin = new Padding(4);
             registerdEmailTbx.Name = "registerdEmailTbx";
             registerdEmailTbx.PlaceholderColor = Color.Gray;
-            registerdEmailTbx.PlaceholderText = "Enter Email";
+            registerdEmailTbx.PlaceholderText = "Enter Username";
             registerdEmailTbx.ReadOnlyBorderColor1 = Color.LightGray;
             registerdEmailTbx.ReadOnlyBorderColor2 = Color.LightGray;
             registerdEmailTbx.ReadOnlyFillColor1 = Color.WhiteSmoke;
@@ -431,7 +434,7 @@
             siticoneLabel3.Name = "siticoneLabel3";
             siticoneLabel3.Size = new Size(414, 36);
             siticoneLabel3.TabIndex = 4;
-            siticoneLabel3.Text = "Pagasco_Surname";
+            siticoneLabel3.Text = "PAGASCO_Surname";
             // 
             // siticoneLabel1
             // 
@@ -476,6 +479,7 @@
             siticonePanel2.BorderGradientEndColor = Color.Purple;
             siticonePanel2.BorderGradientStartColor = Color.Blue;
             siticonePanel2.BorderThickness = 2F;
+            siticonePanel2.Controls.Add(pictureBox1);
             siticonePanel2.Controls.Add(VerifyExtBtn);
             siticonePanel2.CornerRadiusBottomLeft = 0F;
             siticonePanel2.CornerRadiusBottomRight = 0F;
@@ -498,7 +502,7 @@
     0.5F,
     1F
     };
-            siticonePanel2.Location = new Point(658, 0);
+            siticonePanel2.Location = new Point(660, 0);
             siticonePanel2.Margin = new Padding(4);
             siticonePanel2.Name = "siticonePanel2";
             siticonePanel2.PatternStyle = System.Drawing.Drawing2D.HatchStyle.Max;
@@ -508,7 +512,7 @@
             siticonePanel2.RippleMaxSize = 600F;
             siticonePanel2.RippleSpeed = 15F;
             siticonePanel2.ShowBorder = true;
-            siticonePanel2.Size = new Size(714, 804);
+            siticonePanel2.Size = new Size(712, 804);
             siticonePanel2.TabIndex = 6;
             siticonePanel2.TabStop = true;
             siticonePanel2.UseBorderGradient = false;
@@ -516,6 +520,15 @@
             siticonePanel2.UsePatternTexture = false;
             siticonePanel2.UseRadialGradient = false;
             siticonePanel2.MouseDown += panel_MouseDown;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(41, 116);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(632, 572);
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
             // 
             // VerifyExtBtn
             // 
@@ -542,11 +555,13 @@
             Controls.Add(siticonePanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "VerifyManager";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "VerifyManager";
             siticonePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconPictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             siticonePanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -565,5 +580,6 @@
         private SiticoneNetCoreUI.SiticoneButton verifyBtn;
         private SiticoneNetCoreUI.SiticonePanel siticonePanel2;
         private FontAwesome.Sharp.IconButton VerifyExtBtn;
+        private PictureBox pictureBox1;
     }
 }

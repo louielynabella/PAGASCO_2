@@ -30,19 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserChoiceMenu));
             siticonePanel1 = new SiticoneNetCoreUI.SiticonePanel();
-            cnnctBtn = new SiticoneNetCoreUI.SiticoneButton();
+            pictureBox2 = new PictureBox();
             CostumerBtn = new SiticoneNetCoreUI.SiticoneButton();
             siticoneLabel2 = new SiticoneNetCoreUI.SiticoneLabel();
             siticoneLabel1 = new SiticoneNetCoreUI.SiticoneLabel();
             PagascoLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            pictureBox3 = new PictureBox();
             siticonePanel2 = new SiticoneNetCoreUI.SiticonePanel();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            managaerBtn = new SiticoneNetCoreUI.SiticoneButton();
-            UserChoiceExtBtn = new FontAwesome.Sharp.IconButton();
-            ManagerLabel = new SiticoneNetCoreUI.SiticoneShimmerLabel();
-            siticoneShimmerLabel1 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
+            CompanyRoleBtn = new SiticoneNetCoreUI.SiticoneButton();
             pictureBox1 = new PictureBox();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
+            UserChoiceExtBtn = new FontAwesome.Sharp.IconButton();
+            siticoneShimmerLabel1 = new SiticoneNetCoreUI.SiticoneShimmerLabel();
             siticonePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             siticonePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -56,11 +58,12 @@
             siticonePanel1.BorderGradientEndColor = Color.Purple;
             siticonePanel1.BorderGradientStartColor = Color.Blue;
             siticonePanel1.BorderThickness = 2F;
-            siticonePanel1.Controls.Add(cnnctBtn);
+            siticonePanel1.Controls.Add(pictureBox2);
             siticonePanel1.Controls.Add(CostumerBtn);
             siticonePanel1.Controls.Add(siticoneLabel2);
             siticonePanel1.Controls.Add(siticoneLabel1);
             siticonePanel1.Controls.Add(PagascoLabel);
+            siticonePanel1.Controls.Add(pictureBox3);
             siticonePanel1.CornerRadiusBottomLeft = 0F;
             siticonePanel1.CornerRadiusBottomRight = 0F;
             siticonePanel1.CornerRadiusTopLeft = 0F;
@@ -99,85 +102,17 @@
             siticonePanel1.UseMultiGradient = false;
             siticonePanel1.UsePatternTexture = false;
             siticonePanel1.UseRadialGradient = false;
+            siticonePanel1.Paint += siticonePanel1_Paint;
             siticonePanel1.MouseDown += Panel_MouseDown;
             // 
-            // cnnctBtn
+            // pictureBox2
             // 
-            cnnctBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
-            cnnctBtn.AccessibleName = "connection test";
-            cnnctBtn.AutoSizeBasedOnText = false;
-            cnnctBtn.BackColor = Color.Transparent;
-            cnnctBtn.BadgeBackColor = Color.Red;
-            cnnctBtn.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
-            cnnctBtn.BadgeValue = 0;
-            cnnctBtn.BadgeValueForeColor = Color.Transparent;
-            cnnctBtn.BorderColor = Color.FromArgb(38, 70, 83);
-            cnnctBtn.BorderWidth = 2;
-            cnnctBtn.ButtonBackColor = Color.FromArgb(244, 241, 222);
-            cnnctBtn.ButtonImage = null;
-            cnnctBtn.CanBeep = true;
-            cnnctBtn.CanGlow = true;
-            cnnctBtn.CanShake = true;
-            cnnctBtn.ContextMenuStripEx = null;
-            cnnctBtn.CornerRadiusBottomLeft = 20;
-            cnnctBtn.CornerRadiusBottomRight = 20;
-            cnnctBtn.CornerRadiusTopLeft = 20;
-            cnnctBtn.CornerRadiusTopRight = 20;
-            cnnctBtn.CustomCursor = Cursors.Default;
-            cnnctBtn.DisabledTextColor = Color.FromArgb(38, 70, 83);
-            cnnctBtn.EnableLongPress = false;
-            cnnctBtn.EnablePressAnimation = true;
-            cnnctBtn.EnableRippleEffect = true;
-            cnnctBtn.EnableShadow = false;
-            cnnctBtn.EnableTextWrapping = false;
-            cnnctBtn.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cnnctBtn.GlowColor = Color.FromArgb(100, 255, 255, 255);
-            cnnctBtn.GlowIntensity = 100;
-            cnnctBtn.GlowRadius = 20F;
-            cnnctBtn.GradientBackground = false;
-            cnnctBtn.GradientColor = Color.Transparent;
-            cnnctBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            cnnctBtn.HintText = null;
-            cnnctBtn.HoverBackColor = Color.Transparent;
-            cnnctBtn.HoverFontStyle = FontStyle.Regular;
-            cnnctBtn.HoverTextColor = Color.FromArgb(38, 70, 83);
-            cnnctBtn.HoverTransitionDuration = 250;
-            cnnctBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            cnnctBtn.ImagePadding = 5;
-            cnnctBtn.ImageSize = new Size(16, 16);
-            cnnctBtn.IsRadial = false;
-            cnnctBtn.IsReadOnly = false;
-            cnnctBtn.IsToggleButton = false;
-            cnnctBtn.IsToggled = false;
-            cnnctBtn.Location = new Point(30, 720);
-            cnnctBtn.LongPressDurationMS = 1000;
-            cnnctBtn.Margin = new Padding(4);
-            cnnctBtn.Name = "cnnctBtn";
-            cnnctBtn.NormalFontStyle = FontStyle.Regular;
-            cnnctBtn.ParticleColor = Color.Transparent;
-            cnnctBtn.ParticleCount = 15;
-            cnnctBtn.PressAnimationScale = 0.97F;
-            cnnctBtn.PressedBackColor = Color.Transparent;
-            cnnctBtn.PressedFontStyle = FontStyle.Regular;
-            cnnctBtn.PressTransitionDuration = 150;
-            cnnctBtn.ReadOnlyTextColor = Color.WhiteSmoke;
-            cnnctBtn.RippleColor = Color.FromArgb(38, 70, 83);
-            cnnctBtn.RippleOpacity = 0.3F;
-            cnnctBtn.RippleRadiusMultiplier = 0.6F;
-            cnnctBtn.ShadowBlur = 5;
-            cnnctBtn.ShadowColor = Color.FromArgb(100, 0, 0, 0);
-            cnnctBtn.ShadowOffset = new Point(2, 2);
-            cnnctBtn.ShakeDuration = 500;
-            cnnctBtn.ShakeIntensity = 5;
-            cnnctBtn.Size = new Size(201, 49);
-            cnnctBtn.TabIndex = 14;
-            cnnctBtn.Text = "connection test";
-            cnnctBtn.TextAlign = ContentAlignment.MiddleCenter;
-            cnnctBtn.TextColor = Color.FromArgb(38, 70, 83);
-            cnnctBtn.TooltipText = null;
-            cnnctBtn.UseAdvancedRendering = true;
-            cnnctBtn.UseParticles = false;
-            cnnctBtn.Click += cnnctBtn_Click;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(358, 556);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(297, 240);
+            pictureBox2.TabIndex = 15;
+            pictureBox2.TabStop = false;
             // 
             // CostumerBtn
             // 
@@ -303,6 +238,15 @@
             PagascoLabel.Text = "PAGAS.CO";
             PagascoLabel.ToolTipText = "";
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(-188, -286);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(435, 551);
+            pictureBox3.TabIndex = 16;
+            pictureBox3.TabStop = false;
+            // 
             // siticonePanel2
             // 
             siticonePanel2.AcrylicTintColor = Color.FromArgb(128, 255, 255, 255);
@@ -312,11 +256,10 @@
             siticonePanel2.BorderGradientEndColor = Color.Purple;
             siticonePanel2.BorderGradientStartColor = Color.Blue;
             siticonePanel2.BorderThickness = 2F;
+            siticonePanel2.Controls.Add(CompanyRoleBtn);
             siticonePanel2.Controls.Add(pictureBox1);
             siticonePanel2.Controls.Add(iconButton1);
-            siticonePanel2.Controls.Add(managaerBtn);
             siticonePanel2.Controls.Add(UserChoiceExtBtn);
-            siticonePanel2.Controls.Add(ManagerLabel);
             siticonePanel2.Controls.Add(siticoneShimmerLabel1);
             siticonePanel2.CornerRadiusBottomLeft = 0F;
             siticonePanel2.CornerRadiusBottomRight = 0F;
@@ -359,6 +302,93 @@
             siticonePanel2.Paint += siticonePanel2_Paint;
             siticonePanel2.MouseDown += panel_MouseDown;
             // 
+            // CompanyRoleBtn
+            // 
+            CompanyRoleBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
+            CompanyRoleBtn.AccessibleName = "I Work Here";
+            CompanyRoleBtn.AutoSizeBasedOnText = false;
+            CompanyRoleBtn.BackColor = Color.Transparent;
+            CompanyRoleBtn.BadgeBackColor = Color.Red;
+            CompanyRoleBtn.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
+            CompanyRoleBtn.BadgeValue = 0;
+            CompanyRoleBtn.BadgeValueForeColor = Color.Transparent;
+            CompanyRoleBtn.BorderColor = Color.FromArgb(38, 70, 83);
+            CompanyRoleBtn.BorderWidth = 2;
+            CompanyRoleBtn.ButtonBackColor = Color.FromArgb(244, 241, 222);
+            CompanyRoleBtn.ButtonImage = null;
+            CompanyRoleBtn.CanBeep = true;
+            CompanyRoleBtn.CanGlow = true;
+            CompanyRoleBtn.CanShake = true;
+            CompanyRoleBtn.ContextMenuStripEx = null;
+            CompanyRoleBtn.CornerRadiusBottomLeft = 20;
+            CompanyRoleBtn.CornerRadiusBottomRight = 20;
+            CompanyRoleBtn.CornerRadiusTopLeft = 20;
+            CompanyRoleBtn.CornerRadiusTopRight = 20;
+            CompanyRoleBtn.CustomCursor = Cursors.Default;
+            CompanyRoleBtn.DisabledTextColor = Color.FromArgb(38, 70, 83);
+            CompanyRoleBtn.EnableLongPress = false;
+            CompanyRoleBtn.EnablePressAnimation = true;
+            CompanyRoleBtn.EnableRippleEffect = true;
+            CompanyRoleBtn.EnableShadow = false;
+            CompanyRoleBtn.EnableTextWrapping = false;
+            CompanyRoleBtn.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CompanyRoleBtn.GlowColor = Color.FromArgb(100, 255, 255, 255);
+            CompanyRoleBtn.GlowIntensity = 100;
+            CompanyRoleBtn.GlowRadius = 20F;
+            CompanyRoleBtn.GradientBackground = false;
+            CompanyRoleBtn.GradientColor = Color.Transparent;
+            CompanyRoleBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            CompanyRoleBtn.HintText = null;
+            CompanyRoleBtn.HoverBackColor = Color.Transparent;
+            CompanyRoleBtn.HoverFontStyle = FontStyle.Regular;
+            CompanyRoleBtn.HoverTextColor = Color.FromArgb(38, 70, 83);
+            CompanyRoleBtn.HoverTransitionDuration = 250;
+            CompanyRoleBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            CompanyRoleBtn.ImagePadding = 5;
+            CompanyRoleBtn.ImageSize = new Size(16, 16);
+            CompanyRoleBtn.IsRadial = false;
+            CompanyRoleBtn.IsReadOnly = false;
+            CompanyRoleBtn.IsToggleButton = false;
+            CompanyRoleBtn.IsToggled = false;
+            CompanyRoleBtn.Location = new Point(11, 726);
+            CompanyRoleBtn.LongPressDurationMS = 1000;
+            CompanyRoleBtn.Margin = new Padding(4);
+            CompanyRoleBtn.Name = "CompanyRoleBtn";
+            CompanyRoleBtn.NormalFontStyle = FontStyle.Regular;
+            CompanyRoleBtn.ParticleColor = Color.Transparent;
+            CompanyRoleBtn.ParticleCount = 15;
+            CompanyRoleBtn.PressAnimationScale = 0.97F;
+            CompanyRoleBtn.PressedBackColor = Color.Transparent;
+            CompanyRoleBtn.PressedFontStyle = FontStyle.Regular;
+            CompanyRoleBtn.PressTransitionDuration = 150;
+            CompanyRoleBtn.ReadOnlyTextColor = Color.WhiteSmoke;
+            CompanyRoleBtn.RippleColor = Color.FromArgb(38, 70, 83);
+            CompanyRoleBtn.RippleOpacity = 0.3F;
+            CompanyRoleBtn.RippleRadiusMultiplier = 0.6F;
+            CompanyRoleBtn.ShadowBlur = 5;
+            CompanyRoleBtn.ShadowColor = Color.FromArgb(100, 0, 0, 0);
+            CompanyRoleBtn.ShadowOffset = new Point(2, 2);
+            CompanyRoleBtn.ShakeDuration = 500;
+            CompanyRoleBtn.ShakeIntensity = 5;
+            CompanyRoleBtn.Size = new Size(234, 65);
+            CompanyRoleBtn.TabIndex = 16;
+            CompanyRoleBtn.Text = "I Work Here";
+            CompanyRoleBtn.TextAlign = ContentAlignment.MiddleCenter;
+            CompanyRoleBtn.TextColor = Color.FromArgb(38, 70, 83);
+            CompanyRoleBtn.TooltipText = null;
+            CompanyRoleBtn.UseAdvancedRendering = true;
+            CompanyRoleBtn.UseParticles = false;
+            CompanyRoleBtn.Click += CompanyRoleBtn_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(42, 61);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(632, 572);
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
+            // 
             // iconButton1
             // 
             iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -371,84 +401,6 @@
             iconButton1.TabIndex = 14;
             iconButton1.Text = "iconButton1";
             iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // managaerBtn
-            // 
-            managaerBtn.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard";
-            managaerBtn.AccessibleName = "Press to Fill Up!";
-            managaerBtn.AutoSizeBasedOnText = false;
-            managaerBtn.BackColor = Color.Transparent;
-            managaerBtn.BadgeBackColor = Color.Red;
-            managaerBtn.BadgeFont = new Font("Segoe UI", 8F, FontStyle.Bold);
-            managaerBtn.BadgeValue = 0;
-            managaerBtn.BadgeValueForeColor = Color.Transparent;
-            managaerBtn.BorderColor = Color.FromArgb(38, 70, 83);
-            managaerBtn.BorderWidth = 2;
-            managaerBtn.ButtonBackColor = Color.FromArgb(244, 241, 222);
-            managaerBtn.ButtonImage = null;
-            managaerBtn.CanBeep = true;
-            managaerBtn.CanGlow = true;
-            managaerBtn.CanShake = true;
-            managaerBtn.ContextMenuStripEx = null;
-            managaerBtn.CornerRadiusBottomLeft = 20;
-            managaerBtn.CornerRadiusBottomRight = 20;
-            managaerBtn.CornerRadiusTopLeft = 20;
-            managaerBtn.CornerRadiusTopRight = 20;
-            managaerBtn.CustomCursor = Cursors.Default;
-            managaerBtn.DisabledTextColor = Color.FromArgb(38, 70, 83);
-            managaerBtn.EnableLongPress = false;
-            managaerBtn.EnablePressAnimation = true;
-            managaerBtn.EnableRippleEffect = true;
-            managaerBtn.EnableShadow = false;
-            managaerBtn.EnableTextWrapping = false;
-            managaerBtn.Font = new Font("MS Reference Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            managaerBtn.GlowColor = Color.FromArgb(100, 255, 255, 255);
-            managaerBtn.GlowIntensity = 100;
-            managaerBtn.GlowRadius = 20F;
-            managaerBtn.GradientBackground = false;
-            managaerBtn.GradientColor = Color.Transparent;
-            managaerBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            managaerBtn.HintText = null;
-            managaerBtn.HoverBackColor = Color.Transparent;
-            managaerBtn.HoverFontStyle = FontStyle.Regular;
-            managaerBtn.HoverTextColor = Color.FromArgb(38, 70, 83);
-            managaerBtn.HoverTransitionDuration = 250;
-            managaerBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            managaerBtn.ImagePadding = 5;
-            managaerBtn.ImageSize = new Size(16, 16);
-            managaerBtn.IsRadial = false;
-            managaerBtn.IsReadOnly = false;
-            managaerBtn.IsToggleButton = false;
-            managaerBtn.IsToggled = false;
-            managaerBtn.Location = new Point(22, 720);
-            managaerBtn.LongPressDurationMS = 1000;
-            managaerBtn.Margin = new Padding(4);
-            managaerBtn.Name = "managaerBtn";
-            managaerBtn.NormalFontStyle = FontStyle.Regular;
-            managaerBtn.ParticleColor = Color.Transparent;
-            managaerBtn.ParticleCount = 15;
-            managaerBtn.PressAnimationScale = 0.97F;
-            managaerBtn.PressedBackColor = Color.Transparent;
-            managaerBtn.PressedFontStyle = FontStyle.Regular;
-            managaerBtn.PressTransitionDuration = 150;
-            managaerBtn.ReadOnlyTextColor = Color.WhiteSmoke;
-            managaerBtn.RippleColor = Color.FromArgb(38, 70, 83);
-            managaerBtn.RippleOpacity = 0.3F;
-            managaerBtn.RippleRadiusMultiplier = 0.6F;
-            managaerBtn.ShadowBlur = 5;
-            managaerBtn.ShadowColor = Color.FromArgb(100, 0, 0, 0);
-            managaerBtn.ShadowOffset = new Point(2, 2);
-            managaerBtn.ShakeDuration = 500;
-            managaerBtn.ShakeIntensity = 5;
-            managaerBtn.Size = new Size(234, 65);
-            managaerBtn.TabIndex = 13;
-            managaerBtn.Text = "Press to Fill Up!";
-            managaerBtn.TextAlign = ContentAlignment.MiddleCenter;
-            managaerBtn.TextColor = Color.FromArgb(38, 70, 83);
-            managaerBtn.TooltipText = null;
-            managaerBtn.UseAdvancedRendering = true;
-            managaerBtn.UseParticles = false;
-            managaerBtn.Click += managaerBtn_Click;
             // 
             // UserChoiceExtBtn
             // 
@@ -466,28 +418,6 @@
             UserChoiceExtBtn.UseVisualStyleBackColor = false;
             UserChoiceExtBtn.Click += UserChoiceExtBtn_Click;
             // 
-            // ManagerLabel
-            // 
-            ManagerLabel.AutoReverse = false;
-            ManagerLabel.BackColor = Color.FromArgb(244, 241, 222);
-            ManagerLabel.BaseColor = Color.Black;
-            ManagerLabel.Direction = SiticoneNetCoreUI.ShimmerDirection.LeftToRight;
-            ManagerLabel.Font = new Font("MS Reference Sans Serif", 10.2F);
-            ManagerLabel.IsAnimating = true;
-            ManagerLabel.IsPaused = false;
-            ManagerLabel.Location = new Point(8, 631);
-            ManagerLabel.Margin = new Padding(4);
-            ManagerLabel.Name = "ManagerLabel";
-            ManagerLabel.PauseDuration = 0;
-            ManagerLabel.ShimmerColor = Color.FromArgb(38, 70, 83);
-            ManagerLabel.ShimmerOpacity = 1F;
-            ManagerLabel.ShimmerSpeed = 50;
-            ManagerLabel.ShimmerWidth = 0.2F;
-            ManagerLabel.Size = new Size(124, 55);
-            ManagerLabel.TabIndex = 0;
-            ManagerLabel.Text = "Manager?";
-            ManagerLabel.ToolTipText = "";
-            // 
             // siticoneShimmerLabel1
             // 
             siticoneShimmerLabel1.AutoReverse = false;
@@ -497,7 +427,7 @@
             siticoneShimmerLabel1.Font = new Font("MS Reference Sans Serif", 10.2F);
             siticoneShimmerLabel1.IsAnimating = true;
             siticoneShimmerLabel1.IsPaused = false;
-            siticoneShimmerLabel1.Location = new Point(-6, 668);
+            siticoneShimmerLabel1.Location = new Point(14, 673);
             siticoneShimmerLabel1.Margin = new Padding(4);
             siticoneShimmerLabel1.Name = "siticoneShimmerLabel1";
             siticoneShimmerLabel1.PauseDuration = 0;
@@ -505,19 +435,10 @@
             siticoneShimmerLabel1.ShimmerOpacity = 1F;
             siticoneShimmerLabel1.ShimmerSpeed = 50;
             siticoneShimmerLabel1.ShimmerWidth = 0.2F;
-            siticoneShimmerLabel1.Size = new Size(318, 55);
+            siticoneShimmerLabel1.Size = new Size(196, 55);
             siticoneShimmerLabel1.TabIndex = 1;
-            siticoneShimmerLabel1.Text = "Access manager controls";
+            siticoneShimmerLabel1.Text = "Company Access:";
             siticoneShimmerLabel1.ToolTipText = "";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(42, 61);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(632, 572);
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
             // 
             // UserChoiceMenu
             // 
@@ -529,8 +450,11 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "UserChoiceMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             siticonePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             siticonePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -544,12 +468,12 @@
         private SiticoneNetCoreUI.SiticoneButton CostumerBtn;
         private SiticoneNetCoreUI.SiticoneLabel siticoneLabel2;
         private SiticoneNetCoreUI.SiticonePanel siticonePanel2;
-        private SiticoneNetCoreUI.SiticoneShimmerLabel ManagerLabel;
         private SiticoneNetCoreUI.SiticoneShimmerLabel siticoneShimmerLabel1;
         private FontAwesome.Sharp.IconButton UserChoiceExtBtn;
-        private SiticoneNetCoreUI.SiticoneButton managaerBtn;
-        private SiticoneNetCoreUI.SiticoneButton cnnctBtn;
         private FontAwesome.Sharp.IconButton iconButton1;
         private PictureBox pictureBox1;
+        private SiticoneNetCoreUI.SiticoneButton CompanyRoleBtn;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

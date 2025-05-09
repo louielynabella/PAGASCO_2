@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PAGASCO.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.AllDataSales">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAAQAAAACAAgAAAAACAAAACEAAAAAAAAAQAAABQAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.CompanyRole" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAgASAAAQCQAAAgAAAAAAAAABRAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.CostumerMenu" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAIggAQCAEAFQDBACJAIQCQACggAQQCAAQA0BQIgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.CostumerPayment" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAGAAAAAAAACAEAQCAAAAAAAggAAAAIBQAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.CostumerReceipt" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEKgAIACAIAQgAAASQAAQCgAAAgAAAAAABBABAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.CreateAcc" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IpokKgEAACAAAYgFAASwAAUCAIAQgAAEAAAAEQEAKAI=</HashCode>
+      <FileName>CreateAcc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PAGASCO.Database">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wkIgAAwBBAAEgNwhiALCFEEIAoIGSDQnELoTBiIEgAg=</HashCode>
+      <FileName>Database.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.ForgotPassword" Collapsed="true">
+    <Position X="12" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAIgAAACIAAIAAAASQAAACAAACkAAAAAAAAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.ManagerDashboard">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="PAGASCO.ManagerDashboard.FuelStock" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ManagerDashboard.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>sBQgIpAAIigooJIhgASAQgjSpASBgACCAAgwgCDQCCE=</HashCode>
+      <FileName>ManagerDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.ManagerDetails">
+    <Position X="12" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAQAACACRGAAAAABSAAAACAAAAIAAACAAAAABBCEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.ManagerLogin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAYgAAACAAAIAAAASAAAACAIQEgAAEAAAAAEAAAAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PAGASCO.OwnerDashboard">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBABEAAAoigVAAACAASIgEACCQCAhCBYEAQCIEBQAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.OwnerLogin" Collapsed="true">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAQAAAACAAAJAAAASAAAACAIQAgAAEAAAAAABQAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.Program" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.SharedUIHelper" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MABAAAAAAgAAAEAAACAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>SharedUIHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.UserChoiceMenu" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAJhAAACAAAAAAAASAAgRCAAAAgAAAAIAAAABQAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PAGASCO.VerifyManager" Collapsed="true">
+    <Position X="12" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAIgAAACAAAIAAAASCAAACYgAAgAgAAAAAAABABAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PAGASCO.MyInterface" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
